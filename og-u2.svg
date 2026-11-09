@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#2c4a6e"/>
+  <rect x="0" y="0" width="8" height="630" fill="#7aa0d8"/>
+  <text x="64" y="120" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#c8d8ef" letter-spacing="3">D83G · UNIDADE II · UNIP · LEI 10.741/2003</text>
+  <text x="64" y="230" font-family="system-ui,sans-serif" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="-3">EPI</text>
+  <text x="64" y="310" font-family="system-ui,sans-serif" font-size="44" font-weight="700" fill="#c8d8ef">Estatuto da Pessoa Idosa</text>
+  <text x="64" y="400" font-family="system-ui,sans-serif" font-size="30" fill="#8aadd4">ECA Unidade II + Lei 10.741/2003 — conteúdo integral</text>
+  <text x="64" y="450" font-family="system-ui,sans-serif" font-size="30" fill="#8aadd4">10 seções teóricas · 12 exercícios comentados · 30 flashcards</text>
+  <rect x="64" y="510" width="260" height="52" rx="10" fill="#c8d8ef" opacity="0.15"/>
+  <text x="84" y="544" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#c8d8ef">ALTA PRIORIDADE</text>
+  <rect x="344" y="510" width="260" height="52" rx="10" fill="#8a5a00" opacity="0.6"/>
+  <text x="364" y="544" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#ffe4a0">⚠ PEGADINHAS</text>
+</svg>
