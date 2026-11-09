@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ECA — D83G Unidade I</title>
+<style>
+:root {
+  --bg: #f2f4f2; --bg-card: #ffffff; --bg-alt: #e9edea;
+  --fg: #15211d; --fg-muted: #5b6a64; --divider: #d6ddd8;
+  --accent: #0f4c45; --accent-mid: #0d3d38; --accent-light: #dcebe7;
+  --pega: #8a5a00; --pega-bg: #fff3d6; --pega-border: #e0c060;
+  --art-fg: #0a4225; --art-bg: #e6f4ec;
+  --high-bg: #e3ebf7; --med-bg: #fbeadb;
+  --th-bg: #0f4c45; --tr-alt: #e9edea;
+  --radius: 10px;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --bg: #0e1513; --bg-card: #16201c; --bg-alt: #1d2a25;
+  --fg: #e6eeea; --fg-muted: #93a39b; --divider: #2a3832;
+  --accent: #5fc0ae; --accent-mid: #4aa898; --accent-light: #17332e;
+  --pega: #f0c76a; --pega-bg: #3a2d0c; --pega-border: #7a6020;
+  --art-fg: #5fd39b; --art-bg: #133323;
+  --high-bg: #1a2a45; --med-bg: #3a2614;
+  --th-bg: #17332e; --tr-alt: #1d2a25;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size: 15px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left,0px));
+  padding-right: max(16px, env(safe-area-inset-right,0px));
+  padding-block: 0 3rem; max-width: 900px; margin-inline: auto;
+  -webkit-font-smoothing: antialiased;
+}
+#theme-btn {
+  position: fixed; top: 12px; right: 16px; z-index: 999;
+  background: var(--accent); color: #fff; border: none;
+  border-radius: var(--radius); padding: 0.3rem 0.9rem;
+  font-size: 0.75rem; font-weight: 600; cursor: pointer;
+  font-family: system-ui,sans-serif; transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* CABEÇALHO — editorial */
+.page-header {
+  background: var(--bg-card);
+  border: 1px solid var(--divider);
+  border-top: 3px solid var(--accent);
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin-bottom: 1.75rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.header-eyebrow {
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.5rem;
+}
+.page-header h1 {
+  font-size: clamp(1.3rem,3.5vw,1.85rem); font-weight: 800;
+  line-height: 1.1; text-wrap: balance; letter-spacing: -0.03em; color: var(--accent);
+}
+.header-rule {
+  border: none; border-top: 1px solid var(--divider);
+  margin: 0.9rem 0 0.8rem;
+}
+.bio-row {
+  display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.85rem;
+}
+.bio-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  object-fit: cover; object-position: top center;
+  border: 2px solid var(--divider); flex-shrink: 0;
+}
+.bio-info { display: flex; flex-direction: column; gap: 0.05rem; }
+.bio-name { font-size: 0.88rem; font-weight: 700; color: var(--fg); }
+.bio-sub { font-size: 0.7rem; color: var(--fg-muted); font-style: italic; }
+.priority-legend { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+.leg-item {
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.67rem; color: var(--fg-muted); letter-spacing: 0.02em;
+}
+.leg-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.leg-high .leg-dot { background: var(--accent); }
+.leg-pega .leg-dot { background: var(--pega); }
+/* ÍNDICE */
+.toc {
+  background: var(--bg-card); border: 1px solid var(--divider);
+  border-top: 3px solid var(--accent-mid); border-radius: var(--radius);
+  padding: 1rem 1.2rem 1.1rem; margin-bottom: 1.75rem;
+  font-size: 0.85rem; column-count: 2; column-gap: 1.5rem;
+}
+.toc-title {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.6rem; column-span: all;
+}
+.toc ol { padding-left: 1.3rem; }
+.toc li { margin-bottom: 0.25rem; break-inside: avoid; }
+.toc a { color: var(--accent); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 540px) { .toc { column-count: 1; } }
+/* SEÇÃO */
+.section {
+  background: var(--bg-card); border: 1px solid var(--divider);
+  border-radius: var(--radius); margin-bottom: 1.5rem; overflow: hidden;
+}
+.section-header {
+  padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--divider);
+  background: var(--bg-alt); display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;
+}
+.section-num {
+  font-family: ui-monospace,Menlo,monospace; font-size: 0.68rem; font-weight: 700;
+  color: var(--fg-muted); opacity: 0.6; white-space: nowrap;
+}
+.section-title-text {
+  flex: 1; font-size: 0.98rem; font-weight: 700; color: var(--accent);
+  text-wrap: balance; line-height: 1.3;
+}
+.pill {
+  font-size: 0.6rem; font-weight: 700; padding: 0.15rem 0.55rem;
+  border-radius: var(--radius); letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap;
+}
+.pill-high { background: #fbeadb; color: #b4540a; }
+.pill-med  { background: #e3ebf7; color: #3b5f9a; }
+[data-theme="dark"] .pill-high { background: #3a2614; color: #f0a15e; }
+[data-theme="dark"] .pill-med  { background: #1a2a45; color: #8fb3ec; }
+.section-body { padding: 1.2rem 1.2rem 1.5rem; }
+.section-body > * + * { margin-top: 1rem; }
+.section-body p, .section-body > ul li, .section-body > ol li {
+  font-family: Georgia,'Times New Roman',serif; font-size: 0.925rem; line-height: 1.72;
+}
+/* ARTIGO — badge */
+.art {
+  font-family: ui-monospace,Menlo,monospace; font-size: 0.7rem; font-weight: 600;
+  color: var(--art-fg); background: var(--art-bg);
+  padding: 0.07rem 0.38rem; border-radius: 3px; white-space: nowrap;
+  border: 1px solid #c4e0cf; cursor: help;
+  display: inline-block; vertical-align: baseline;
+}
+[data-theme="dark"] .art { border-color: #2a4a38; }
+/* Popover global (position:fixed via JS) */
+#art-pop {
+  display: none; position: fixed; z-index: 9999;
+  background: var(--bg-card); color: var(--fg);
+  width: 320px;
+  border-radius: var(--radius); border: 1px solid var(--accent-mid);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22); overflow: hidden;
+}
+#art-pop-head {
+  background: var(--accent); color: #fff;
+  padding: 0.45rem 0.8rem;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 0.5rem;
+}
+#art-pop-key {
+  font-family: ui-monospace,Menlo,monospace; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.04em;
+}
+#art-pop-close {
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  font-size: 1rem; cursor: pointer; line-height: 1; padding: 0 0.2rem;
+  flex-shrink: 0;
+}
+#art-pop-close:hover { color: #fff; }
+#art-pop-body {
+  padding: 0.75rem 0.9rem;
+  font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem;
+  line-height: 1.65; color: var(--fg);
+}
+/* seta apontando para o badge */
+#art-pop::before {
+  content: ''; position: absolute; border: 7px solid transparent;
+  pointer-events: none;
+}
+/* SUBTÍTULOS */
+h3 {
+  font-size: 0.88rem; font-weight: 700; color: var(--accent);
+  margin-top: 1.3rem; margin-bottom: 0.45rem; padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--accent-light); letter-spacing: 0.005em; text-wrap: balance;
+}
+.section-body > h3:first-child { margin-top: 0; }
+.def-block {
+  background: var(--high-bg); border-left: 3px solid var(--accent-mid);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 0.8rem 1rem; font-size: 0.9rem;
+}
+.def-block .def-label {
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.35rem;
+}
+.pega-block {
+  background: var(--pega-bg); border-left: 3px solid var(--pega-border);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 0.8rem 1rem;
+}
+.pega-label {
+  font-size: 0.63rem; font-weight: 800; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--pega); margin-bottom: 0.35rem;
+}
+.pega-block p, .pega-block li {
+  font-family: Georgia,'Times New Roman',serif; font-size: 0.88rem; line-height: 1.65;
+}
+.pega-block ul, .pega-block ol { padding-left: 1.25rem; }
+.pega-block li { margin-bottom: 0.25rem; }
+/* TABELA */
+.tbl-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--divider); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 0; }
+thead th {
+  background: var(--th-bg); color: #fff; padding: 0.5rem 0.8rem; text-align: left;
+  font-family: system-ui,-apple-system,sans-serif; font-weight: 600;
+  font-size: 0.75rem; letter-spacing: 0.03em; white-space: nowrap;
+}
+tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--divider); vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: var(--tr-alt); }
+td strong { color: var(--accent); }
+/* COMPARATIVO */
+.compare3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(195px,1fr)); gap: 0.75rem; }
+.comp-card {
+  background: var(--bg-alt); border: 1px solid var(--divider);
+  border-top: 2px solid var(--accent-mid); border-radius: var(--radius); padding: 0.9rem 0.9rem 1rem;
+}
+.comp-card-title {
+  font-size: 0.82rem; font-weight: 700; color: var(--accent);
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 0.4rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--divider);
+}
+.comp-card ul { font-size: 0.83rem; padding-left: 1.1rem; font-family: Georgia,'Times New Roman',serif; line-height: 1.6; }
+.comp-card li { margin-bottom: 0.3rem; }
+.comp-card em { color: var(--pega); font-style: normal; font-size: 0.78rem; font-weight: 600; }
+/* GRADE DE IDADES */
+.idade-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(155px,1fr)); gap: 0.6rem; }
+.id-card { border-radius: var(--radius); padding: 0.85rem 0.75rem; border: 1px solid var(--divider); text-align: center; }
+.id-faixa { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; }
+.id-regra { font-family: Georgia,'Times New Roman',serif; font-size: 0.77rem; color: var(--fg-muted); margin-top: 0.3rem; line-height: 1.4; }
+.id-veda { background: #fff2f0; border-color: #f0c0b8; border-top: 3px solid #c8402a; }
+.id-veda .id-faixa { color: #8b1c0a; }
+.id-aprendiz { background: #fffbf0; border-color: #f0da90; border-top: 3px solid #c89020; }
+.id-aprendiz .id-faixa { color: #7a5000; }
+.id-parcial { background: var(--high-bg); border-color: #b0ccea; border-top: 3px solid #3b5f9a; }
+.id-parcial .id-faixa { color: #3b5f9a; }
+.id-livre { background: var(--accent-light); border-color: #90cca8; border-top: 3px solid var(--accent); }
+.id-livre .id-faixa { color: var(--accent); }
+[data-theme="dark"] .id-veda { background: #2a1510; border-color: #6a2018; }
+[data-theme="dark"] .id-aprendiz { background: #2a2010; border-color: #6a5010; }
+/* CHIPS */
+.med-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+.med-chip {
+  font-size: 0.78rem; font-weight: 500; background: var(--accent-light);
+  color: var(--accent); border: 1px solid #bcd0ef; border-radius: var(--radius); padding: 0.22rem 0.65rem;
+}
+[data-theme="dark"] .med-chip { border-color: #2a4838; }
+ul, ol { padding-left: 1.35rem; }
+li { margin-bottom: 0.3rem; }
+p { line-height: 1.65; }
+footer {
+  text-align: center; font-size: 0.72rem; color: var(--fg-muted);
+  margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--divider);
+}
+@media (max-width: 480px) {
+  .compare3 { grid-template-columns: 1fr; }
+  .idade-grid { grid-template-columns: repeat(2,1fr); }
+  .section-title-text { font-size: 0.9rem; }
+  .art-tip { width: 220px; }
+}
+/* ===== EXERCÍCIOS ===== */
+.quiz-score-bar {
+  display:flex; align-items:center; gap:0.75rem;
+  padding:0.6rem 0.9rem; background:var(--bg-alt);
+  border-radius:var(--radius); margin-bottom:1.1rem; flex-wrap:wrap;
+  font-size:0.8rem; color:var(--fg-muted);
+}
+.quiz-score-bar strong { color:var(--accent); font-size:1rem; }
+.quiz-reset {
+  margin-left:auto; background:none; border:1px solid var(--divider);
+  border-radius:var(--radius); padding:0.2rem 0.75rem; font-size:0.72rem;
+  cursor:pointer; color:var(--fg-muted); font-family:system-ui,sans-serif;
+}
+.quiz-reset:hover { border-color:var(--accent); color:var(--accent); }
+.quiz-q { margin-bottom:1.4rem; padding-bottom:1.4rem; border-bottom:1px solid var(--divider); }
+.quiz-q:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.quiz-num { font-size:0.63rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase; color:var(--fg-muted); margin-bottom:0.4rem; }
+.quiz-stem { font-family:Georgia,'Times New Roman',serif; font-size:0.9rem; line-height:1.7; margin-bottom:0.65rem; }
+.quiz-assert { display:block; margin:0.25rem 0 0.25rem 1rem; font-size:0.875rem; }
+.quiz-opts { display:flex; flex-direction:column; gap:0.35rem; }
+.quiz-opt {
+  display:flex; align-items:flex-start; gap:0.5rem;
+  padding:0.48rem 0.7rem; border-radius:var(--radius);
+  border:1px solid var(--divider); cursor:pointer;
+  background:var(--bg-card); text-align:left; width:100%;
+  font-family:Georgia,'Times New Roman',serif; font-size:0.84rem; line-height:1.55;
+  transition:background 0.12s, border-color 0.12s; color:var(--fg);
+}
+.quiz-opt:hover:not([disabled]) { background:var(--accent-light); border-color:var(--accent-mid); }
+.quiz-opt[disabled] { cursor:default; }
+.quiz-opt.correct { background:#e6f4ec; border-color:#5aad7a; }
+.quiz-opt.wrong   { background:#fbeaea; border-color:#d08080; }
+[data-theme="dark"] .quiz-opt.correct { background:#133323; border-color:#3a8a5a; }
+[data-theme="dark"] .quiz-opt.wrong   { background:#2a1515; border-color:#8a4040; }
+.quiz-letter { font-family:ui-monospace,Menlo,monospace; font-size:0.7rem; font-weight:700; color:var(--fg-muted); flex-shrink:0; padding-top:0.12rem; min-width:1rem; }
+.quiz-explain {
+  display:none; margin-top:0.6rem;
+  background:var(--accent-light); border-left:3px solid var(--accent);
+  border-radius:0 var(--radius) var(--radius) 0; padding:0.65rem 0.85rem;
+  font-family:Georgia,'Times New Roman',serif; font-size:0.82rem; line-height:1.65;
+}
+.quiz-explain.show { display:block; }
+.quiz-explain strong { color:var(--accent); }
+/* ===== FLASHCARDS ===== */
+.fc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:0.65rem; }
+.fc { height:150px; perspective:900px; cursor:pointer; }
+.fc-inner {
+  position:relative; width:100%; height:100%;
+  transform-style:preserve-3d; transition:transform 0.38s ease;
+}
+.fc.flipped .fc-inner { transform:rotateY(180deg); }
+.fc-front, .fc-back {
+  position:absolute; inset:0;
+  backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  border-radius:var(--radius); padding:0.8rem 0.9rem;
+  display:flex; flex-direction:column; justify-content:center;
+  border:1px solid var(--divider); overflow:hidden;
+}
+.fc-front { background:var(--bg-card); }
+.fc-back { background:var(--accent-light); border-color:var(--accent-mid); transform:rotateY(180deg); }
+.fc-tag { font-size:0.58rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--fg-muted); margin-bottom:0.3rem; }
+.fc-q { font-family:Georgia,'Times New Roman',serif; font-size:0.79rem; line-height:1.5; color:var(--fg); }
+.fc-a { font-family:Georgia,'Times New Roman',serif; font-size:0.78rem; line-height:1.5; color:var(--accent); font-weight:600; }
+.fc-law { font-size:0.62rem; color:var(--fg-muted); margin-top:0.35rem; font-style:italic; }
+.fc-hint { font-size:0.6rem; color:var(--fg-muted); opacity:0.5; margin-top:auto; padding-top:0.4rem; align-self:flex-end; }
+</style>
+<script>
+/* Aplica tema salvo antes do render */
+(function(){
+  try {
+    var t = localStorage.getItem('eca-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch(e) {}
+})();
+</script>
+</head>
+<body>
+
+<button id="theme-btn" onclick="
+  var d = document.documentElement,
+      n = d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  d.setAttribute('data-theme', n);
+  this.textContent = n === 'dark' ? '☀' : '☾';
+  try { localStorage.setItem('eca-theme', n); } catch(e) {}
+">☾</button>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('eca-theme') || 'light';
+    var b = document.getElementById('theme-btn');
+    if (b) b.textContent = t === 'dark' ? '☀' : '☾';
+  } catch(e) {}
+})();
+</script>
+
+<script>
+/* Textos dos artigos para tooltips — transcrição literal da lei */
+var ARTS = {
+  "ECA art. 2º": "Considera-se criança, para os efeitos desta Lei, a pessoa até doze anos de idade incompletos, e adolescente aquela entre doze e dezoito anos de idade.",
+  "ECA art. 3º": "A criança e o adolescente gozam de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei, assegurando-se-lhes, por lei ou por outros meios, todas as oportunidades e facilidades, a fim de lhes facultar o desenvolvimento físico, mental, moral, espiritual e social, em condições de liberdade e de dignidade.",
+  "ECA art. 4º": "É dever da família, da comunidade, da sociedade em geral e do poder público assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, à saúde, à alimentação, à educação, ao esporte, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária.",
+  "ECA art. 4º PU": "PU — A garantia de prioridade compreende: a) primazia de receber proteção e socorro em quaisquer circunstâncias; b) precedência de atendimento nos serviços públicos ou de relevância pública; c) preferência na formulação e execução das políticas sociais públicas; d) destinação privilegiada de recursos públicos nas áreas relacionadas com a proteção à infância e à juventude.",
+  "ECA art. 6º": "Na interpretação desta Lei levar-se-ão em conta os fins sociais a que ela se dirige, as exigências do bem comum, os direitos e deveres individuais e coletivos, e a condição peculiar da criança e do adolescente como pessoas em desenvolvimento.",
+  "ECA art. 8º": "É assegurado à gestante, através do Sistema Único de Saúde, o atendimento pré e perinatal.",
+  "ECA art. 8º §2º": "§2º — Os profissionais de saúde de referência da gestante garantirão sua orientação e o aleitamento materno exclusivo até os 6 (seis) meses, salvo contraindicação médica.",
+  "ECA art. 8º §10": "§10 — Incumbe ao poder público garantir, à gestante e à mulher com filho na primeira infância que se encontrem sob custódia em unidade de privação de liberdade, ambiência que atenda às normas sanitárias e assistenciais do SUS para o acolhimento do filho, em articulação com o sistema de ensino competente, visando ao desenvolvimento integral da criança.",
+  "ECA art. 10 IV": "Art. 10. Os hospitais e demais estabelecimentos de saúde de atendimento à gestante e parturiente ficam obrigados a: […] IV – realizar exames visando ao diagnóstico e terapêutica de anormalidades no metabolismo do recém-nascido, bem como prestar orientação aos pais.",
+  "ECA art. 11 §1º": "§1º — A criança e o adolescente com deficiência serão atendidos, sem discriminação ou segregação, em suas necessidades gerais de saúde e nas específicas de sua condição, mediante o fornecimento gratuito de órteses, próteses e outros recursos relativos ao tratamento, habilitação ou reabilitação, independentemente da existência de previsão orçamentária para o custeio dessas prestações.",
+  "ECA art. 12": "Os estabelecimentos de atendimento à saúde, inclusive as unidades neonatais, de terapia intensiva e de cuidados intermediários, deverão proporcionar condições para a permanência em tempo integral de um dos pais ou responsável, nos casos de internação de criança ou adolescente.",
+  "ECA art. 13 §1º": "§1º — A gestante ou mãe que manifeste interesse em entregar seu filho para adoção, antes ou logo após o nascimento, será encaminhada, sem constrangimento, à Justiça da Infância e da Juventude.",
+  "ECA art. 16": "O direito à liberdade compreende os seguintes aspectos: I – ir, vir e estar nos logradouros públicos e espaços comunitários, ressalvadas as restrições legais; II – opinião e expressão; III – crença e culto religioso; IV – brincar, praticar esportes e divertir-se; V – participar da vida familiar e comunitária, sem discriminação; VI – participar da vida política, na forma da lei; VII – buscar refúgio, auxílio e orientação.",
+  "ECA art. 18-A": "A criança e o adolescente têm o direito de ser educados e cuidados sem o uso de castigo físico ou de tratamento cruel ou degradante, como formas de correção, disciplina, educação ou qualquer outro pretexto, pelos pais, pelos integrantes da família ampliada, pelos responsáveis, pelos agentes públicos executores de medidas socioeducativas ou por qualquer pessoa encarregada de cuidar deles, tratá-los, educá-los ou protegê-los.",
+  "ECA art. 18-A PU": "PU — Para os fins desta Lei, considera-se: I – castigo físico: ação de natureza disciplinar ou punitiva aplicada com o uso da força física sobre a criança ou o adolescente que resulte em: a) sofrimento físico; ou b) lesão; II – tratamento cruel ou degradante: conduta ou forma cruel de tratamento em relação à criança ou ao adolescente que: a) humilhe; b) ameace gravemente; ou c) ridicularize.",
+  "ECA art. 19": "É direito da criança e do adolescente ser criado e educado no seio de sua família e, excepcionalmente, em família substituta, assegurada a convivência familiar e comunitária, em ambiente que garanta seu desenvolvimento integral.",
+  "ECA art. 19-B": "A criança e o adolescente em programa de acolhimento institucional ou familiar poderão participar de programa de apadrinhamento. §1º — O apadrinhamento consiste no estabelecimento e proporcionamento de vínculos externos à instituição para fins de convivência familiar e comunitária e colaboração com o seu desenvolvimento nos aspectos social, moral, físico, cognitivo, educacional e financeiro.",
+  "ECA art. 20": "Os filhos, havidos ou não da relação do casamento, ou por adoção, terão os mesmos direitos e qualificações, proibidas quaisquer designações discriminatórias relativas à filiação.",
+  "ECA art. 21": "O poder familiar será exercido, em igualdade de condições, pelo pai e pela mãe, na forma do que dispuser a legislação civil, assegurado a qualquer deles o direito de, em caso de discordância, recorrer à autoridade judiciária competente para a solução da divergência.",
+  "ECA art. 22": "Aos pais incumbe o dever de sustento, guarda e educação dos filhos menores, cabendo-lhes ainda, no interesse destes, a obrigação de cumprir e fazer cumprir as determinações judiciais.",
+  "ECA art. 23": "A falta ou a carência de recursos materiais não constitui motivo suficiente para a perda ou a suspensão do poder familiar.  §1º — Não existindo outro motivo que por si só autorize a decretação da medida, a criança ou o adolescente será mantido em sua família de origem, a qual deverá obrigatoriamente ser incluída em serviços e programas oficiais de proteção, apoio e promoção.",
+  "ECA art. 23 §2º": "§2º — A condenação criminal do pai ou da mãe não implicará a destituição do poder familiar, exceto na hipótese de condenação por crime doloso, sujeito à pena de reclusão, cometido contra outrem igualmente titular do mesmo poder familiar ou contra filho, filha ou outro descendente.",
+  "ECA art. 25": "Entende-se por família natural a comunidade formada pelos pais ou qualquer deles e seus descendentes. PU — Entende-se por família extensa ou ampliada aquela que se estende para além da unidade pais e filhos ou da unidade do casal, formada por parentes próximos com os quais a criança ou adolescente convive e mantém vínculos de afinidade e afetividade.",
+  "ECA art. 26": "Os filhos havidos fora do casamento poderão ser reconhecidos pelos pais, conjunta ou separadamente, no próprio termo de nascimento, por testamento, mediante escritura ou outro documento público, qualquer que seja a origem da filiação.",
+  "ECA art. 26 PU": "PU — O reconhecimento pode preceder o nascimento do filho ou ser posterior ao seu falecimento, se deixar descendentes.",
+  "ECA art. 28 §2º": "§2º — Tratando-se de maior de 12 (doze) anos de idade, será necessário seu consentimento, colhido em audiência.",
+  "ECA art. 33": "A guarda obriga a prestação de assistência material, moral e educacional à criança ou adolescente, conferindo a seu detentor o direito de opor-se a terceiros, inclusive aos pais.",
+  "ECA art. 36": "A tutela será deferida, nos termos da lei civil, a pessoa de até 18 (dezoito) anos incompletos. Parágrafo único — O deferimento da tutela pressupõe a prévia decretação da perda ou suspensão do poder familiar e implica necessariamente o dever de guarda.",
+  "ECA art. 39 §2º": "§2º — É vedada a adoção por procuração.",
+  "ECA art. 42": "Podem adotar os maiores de dezoito anos, independentemente do estado civil.",
+  "ECA art. 42 §1º": "§1º — Não podem adotar os ascendentes e os irmãos do adotando.",
+  "ECA art. 42 §3º": "§3º — O adotante há de ser, pelo menos, dezesseis anos mais velho do que o adotando.",
+  "ECA art. 45 §2º": "§2º — Em se tratando de adotando maior de 12 (doze) anos de idade, será também necessário o seu consentimento.",
+  "ECA art. 53": "A criança e o adolescente têm direito à educação, visando ao pleno desenvolvimento de sua pessoa, preparo para o exercício da cidadania e qualificação para o trabalho, assegurando-se-lhes: I – igualdade de condições para o acesso e permanência na escola; II – direito de ser respeitado por seus educadores; III – direito de contestar critérios avaliativos, podendo recorrer às instâncias escolares superiores; IV – direito de organização e participação em entidades estudantis; V – acesso à escola pública e gratuita próxima de sua residência, garantindo-se vagas no mesmo estabelecimento a irmãos que frequentem a mesma etapa ou ciclo de ensino da educação básica.",
+  "ECA art. 53 PU": "PU — É direito dos pais ou responsáveis ter ciência do processo pedagógico, bem como participar da definição das propostas educacionais.",
+  "ECA art. 62": "Considera-se aprendizagem a formação técnico-profissional ministrada segundo as diretrizes e bases da legislação de educação em vigor.",
+  "ECA art. 63 I": "I – garantia de acesso e frequência obrigatória ao ensino regular.",
+  "ECA art. 63 II": "II – atividade compatível com o desenvolvimento do adolescente.",
+  "ECA art. 63 III": "III – horário especial para o exercício das atividades.",
+  "ECA art. 64": "Ao adolescente até quatorze anos de idade é assegurada bolsa de aprendizagem.",
+  "ECA art. 65": "Ao adolescente aprendiz, maior de quatorze anos, são assegurados os direitos trabalhistas e previdenciários.",
+  "ECA art. 66": "Ao adolescente portador de deficiência é assegurado trabalho protegido.",
+  "ECA art. 67": "Ao adolescente empregado, aprendiz, em regime familiar de trabalho, aluno de escola técnica, assistido em entidade governamental ou não governamental, é vedado trabalho: I – noturno, realizado entre as vinte e duas horas de um dia e as cinco horas do dia seguinte; II – perigoso, insalubre ou penoso; III – realizado em locais prejudiciais à sua formação e ao seu desenvolvimento físico, psíquico, moral e social; IV – realizado em horários e locais que não permitam a frequência à escola.",
+  "ECA art. 101 §1º": "§1º — O acolhimento institucional e o acolhimento familiar são medidas provisórias e excepcionais, utilizáveis como forma de transição para reintegração familiar ou, não sendo esta possível, para colocação em família substituta, não implicando privação de liberdade.",
+  "ECA art. 103": "Considera-se ato infracional a conduta descrita como crime ou contravenção penal.",
+  "ECA art. 104": "São penalmente inimputáveis os menores de dezoito anos, sujeitos às medidas previstas nesta Lei.",
+  "ECA art. 104 PU": "PU — Para os efeitos desta Lei, deve ser considerada a idade do adolescente à data do fato.",
+  "ECA art. 112": "Verificada a prática de ato infracional, a autoridade competente poderá aplicar ao adolescente as seguintes medidas: I – advertência; II – obrigação de reparar o dano; III – prestação de serviços à comunidade; IV – liberdade assistida; V – inserção em regime de semiliberdade; VI – internação em estabelecimento educacional; VII – qualquer uma das previstas no art. 101, I a VI. §1º — A medida aplicada ao adolescente levará em conta a sua capacidade de cumpri-la, as circunstâncias e a gravidade da infração.",
+  "ECA art. 122": "A medida de internação só poderá ser aplicada quando: I – tratar-se de ato infracional cometido mediante grave ameaça ou violência a pessoa; II – por reiteração no cometimento de outras infrações graves; III – por descumprimento reiterado e injustificável da medida anteriormente imposta.",
+  "ECA art. 136 I": "Art. 136. São atribuições do Conselho Tutelar: I – atender as crianças e adolescentes nas hipóteses previstas nos arts. 98 e 105, aplicando as medidas previstas no art. 101, I a VII;",
+  "ECA art. 149 II": "II – a participação de criança e adolescente em: a) espetáculos públicos e seus ensaios; b) certames de beleza.",
+  "CF art. 7º XXXIII": "XXXIII – proibição de trabalho noturno, perigoso ou insalubre a menores de dezoito e de qualquer trabalho a menores de dezesseis anos, salvo na condição de aprendiz, a partir de quatorze anos.",
+  "CF art. 227": "É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária, além de colocá-los a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão.",
+  "CF art. 228": "São penalmente inimputáveis os menores de dezoito anos, sujeitos às normas da legislação especial.",
+  "CLT art. 406 I-II": "I – em representação teatral e demais manifestações artísticas, desde que a representação tenha fim educativo ou a peça de que participe não possa ser prejudicial à sua formação moral; II – em circos, fotografias, filmagens, atividades artísticas, desde que se trate de ocupação do próprio menor ou de seus pais.",
+  "STF — ADI 5326 (2018)": "O Plenário do STF declarou inconstitucional a Resolução do CNJ que atribuía a Corregedorias estaduais competência para autorizar trabalho artístico de crianças e adolescentes. A competência é exclusiva do Juízo da Infância e da Juventude (Justiça comum estadual)."
+};
+document.addEventListener('DOMContentLoaded', function(){
+  /* Popover global */
+  var pop = document.createElement('div');
+  pop.id = 'art-pop';
+  pop.innerHTML = '<div id="art-pop-head"><span id="art-pop-key"></span><button id="art-pop-close" aria-label="Fechar">×</button></div><div id="art-pop-body"></div>';
+  document.body.appendChild(pop);
+
+  var popKey  = document.getElementById('art-pop-key');
+  var popBody = document.getElementById('art-pop-body');
+  var popClose = document.getElementById('art-pop-close');
+  var activeEl = null;
+
+  function closePop(){
+    pop.style.display = 'none';
+    activeEl = null;
+  }
+
+  function openPop(el){
+    var key = el.getAttribute('data-key');
+    var txt = ARTS[key];
+    if(!txt) return;
+
+    popKey.textContent = key;
+    popBody.textContent = txt;
+    pop.style.display = 'block';
+    activeEl = el;
+
+    /* posição */
+    var margin = 10;
+    var maxW = Math.min(320, window.innerWidth - margin * 2);
+    pop.style.width = maxW + 'px';
+
+    var r = el.getBoundingClientRect();
+
+    /* horizontal: centrado sobre o badge, clamped */
+    var left = r.left + r.width / 2 - maxW / 2;
+    left = Math.max(margin, Math.min(left, window.innerWidth - maxW - margin));
+    pop.style.left = left + 'px';
+
+    /* vertical: acima se couber, senão abaixo */
+    pop.style.top = '0px';
+    var popH = pop.offsetHeight;
+    var top = r.top - popH - 10;
+    if(top < margin) top = r.bottom + 10;
+    pop.style.top = top + 'px';
+  }
+
+  /* Clique nos badges */
+  document.querySelectorAll('.art[data-key]').forEach(function(el){
+    var key = el.getAttribute('data-key');
+    if(!ARTS[key]) return;
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(activeEl === el){ closePop(); return; }
+      openPop(el);
+    });
+  });
+
+  /* Fechar ao clicar no X */
+  popClose.addEventListener('click', closePop);
+
+  /* Fechar ao clicar fora */
+  document.addEventListener('click', function(e){
+    if(pop.style.display !== 'none' && !pop.contains(e.target)){
+      closePop();
+    }
+  });
+
+  /* Fechar com Escape */
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closePop();
+  });
+
+  /* Reposicionar no scroll/resize */
+  window.addEventListener('scroll', function(){
+    if(activeEl) openPop(activeEl);
+  }, {passive:true});
+  window.addEventListener('resize', function(){
+    if(activeEl) openPop(activeEl);
+  });
+});
+</script>
+
+<header class="page-header">
+  <div class="header-eyebrow">D83G · Unidade I · UNIP · Lei 8.069/1990</div>
+  <h1>ECA — Estatuto da Criança e do Adolescente</h1>
+  <hr class="header-rule">
+  <div class="bio-row">
+    <img class="bio-avatar" src="/_blob/f8a8c21ab8b41a60a6262c3006ecd0cb" alt="André L. Silva">
+    <div class="bio-info">
+      <span class="bio-name">André L. Silva</span>
+      <span class="bio-sub">Graduando 10º Semestre | Direito Unip Alphaville</span>
+    </div>
+  </div>
+  <div class="priority-legend">
+    <span class="leg-item leg-high"><span class="leg-dot"></span>Alta prioridade</span>
+    <span class="leg-item leg-pega"><span class="leg-dot"></span>Pegadinha</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-title">Sumário</div>
+  <ol>
+    <li><a href="#s1">Sujeitos do ECA e Evolução Histórica</a></li>
+    <li><a href="#s2">Doutrina da Proteção Integral — Princípios</a></li>
+    <li><a href="#s3">Direito à Vida e à Saúde</a></li>
+    <li><a href="#s4">Convivência Familiar — Poder Familiar e Modalidades</a></li>
+    <li><a href="#s5">Família Substituta — Guarda, Tutela e Adoção</a></li>
+    <li><a href="#s6">Direito à Educação</a></li>
+    <li><a href="#s7">Direito à Dignidade — Lei Menino Bernardo</a></li>
+    <li><a href="#s8">Profissionalização e Proteção ao Trabalho</a></li>
+    <li><a href="#s9">Ato Infracional — Medidas Protetivas e Socioeducativas</a></li>
+    <li><a href="#s10">Mapa de Pegadinhas</a></li>
+    <li><a href="#s11">Exercícios Comentados</a></li>
+    <li><a href="#s12">Flashcards de Revisão — 30 cards</a></li>
+  </ol>
+</nav>
+
+<!-- ===== SEÇÃO 1 ===== -->
+<article class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title-text">Sujeitos do ECA e Evolução Histórica</span>
+    <span class="pill pill-med">Média prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Definição legal dos sujeitos <span class="art" data-key="ECA art. 2º">ECA art. 2º</span></h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Sujeito</th><th>Faixa etária</th><th>Critério</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Criança</strong></td><td>Até 12 anos incompletos</td><td>O dia do 12.º aniversário já é adolescente</td></tr>
+          <tr><td><strong>Adolescente</strong></td><td>12 a 18 anos de idade</td><td>A partir de 12 anos completos</td></tr>
+          <tr><td>Excepcionalmente</td><td>18 a 21 anos</td><td>Apenas quando a lei o determinar expressamente</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Atenção técnica — ato infracional</div>
+      <p>A <strong>idade do adolescente é aferida na data do fato</strong>, não na data da sentença ou do início do processo. <span class="art" data-key="ECA art. 104 PU">ECA art. 104 PU</span>. Questões apresentam réu que completa 18 anos durante o processo — a medida socioeducativa aplicável é a vigente à época do fato.</p>
+    </div>
+    <h3>Três etapas históricas da legislação brasileira</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Etapa</th><th>Paradigma</th><th>Características</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1ª — Infância negada</strong></td><td>Ausência de proteção</td><td>Criança invisível juridicamente; exercício absoluto do <em>pater familias</em></td></tr>
+          <tr><td><strong>2ª — Menorista</strong></td><td>Legislação tutelar</td><td>Estado substitui o <em>pater familias</em>; "menor" como objeto de intervenção, não sujeito de direito</td></tr>
+          <tr><td><strong>3ª — Garantista</strong></td><td>Doutrina da Proteção Integral</td><td>Criança e adolescente reconhecidos como <strong>sujeitos de direito</strong>; <span class="art" data-key="CF art. 227">CF art. 227</span> + ECA Lei 8.069/90</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Evolução histórica internacional — datas essenciais</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Ano</th><th>Evento</th><th>Relevância</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1919</strong></td><td>Criação da Liga das Nações (pós 1ª Guerra)</td><td>Base para o 1º instrumento internacional de proteção</td></tr>
+          <tr><td><strong>1924</strong></td><td>Declaração de Genebra</td><td><strong>1º documento internacional</strong> que reconheceu a necessidade de proteção — incumbia ao Estado garanti-la por legislação específica</td></tr>
+          <tr><td><strong>1947</strong></td><td>Criação do UNICEF (ONU)</td><td>Fundo de emergência para crianças em países devastados pela 2ª Guerra Mundial</td></tr>
+          <tr><td><strong>20/11/1959</strong></td><td>Declaração Universal dos Direitos da Criança (ONU)</td><td>10 direitos aprovados pela Assembleia Geral; criança reconhecida como sujeito de direito com prioridade absoluta</td></tr>
+          <tr><td><strong>20/11/1989</strong></td><td>Convenção Internacional sobre os Direitos da Criança (ONU)</td><td>Ratificada pelo Brasil em 02/11/1990 — um mês após o ECA</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Cronologia legislativa brasileira</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Data</th><th>Marco</th><th>Detalhe técnico</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1726</strong></td><td>Roda dos Expostos (Santa Casa/Bahia)</td><td>Cilindro giratório para acolher crianças abandonadas; preservava o anonimato de quem abandonava</td></tr>
+          <tr><td><strong>1880</strong></td><td>Código Criminal da República</td><td>Penalização de crianças 9–14 anos — <em>teoria do discernimento</em>; podiam receber pena de adulto</td></tr>
+          <tr><td><strong>1921</strong></td><td>Lei 4.242</td><td>Assistência aos "menores" abandonados e delinquentes; inimputáveis até os 14 anos</td></tr>
+          <tr><td><strong>1927</strong></td><td>Código de Menores</td><td>Proibiu a Roda dos Expostos; <strong>inimputáveis até os 18 anos</strong></td></tr>
+          <tr><td><strong>1932</strong></td><td>Era Vargas</td><td>Alteração da faixa etária penal (9–14 anos)</td></tr>
+          <tr><td><strong>1988</strong></td><td><span class="art" data-key="CF art. 227">CF arts. 227</span>–228</td><td>Dever absoluto da família, sociedade e Estado; inimputabilidade constitucional</td></tr>
+          <tr><td><strong>13/07/1990</strong></td><td>ECA — Lei 8.069/90</td><td>Criança e adolescente reconhecidos como sujeitos de direito com proteção integral</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="def-block" style="margin-top:0.75rem">
+      <div class="def-label">Marco legislativo</div>
+      <span class="art" data-key="CF art. 227">CF arts. 227</span> e <span class="art" data-key="CF art. 228">228</span> → ECA em 13/07/1990 (Lei 8.069/90). O Brasil ratificou a Convenção Internacional sobre os Direitos da Criança (ONU, 20/11/1989) em 02/11/1990.
+    </div>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 2 ===== -->
+<article class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title-text">Doutrina da Proteção Integral — Princípios</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Fundamento constitucional e legal <span class="art" data-key="CF art. 227">CF art. 227</span> <span class="art" data-key="ECA art. 3º">ECA arts. 3º</span>, <span class="art" data-key="ECA art. 4º">4º</span> e <span class="art" data-key="ECA art. 6º">6º</span></h3>
+    <div class="def-block">
+      <div class="def-label">Texto legal — <span class="art" data-key="ECA art. 4º">ECA art. 4º</span></div>
+      <p>"É dever da <strong>família, da comunidade, da sociedade em geral e do poder público</strong> assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, à saúde, à alimentação, à educação, ao esporte, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária."</p>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Pegadinha de prova</div>
+      <p>A proteção integral <strong>não é dever exclusivo do Estado</strong>, tampouco exclusivo dos pais. São quatro pilares em corresponsabilidade: <strong>família + comunidade + sociedade + poder público</strong>. Questão que atribua o dever apenas ao Estado ou apenas à família está <strong>incorreta</strong>.</p>
+    </div>
+    <h3>Implementação da prioridade absoluta <span class="art" data-key="ECA art. 4º PU">ECA art. 4º PU</span></h3>
+    <ul>
+      <li>Primazia de receber proteção e socorro <strong>em quaisquer circunstâncias</strong>.</li>
+      <li>Precedência de atendimento nos serviços públicos e de relevância pública.</li>
+      <li>Preferência na formulação e execução de <strong>políticas sociais públicas</strong>.</li>
+      <li>Destinação privilegiada de <strong>recursos públicos</strong> nas áreas relacionadas à infância e juventude.</li>
+    </ul>
+    <h3>Princípios fundamentais <span class="art" data-key="ECA art. 6º">ECA art. 6º</span></h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Princípio</th><th>Conteúdo técnico</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Prioridade absoluta</strong></td><td>Fundado na condição peculiar de pessoa em desenvolvimento — vulnerabilidade intrínseca que justifica tratamento prioritário diferenciado</td></tr>
+          <tr><td><strong>Melhor interesse</strong></td><td>Critério orientador para aplicadores do Direito; exige análise do caso concreto; não é presunção, é dever de ponderação fundamentada</td></tr>
+          <tr><td><strong>Isonomia material</strong></td><td>Tratar desigualmente os desiguais na medida de suas desigualdades; o ato infracional recebe tratamento diferenciado do crime adulto</td></tr>
+          <tr><td><strong>Interpretação teleológica</strong></td><td><span class="art" data-key="ECA art. 6º">art. 6º</span> — Considerar fins sociais, bem comum, condição peculiar de pessoa em desenvolvimento na interpretação do ECA</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Textos cobrados literalmente nas questões</h3>
+    <ul>
+      <li><span class="art" data-key="ECA art. 3º">art. 3º ECA</span> — "A criança e o adolescente gozam de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei…"</li>
+      <li><span class="art" data-key="CF art. 227">art. 227 CF</span> — "É dever da família, da sociedade e do Estado assegurar à criança, ao adolescente e ao jovem, com absoluta prioridade, o direito à vida, à saúde, à alimentação, à educação, ao lazer, à profissionalização, à cultura, à dignidade, ao respeito, à liberdade e à convivência familiar e comunitária, além de colocá-los a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão."</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 3 ===== -->
+<article class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title-text">Direito à Vida e à Saúde</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Gestante em unidade de privação de liberdade <span class="art" data-key="ECA art. 8º §10">ECA art. 8º §10</span></h3>
+    <div class="def-block">
+      <div class="def-label">Marco Legal da Primeira Infância (Lei 13.257/2016)</div>
+      <p>"Incumbe ao <strong>poder público</strong> garantir à gestante e à mulher com filho na primeira infância que se encontrem sob custódia em unidade de privação de liberdade, ambiência que atenda às normas sanitárias e assistenciais do SUS para o acolhimento do filho, em articulação com o sistema de ensino competente, visando ao desenvolvimento integral da criança."</p>
+    </div>
+    <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--fg-muted)">Sujeito do dever: o <strong>poder público</strong>. Finalidade: ambiência SUS + articulação com sistema de ensino.</p>
+    <h3>Direitos conexos à saúde materno-infantil</h3>
+    <ul>
+      <li>Atendimento pré-natal e pós-natal pelo SUS. <span class="art" data-key="ECA art. 8º">art. 8º</span></li>
+      <li>Parto natural cuidadoso; cesárea apenas por indicação médica. <span class="art" data-key="ECA art. 8º §2º">art. 8º §2º</span></li>
+      <li>Obrigatoriedade do <strong>teste do pezinho</strong> (triagem neonatal). <span class="art" data-key="ECA art. 10 IV">art. 10 IV</span></li>
+      <li>Poder Público fornece gratuitamente órteses, próteses e tecnologias assistivas. <span class="art" data-key="ECA art. 11 §1º">art. 11 §1º</span></li>
+      <li>Internação: direito à permanência em tempo integral de um dos pais ou responsável. <span class="art" data-key="ECA art. 12">art. 12</span></li>
+      <li>Mãe que queira entregar filho para adoção → encaminhamento <strong>sem constrangimento</strong> à Justiça da Infância. <span class="art" data-key="ECA art. 13 §1º">art. 13 §1º</span></li>
+    </ul>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 4 ===== -->
+<article class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title-text">Convivência Familiar — Poder Familiar e Modalidades</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Direito fundamental à convivência familiar <span class="art" data-key="ECA art. 19">ECA art. 19</span></h3>
+    <p>Toda criança ou adolescente tem o direito de ser criado e educado no seio da sua família e, <strong>excepcionalmente</strong>, em família substituta, assegurada a convivência familiar e comunitária em ambiente que garanta seu desenvolvimento integral.</p>
+    <h3>Três modalidades de família <span class="art" data-key="ECA art. 25">ECA arts. 25</span>-28</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Modalidade</th><th>Composição</th><th>Observação técnica</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Família natural</strong></td><td>Pais (ou qualquer deles) e seus descendentes</td><td>Inclui a família monoparental; referência primária para manutenção do vínculo</td></tr>
+          <tr><td><strong>Família extensa ou ampliada</strong></td><td>Parentes próximos com quem a criança convive e mantém vínculos de afinidade e afetividade</td><td>Exige vínculo afetivo verificado no caso concreto; doutrina admite inclusão de pessoas sem parentesco formal</td></tr>
+          <tr><td><strong>Família substituta</strong></td><td>Integração por guarda, tutela ou adoção</td><td>Medida excepcional; maior de 12 anos → consentimento em audiência judicial obrigatório</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Poder familiar — igualdade e limites <span class="art" data-key="ECA art. 21">ECA arts. 21</span>-23</h3>
+    <ul>
+      <li><span class="art" data-key="ECA art. 22">art. 22</span> — Incumbe aos pais o dever de <strong>sustento, guarda e educação</strong> dos filhos menores + cumprimento de determinações judiciais.</li>
+      <li><strong>Exercício igualitário</strong> entre pai e mãe — sem hierarquia. <span class="art" data-key="ECA art. 21">art. 21</span></li>
+      <li>Filhos dentro ou fora do casamento, ou por adoção, têm os <strong>mesmos direitos</strong>. <span class="art" data-key="ECA art. 20">art. 20</span></li>
+      <li><span class="art" data-key="ECA art. 23">art. 23</span> — <strong>Falta ou carência de recursos materiais não constitui motivo suficiente</strong> para perda ou suspensão do poder familiar.</li>
+      <li><span class="art" data-key="ECA art. 23 §2º">art. 23 §2º</span> — Condenação criminal <strong>não implica automaticamente destituição</strong>. Exceção: crime doloso + reclusão + vítima = co-titular ou descendente.</li>
+    </ul>
+    <div class="pega-block">
+      <div class="pega-label">⚠ Pegadinha técnica — destituição do poder familiar</div>
+      <ul>
+        <li><strong>Pobreza isolada nunca justifica a destituição</strong>. O Estado deve suprir a carência, não romper a família.</li>
+        <li>A destituição por condenação exige a <em>cumulação de três requisitos</em>: dolo + reclusão + vítima = co-titular ou descendente.</li>
+      </ul>
+    </div>
+    <h3>Programa de Apadrinhamento <span class="art" data-key="ECA art. 19-B">ECA art. 19-B</span></h3>
+    <p>Crianças e adolescentes em acolhimento institucional ou familiar podem participar de programa de apadrinhamento — estabelecimento de <strong>vínculos externos à instituição</strong> para fins de convivência familiar e comunitária. Pessoas naturais maiores de 18 anos e pessoas jurídicas podem apadrinhar.</p>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 5 ===== -->
+<article class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title-text">Família Substituta — Guarda, Tutela e Adoção</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <div class="def-block">
+      <div class="def-label">Regra geral <span class="art" data-key="ECA art. 28 §2º">ECA art. 28 §2º</span> / <span class="art" data-key="ECA art. 45 §2º">art. 45 §2º</span></div>
+      <p>Tratando-se de maior de <strong>12 anos de idade</strong>, será necessário o seu <strong>consentimento, colhido em audiência judicial</strong>.</p>
+    </div>
+    <h3>Comparativo técnico: Guarda × Tutela × Adoção</h3>
+    <div class="compare3" style="margin-top:0.65rem">
+      <div class="comp-card">
+        <div class="comp-card-title">Guarda <span class="art" data-key="ECA art. 33" style="font-size:0.68rem">art. 33</span></div>
+        <ul>
+          <li>Obriga à prestação de assistência <strong>material, moral e educacional</strong></li>
+          <li>Detentor pode opor-se a terceiros, <strong>inclusive aos pais</strong></li>
+          <li>Pode ser deferida liminar ou incidentalmente</li>
+          <li><em>Não rompe definitivamente o poder familiar</em></li>
+          <li><em>Não pressupõe destituição prévia</em></li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card-title">Tutela <span class="art" data-key="ECA art. 36" style="font-size:0.68rem">art. 36</span></div>
+        <ul>
+          <li>Dever de guarda + administração dos bens</li>
+          <li><strong>Pressupõe prévia decretação</strong> de perda ou suspensão do poder familiar</li>
+          <li>Implica necessariamente o dever de guarda</li>
+          <li><em>Pressupõe destituição prévia — condição sine qua non</em></li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card-title">Adoção <span class="art" data-key="ECA art. 42" style="font-size:0.68rem">arts. 39–52</span></div>
+        <ul>
+          <li>Desligamento <strong>definitivo</strong> da família biológica</li>
+          <li>Medida <strong>excepcional e irrevogável</strong></li>
+          <li>Adotado adquire status de filho com todos os direitos</li>
+          <li>Só cabe quando esgotados os recursos de manutenção na família natural</li>
+          <li><em>Irrevogabilidade é absoluta — sem prazo de arrependimento</em></li>
+        </ul>
+      </div>
+    </div>
+    <h3>Requisitos da adoção <span class="art" data-key="ECA art. 42">ECA art. 42</span></h3>
+    <ul>
+      <li>Adotante: <strong>maior de 18 anos</strong>, qualquer estado civil, plenamente capaz. <span class="art" data-key="ECA art. 42">caput</span></li>
+      <li>Diferença mínima de <strong>16 anos</strong> entre adotante e adotando. <span class="art" data-key="ECA art. 42 §3º">§3º</span></li>
+      <li><strong>Vedada</strong> a adoção por ascendentes (avós) e por irmãos. <span class="art" data-key="ECA art. 42 §1º">§1º</span></li>
+      <li><strong>Vedada a adoção por procuração</strong>, em qualquer hipótese. <span class="art" data-key="ECA art. 39 §2º">art. 39 §2º</span></li>
+    </ul>
+    <div class="pega-block">
+      <div class="pega-label">⚠ Pegadinhas — Adoção e Família Substituta</div>
+      <ul>
+        <li><strong>Adoção por procuração → SEMPRE VEDADA</strong>. Não existe exceção legal.</li>
+        <li><strong>Adoção é irrevogável</strong>. Prazos fictícios (45 dias, 6 meses, 1 ano) = todos errados.</li>
+        <li><strong>Tutela não é "forma mais tênue"</strong> que a guarda — ao contrário, pressupõe destituição prévia.</li>
+        <li><strong>Maior de 12 anos precisa consentir em audiência</strong> — em qualquer modalidade de família substituta.</li>
+      </ul>
+    </div>
+    <h3>Reconhecimento de filiação <span class="art" data-key="ECA art. 26">ECA art. 26</span></h3>
+    <p>Filhos havidos fora do casamento podem ser reconhecidos conjunta ou separadamente pelos pais: no próprio termo de nascimento, por testamento, mediante escritura ou outro documento público. O reconhecimento é <strong>irrevogável</strong>. <span class="art" data-key="ECA art. 26 PU">art. 26 PU</span></p>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 6 ===== -->
+<article class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title-text">Direito à Educação</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Direitos assegurados pelo ECA <span class="art" data-key="ECA art. 53">ECA art. 53</span></h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Inciso</th><th>Direito</th></tr></thead>
+        <tbody>
+          <tr><td>I</td><td>Igualdade de condições para o acesso e permanência na escola</td></tr>
+          <tr><td>II</td><td>Direito de ser respeitado por seus <strong>educadores</strong></td></tr>
+          <tr><td>III</td><td>Direito de <strong>contestar critérios avaliativos</strong>, podendo recorrer às instâncias escolares superiores</td></tr>
+          <tr><td>IV</td><td>Direito de <strong>organização e participação em entidades estudantis</strong></td></tr>
+          <tr><td>V</td><td>Acesso à escola pública e gratuita próxima à residência; garantia de vagas a <strong>irmãos</strong> na mesma etapa ou ciclo de ensino</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="def-block" style="margin-top:0.75rem">
+      <div class="def-label"><span class="art" data-key="ECA art. 53 PU">art. 53 PU</span> — direito dos pais ou responsáveis</div>
+      <p>É direito dos pais ou responsáveis ter <strong>ciência do processo pedagógico</strong>, bem como participar da <strong>definição das propostas educacionais</strong>.</p>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Pegadinha técnica — inciso II</div>
+      <p>O <span class="art" data-key="ECA art. 53">art. 53, II</span>, garante ser respeitado pelos <strong>educadores</strong> — <strong>não</strong> por outras crianças ou pela classe escolar.</p>
+    </div>
+    <h3>Direitos de liberdade <span class="art" data-key="ECA art. 16">ECA art. 16</span></h3>
+    <p>São direitos de liberdade: crença e culto religioso; opinião e expressão; ir, vir e estar em logradouros públicos; participar da vida política na forma da lei; buscar refúgio, auxílio e orientação.</p>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 7 ===== -->
+<article class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title-text">Direito à Dignidade — Lei Menino Bernardo</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Lei 13.010/2014 (Lei Menino Bernardo) <span class="art" data-key="ECA art. 18-A">ECA art. 18-A</span></h3>
+    <p>Crianças e adolescentes têm o direito de ser educados e cuidados <strong>sem o uso de castigo físico ou de tratamento cruel ou degradante</strong>, como formas de correção, disciplina, educação ou qualquer outro pretexto, pelos pais, integrantes da família ampliada, responsáveis, agentes públicos executores de medidas socioeducativas ou qualquer pessoa encarregada de cuidar deles.</p>
+    <h3>Definições legais — distinção técnica obrigatória <span class="art" data-key="ECA art. 18-A PU">art. 18-A PU</span></h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Conceito</th><th>Definição legal</th><th>Elemento central</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Castigo físico</strong></td><td>Ação disciplinar/punitiva aplicada com o <strong>uso da força física</strong> que resulte em sofrimento físico ou lesão</td><td>Elemento material: força física + resultado sofrimento/lesão</td></tr>
+          <tr><td><strong>Tratamento cruel ou degradante</strong></td><td>Conduta cruel que: a) humilhe; ou b) ameace gravemente; ou c) ridicularize</td><td>Elemento psicológico/moral: humilhação, ameaça grave ou ridicularização</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Distinção técnica essencial</div>
+      <p><strong>Castigo físico</strong> = força física → sofrimento ou lesão (plano físico). <strong>Tratamento cruel/degradante</strong> = verbal, psicológico, moral (plano emocional: humilha, ameaça, ridiculariza). Prova frequentemente apresenta as definições trocadas.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 8 ===== -->
+<article class="section" id="s8">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title-text">Profissionalização e Proteção ao Trabalho</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Regra constitucional <span class="art" data-key="CF art. 7º XXXIII">CF art. 7º XXXIII</span> (EC 20/1998)</h3>
+    <div class="idade-grid" style="margin-top:0.5rem">
+      <div class="id-card id-veda">
+        <div class="id-faixa">Até 14 anos</div>
+        <div class="id-regra">Vedado qualquer trabalho — exceto artístico com alvará judicial</div>
+      </div>
+      <div class="id-card id-aprendiz">
+        <div class="id-faixa">14 a 16 anos</div>
+        <div class="id-regra">Apenas na condição de <strong>aprendiz</strong></div>
+      </div>
+      <div class="id-card id-parcial">
+        <div class="id-faixa">16 a 18 anos</div>
+        <div class="id-regra">Trabalho permitido; vedado noturno (22h–5h), perigoso e insalubre</div>
+      </div>
+      <div class="id-card id-livre">
+        <div class="id-faixa">18 anos+</div>
+        <div class="id-regra">Sem restrições da legislação tutelar do ECA</div>
+      </div>
+    </div>
+    <h3>Trabalho artístico de menor de 14 anos <span class="art" data-key="ECA art. 149 II">ECA art. 149 II "a"</span> <span class="art" data-key="CLT art. 406 I-II">CLT arts. 405-406</span></h3>
+    <ul>
+      <li>Participação em espetáculos públicos mediante <strong>alvará judicial</strong>, emitido pelo <strong>Juízo da Infância e da Juventude</strong>.</li>
+      <li>Requisitos: a) representação com fim educativo ou que não prejudique a formação moral; b) ou ocupação indispensável à subsistência. <span class="art" data-key="CLT art. 406 I-II">CLT art. 406 I-II</span></li>
+      <li><span class="art" data-key="STF — ADI 5326 (2018)">STF — ADI 5326 (2018)</span>: competência = <strong>Justiça comum</strong> (Vara da Infância) — não órgãos administrativos do Judiciário ou do Ministério Público.</li>
+    </ul>
+    <h3>Contrato de aprendizagem <span class="art" data-key="ECA art. 62">ECA arts. 62</span>-66</h3>
+    <ul>
+      <li><span class="art" data-key="ECA art. 63 I">art. 63 I</span> — Garantia de acesso e <strong>frequência obrigatória</strong> ao ensino regular.</li>
+      <li><span class="art" data-key="ECA art. 63 II">art. 63 II</span> — Atividade compatível com o desenvolvimento do adolescente.</li>
+      <li><span class="art" data-key="ECA art. 63 III">art. 63 III</span> — Horário especial para o exercício das atividades.</li>
+    </ul>
+    <div class="tbl-wrap" style="margin-top:0.65rem">
+      <table>
+        <thead><tr><th>Faixa</th><th>Consequência jurídica</th><th>Artigo</th></tr></thead>
+        <tbody>
+          <tr><td>Até 14 anos</td><td><strong>Bolsa de aprendizagem</strong> (não assegura direitos trabalhistas)</td><td><span class="art" data-key="ECA art. 64">art. 64</span></td></tr>
+          <tr><td>Maior de 14 anos</td><td><strong>Direitos trabalhistas e previdenciários</strong></td><td><span class="art" data-key="ECA art. 65">art. 65</span></td></tr>
+          <tr><td>Com deficiência</td><td>Trabalho protegido</td><td><span class="art" data-key="ECA art. 66">art. 66</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Vedações ao trabalho do adolescente <span class="art" data-key="ECA art. 67">ECA art. 67</span></h3>
+    <div class="med-row">
+      <span class="med-chip">Noturno — 22h a 5h</span>
+      <span class="med-chip">Perigoso / insalubre / penoso</span>
+      <span class="med-chip">Prejudicial ao desenvolvimento</span>
+      <span class="med-chip">Incompatível com frequência escolar</span>
+    </div>
+    <div class="pega-block" style="margin-top:0.9rem">
+      <div class="pega-label">⚠ Pegadinhas — Trabalho e Aprendizagem</div>
+      <ul>
+        <li>Aprendizagem: a partir dos <strong>14 anos</strong> — não a partir dos 12 anos.</li>
+        <li>Trabalho noturno vetado ao menor de <strong>18 anos</strong> — não apenas ao menor de 16.</li>
+        <li>Menor de 14 anos: <strong>bolsa de aprendizagem</strong>, não direitos trabalhistas e previdenciários.</li>
+        <li>Frequência escolar no contrato de aprendizagem é <strong>obrigatória</strong> — não facultativa.</li>
+        <li>Trabalho artístico: <strong>alvará judicial obrigatório</strong>, nunca autorização administrativa ou ministerial isolada.</li>
+        <li>STF ADI 5326: competência = <strong>Justiça comum</strong>, não Corregedoria ou órgão estadual do MP.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 9 ===== -->
+<article class="section" id="s9">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <span class="section-title-text">Ato Infracional — Medidas Protetivas e Socioeducativas</span>
+    <span class="pill pill-med">Média prioridade</span>
+  </div>
+  <div class="section-body">
+    <h3>Conceito de ato infracional e inimputabilidade <span class="art" data-key="ECA art. 103">ECA arts. 103</span>-<span class="art" data-key="ECA art. 104">104</span></h3>
+    <div class="def-block">
+      <div class="def-label">Texto legal — <span class="art" data-key="ECA art. 103">ECA art. 103</span></div>
+      <p>"Considera-se <strong>ato infracional</strong> a conduta descrita como crime ou contravenção penal."</p>
+    </div>
+    <p style="margin-top:0.5rem">Menores de 18 anos são <strong>penalmente inimputáveis</strong> <span class="art" data-key="CF art. 228">CF art. 228</span> / <span class="art" data-key="ECA art. 104">ECA art. 104</span>: não praticam "crime", mas <em>ato infracional</em>. Ficam sujeitos exclusivamente às medidas do ECA.</p>
+    <h3>Distinção técnica fundamental: Criança × Adolescente</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Sujeito</th><th>Idade</th><th>Medidas aplicáveis</th><th>Órgão competente</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Criança</strong></td><td>Até 12 incompletos</td><td><strong>Apenas medidas protetivas</strong> (art. 101)</td><td>Conselho Tutelar (I–VII) ou Juízo (I–IX)</td></tr>
+          <tr><td><strong>Adolescente</strong></td><td>12 a 18 anos</td><td>Medidas socioeducativas (<span class="art" data-key="ECA art. 112">art. 112</span>) + protetivas (art. 101)</td><td>Juízo da Infância e da Juventude</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Caso Malaquias — exercício da disciplina</div>
+      <p>Malaquias, 11 anos e 10 meses → <strong>criança</strong>. Aplica-se somente o <strong>art. 101</strong>. As medidas socioeducativas do <span class="art" data-key="ECA art. 112">art. 112</span> são <strong>exclusivas para adolescentes</strong>.</p>
+    </div>
+    <h3>Medidas socioeducativas — rol do <span class="art" data-key="ECA art. 112">art. 112</span></h3>
+    <div class="med-row">
+      <span class="med-chip">1. Advertência</span>
+      <span class="med-chip">2. Obrigação de reparar o dano</span>
+      <span class="med-chip">3. Prestação de serviços à comunidade</span>
+      <span class="med-chip">4. Liberdade assistida</span>
+      <span class="med-chip">5. Semiliberdade</span>
+      <span class="med-chip">6. Internação</span>
+    </div>
+    <h3>Internação — hipóteses taxativas <span class="art" data-key="ECA art. 122">ECA art. 122</span></h3>
+    <ul>
+      <li>I — Ato infracional cometido mediante <strong>grave ameaça ou violência à pessoa</strong>.</li>
+      <li>II — <strong>Reiteração</strong> no cometimento de outras infrações graves.</li>
+      <li>III — Descumprimento <strong>reiterado e injustificável</strong> de medida anteriormente imposta.</li>
+    </ul>
+    <h3>Conselho Tutelar — competências e limites <span class="art" data-key="ECA art. 136 I">ECA art. 136 I</span></h3>
+    <ul>
+      <li>Aplica medidas protetivas do art. 101, <strong>incisos I a VII apenas</strong>.</li>
+      <li>Não tem competência para: guarda, tutela, adoção, suspensão ou destituição do poder familiar — essas são <strong>exclusivas do Juízo da Infância e Juventude</strong>.</li>
+    </ul>
+    <h3>Medidas protetivas — <span class="art" data-key="ECA art. 101 §1º">art. 101</span> (principais)</h3>
+    <ul>
+      <li>Encaminhamento aos pais ou responsável mediante termo de responsabilidade.</li>
+      <li>Orientação, apoio e acompanhamento temporários.</li>
+      <li>Matrícula e frequência obrigatórias em ensino fundamental.</li>
+      <li>Requisição de tratamento médico, psicológico ou psiquiátrico.</li>
+      <li>Acolhimento institucional — medida <strong>provisória e excepcional</strong>, não implica privação de liberdade. <span class="art" data-key="ECA art. 101 §1º">art. 101 §1º</span></li>
+      <li>Inclusão em programa de acolhimento familiar.</li>
+      <li>Colocação em família substituta.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- ===== SEÇÃO 10 ===== -->
+<article class="section" id="s10">
+  <div class="section-header">
+    <span class="section-num">10</span>
+    <span class="section-title-text">Mapa de Pegadinhas — Revisão Final</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <div class="pega-block">
+      <div class="pega-label">⚠ Proteção integral — quatro pilares</div>
+      <ul>
+        <li>Dever de proteger: <strong>família + comunidade + sociedade + poder público</strong>. Nunca atribuir exclusivamente ao Estado ou à família.</li>
+        <li>Criança/adolescente <strong>não</strong> é titular do direito a "prisão especial do CPP" — são penalmente inimputáveis. <span class="art" data-key="CF art. 228">CF art. 228</span> + <span class="art" data-key="ECA art. 104">ECA art. 104</span></li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Educação — <span class="art" data-key="ECA art. 53">art. 53</span></div>
+      <ul>
+        <li>Inciso II: ser respeitado pelos <strong>educadores</strong>, não por outras crianças.</li>
+        <li>Parágrafo único: pais têm <strong>ciência do processo pedagógico e participação nas propostas educacionais</strong>.</li>
+        <li>Inciso III: direito de <strong>contestar critérios avaliativos</strong> e recorrer à instância escolar superior.</li>
+        <li>Inciso IV: direito de <strong>organizar entidades estudantis</strong>.</li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Família substituta — erros técnicos recorrentes</div>
+      <ul>
+        <li>Tutela pressupõe <strong>prévia destituição/suspensão do poder familiar</strong> — condição mais gravosa, não mais tênue que a guarda.</li>
+        <li>Guarda <strong>obriga</strong> assistência material, moral e educacional; detentor pode opor-se inclusive aos pais.</li>
+        <li>Adoção por procuração → <strong>VEDADA</strong>, sem exceções.</li>
+        <li>Adoção é <strong>irrevogável</strong>. Nenhum prazo de arrependimento existe no ECA.</li>
+        <li>Maior de 12 anos → <strong>consentimento em audiência obrigatório</strong> para qualquer modalidade de família substituta.</li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Trabalho e aprendizagem</div>
+      <ul>
+        <li>Aprendizagem: <strong>a partir de 14 anos</strong> (não 12 anos).</li>
+        <li>Trabalho noturno (22h–5h): vedado ao menor de <strong>18 anos</strong>, não apenas de 16.</li>
+        <li>Menor de 14: <strong>bolsa de aprendizagem</strong> (não direitos trabalhistas).</li>
+        <li>Maior de 14 aprendiz: <strong>direitos trabalhistas e previdenciários assegurados</strong>.</li>
+        <li>Frequência escolar no contrato de aprendizagem: <strong>obrigatória</strong>.</li>
+        <li>Trabalho artístico: <strong>alvará judicial</strong>, competência da <strong>Vara da Infância</strong> — não autorização administrativa.</li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Poder familiar e destituição</div>
+      <ul>
+        <li><strong>Pobreza isolada não justifica destituição</strong> — o Estado deve suprir a carência.</li>
+        <li>Condenação criminal só destitui se cumprida a tríplice cumulação: dolo + reclusão + vítima = co-titular do poder familiar ou descendente.</li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Ato infracional — criança vs. adolescente</div>
+      <ul>
+        <li>Criança: <strong>apenas medidas protetivas do art. 101</strong>. Nunca medidas socioeducativas.</li>
+        <li>Adolescente: medidas socioeducativas (<span class="art" data-key="ECA art. 112">art. 112</span>) e protetivas (art. 101).</li>
+        <li>Idade relevante para fins do ECA: <strong>data do fato</strong>, não da sentença.</li>
+        <li>Internação: hipóteses <strong>taxativas</strong> (<span class="art" data-key="ECA art. 122">art. 122 I–III</span>). Fora delas, é ilegal.</li>
+      </ul>
+    </div>
+    <div class="pega-block" style="margin-top:0.75rem">
+      <div class="pega-label">⚠ Dignidade — distinção técnica Lei 13.010/2014</div>
+      <ul>
+        <li><strong>Castigo físico</strong> = força física → sofrimento físico ou lesão.</li>
+        <li><strong>Tratamento cruel/degradante</strong> = conduta que humilha, ameaça gravemente ou ridiculariza.</li>
+        <li>São institutos distintos — não confundir. <span class="art" data-key="ECA art. 18-A PU">art. 18-A PU</span></li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<article class="section" id="s11">
+  <div class="section-header">
+    <span class="section-num">11</span>
+    <span class="section-title-text">Exercícios Comentados — Questionário U1 + Teleaula I</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <div class="quiz-score-bar">
+      <span>Acertos: <strong id="q-ok">0</strong></span>
+      <span>Erros: <strong id="q-err">0</strong></span>
+      <span id="q-total"></span>
+      <button class="quiz-reset" onclick="resetQuiz()">↺ Reiniciar</button>
+    </div>
+
+    <div class="quiz-q" data-correct="d">
+      <div class="quiz-num">Q1 — Questionário Unidade I</div>
+      <div class="quiz-stem">O direito à vida e à saúde são garantias fundamentais instituídas na CF. Para se garantir o nascimento sadio, deve haver proteção especial à maternidade. Assinale a correta:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>A gestante tem direito a 1 acompanhante durante o pré-natal, parto e pós-parto, exceto se houver regulamentos de restrição por superlotação.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>A gestante menor de 16 anos receberá orientação sobre aleitamento materno e desenvolvimento infantil.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>A gestante tem direito a acompanhamento saudável, sendo a cesariana aplicada exclusivamente por conveniência da parturiente.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Incumbe ao poder público garantir à gestante e à mulher com filho na primeira infância, em custódia, ambiência que atenda às normas do SUS para acolhimento do filho, em articulação com o sistema de ensino competente.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>O atendimento pré-natal será realizado por médicos.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta D — ECA art. 8º §10</strong> (incluído pelo Marco Legal da Primeira Infância, Lei 13.257/2016). Obrigação do poder público de garantir ambiência adequada (SUS + educação) às gestantes e mães em unidades de privação de liberdade.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="d">
+      <div class="quiz-num">Q2 — Questionário Unidade I</div>
+      <div class="quiz-stem">A doutrina da proteção integral (art. 1º ECA) envolve políticas públicas de proteção social. Analise as assertivas e assinale a correta:
+        <span class="quiz-assert">I. A criança e o adolescente gozam de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral, asseguradas todas as oportunidades para seu desenvolvimento.</span>
+        <span class="quiz-assert">II. É dever da família, da comunidade, da sociedade em geral e do poder público assegurar, com absoluta prioridade, a efetivação dos direitos referentes à vida, saúde, alimentação, educação, entre outros.</span>
+        <span class="quiz-assert">III. Na interpretação desta Lei levar-se-ão em conta os fins sociais, as exigências do bem comum, os direitos e deveres individuais e coletivos, e a condição peculiar da criança e do adolescente como pessoas em desenvolvimento.</span>
+      </div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Somente estão corretas as assertivas II e III.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Somente estão corretas as assertivas I e III.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Somente estão corretas as assertivas I e II.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Todas as assertivas estão corretas.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta D — Arts. 3º, 4º e 6º ECA</strong>. As três assertivas reproduzem literalmente a lei: I = art. 3º; II = art. 4º caput (c/c CF art. 227); III = art. 6º.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="c">
+      <div class="quiz-num">Q3 — Questionário Unidade I</div>
+      <div class="quiz-stem">Sobre a colocação de crianças e adolescentes em família substituta, assinale a alternativa correta:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>É permitida a adoção por procuração, salvo exceções legais.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>A tutela é forma mais tênue de família substituta, pois não exige necessariamente a destituição do poder familiar.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Tratando-se de maior de 12 anos de idade, será necessário seu consentimento, colhido em audiência.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>A guarda, por ser transitória, desobriga à prestação de assistência material, moral e educacional, não podendo seu detentor opor-se aos pais ou terceiros.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>A tutela será deferida, nos termos da lei civil, à pessoa maior de 18 anos completos.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta C — Arts. 45 §2º e 28 §2º ECA</strong>. Para qualquer modalidade de família substituta, o adolescente maior de 12 anos deve dar consentimento em audiência. Pegadinhas: adoção por procuração vedada (art. 39 §2º); tutela pressupõe destituição do poder familiar (art. 36); guarda obriga assistência e gera oponibilidade (art. 33).</div>
+    </div>
+
+    <div class="quiz-q" data-correct="e">
+      <div class="quiz-num">Q4 — Questionário Unidade I</div>
+      <div class="quiz-stem">No tocante ao direito à educação previsto no ECA, assinale a alternativa correta:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>É vedada a contestação de critérios avaliativos por estarem dentro dos limites educacionais da instituição de ensino.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Garantia de acesso à escola pública e gratuita próxima à residência, não sendo possível garantir vagas a irmãos no mesmo estabelecimento.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Garantia de igualdade de condições para o acesso e permanência na escola, vedada a participação em entidades estudantis.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>O direito à educação visa ao pleno desenvolvimento com objetivo de prepará-los exclusivamente para o exercício da cidadania.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>É direito dos pais ou responsáveis ter ciência do processo pedagógico, bem como participar da definição das propostas educacionais.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta E — Art. 53 PU ECA</strong>. Garantia expressa aos pais de conhecer o processo pedagógico e participar das propostas educacionais. As demais invertem ou omitem direitos expressamente previstos no caput e incisos do art. 53.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="c">
+      <div class="quiz-num">Q5 — Questionário Unidade I</div>
+      <div class="quiz-stem">Dentre as formas de colocação em família substituta, podemos afirmar que a adoção:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Pode ser revogada até o prazo máximo de 6 meses.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Pode ser revogada até o prazo máximo de 1 ano.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>É medida excepcional e, dadas suas particularidades e tentativa de definitividade, é irrevogável.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Pode ser revogada até o prazo máximo de 45 dias.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Pode ser revogada desde que autorizada pelo Ministério Público.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta C — Art. 39 §1º ECA</strong>. A adoção é medida excepcional e <strong>irrevogável</strong>. O ECA não prevê nenhum prazo de arrependimento ou desfazimento da adoção.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="c">
+      <div class="quiz-num">Q6 — Questionário Unidade I</div>
+      <div class="quiz-stem">No tocante à profissionalização e proteção ao trabalho, analise as assertivas e assinale a correta:
+        <span class="quiz-assert">I. É proibido qualquer trabalho a menores de 18 anos, salvo na condição de aprendiz a partir de 14 anos.</span>
+        <span class="quiz-assert">II. A CF autoriza expressamente qualquer trabalho a maiores de 16 anos.</span>
+        <span class="quiz-assert">III. Menores de 14 anos podem exercer trabalho artístico, desde que autorizado por meio de alvará judicial pelo Juízo da Infância e Juventude.</span>
+      </div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Somente a assertiva II está correta.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Somente a assertiva I está correta.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Somente a assertiva III está correta.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Todas as assertivas estão corretas.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta C</strong>. I incorreta — vedação de qualquer trabalho aplica-se a <strong>menores de 16 anos</strong>, salvo aprendiz a partir de 14 (CF art. 7º XXXIII). II incorreta — aos de 16–18 anos é vedado trabalho noturno, perigoso ou insalubre. III correta — art. 149 II "a" ECA + arts. 405/406 CLT + STF ADI 5326 (competência do Juízo da Infância, não administrativa).</div>
+    </div>
+
+    <div class="quiz-q" data-correct="e">
+      <div class="quiz-num">Q7 — Questionário Unidade I</div>
+      <div class="quiz-stem">No tocante à aprendizagem, assinale a alternativa correta:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>É permitida a aprendizagem a partir de 12 anos completos.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>O trabalho na modalidade aprendizagem pode ser realizado no horário noturno se a atividade assim exigir.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>A formação técnico-profissional faculta a frequência ao ensino regular.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Ao aprendiz menor de 14 anos são assegurados os direitos trabalhistas e previdenciários.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>A formação técnico-profissional deverá ser compatível com o desenvolvimento do adolescente.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta E — Art. 63 II ECA</strong>. Pegadinhas: aprendizagem a partir de 14 anos (art. 60); noturno vedado ao menor de 18 (art. 67 I); frequência escolar obrigatória (art. 63 I); ao menor de 14: bolsa de aprendizagem, não direitos trabalhistas (art. 64).</div>
+    </div>
+
+    <div class="quiz-q" data-correct="b">
+      <div class="quiz-num">Q8 — Questionário Unidade I</div>
+      <div class="quiz-stem">É dever de todos velar pela dignidade da criança e do adolescente, poupando-os de qualquer tratamento desumano. A ação de natureza disciplinar ou punitiva aplicada com o uso da força física que resulte em sofrimento físico ou lesão, o ECA define como:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Banimento.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Castigo físico.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Prisão perpétua.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Pornografia infantojuvenil.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Tratamento cruel ou degradante.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta B — Art. 18-A PU I ECA</strong> (Lei 13.010/2014 — Lei Menino Bernardo). <strong>Castigo físico</strong> = força física → sofrimento físico ou lesão. <strong>Tratamento cruel/degradante</strong> = conduta que humilha, ameaça gravemente ou ridiculariza (inciso II). Distinção técnica cobrada com frequência.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="d">
+      <div class="quiz-num">Q9 — Questionário Unidade I</div>
+      <div class="quiz-stem">Quanto aos direitos fundamentais das crianças e adolescentes previstos no ECA, é correto afirmar que têm direito a, <strong>EXCETO</strong>:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Liberdade.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Proteção à vida.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Proteção à saúde.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Prisão especial do Código de Processo Penal.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Dignidade como pessoas humanas em processo de desenvolvimento.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta D — Art. 104 ECA + CF art. 228</strong>. Crianças e adolescentes são penalmente <strong>inimputáveis</strong> — não estão sujeitos ao CPP, e sim às medidas protetivas e socioeducativas do ECA. A "prisão especial" não é direito previsto no ECA.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="c">
+      <div class="quiz-num">Q10 — Questionário Unidade I</div>
+      <div class="quiz-stem">Com relação aos direitos à educação instituídos no ECA, analise as assertivas e assinale a correta:
+        <span class="quiz-assert">I. Há o direito de ser respeitado por outras crianças em sua classe escolar.</span>
+        <span class="quiz-assert">II. Há o direito de organização e participação em entidades estudantis.</span>
+        <span class="quiz-assert">III. Há o direito de contestar critérios avaliativos, podendo recorrer às instâncias escolares superiores.</span>
+      </div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Apenas a assertiva III está correta.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Estão corretas as assertivas I e II.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Estão corretas as assertivas II e III.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Todas as assertivas estão corretas.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta C — Art. 53 II, III e IV ECA</strong>. I incorreta: o direito de ser respeitado é garantido pelos <strong>educadores</strong> (inciso II), não por outras crianças — pegadinha frequente. II correta (inciso IV). III correta (inciso III).</div>
+    </div>
+
+    <div class="quiz-q" data-correct="a">
+      <div class="quiz-num">Q11 — Atividade Teleaula I (Videoaula 1)</div>
+      <div class="quiz-stem">Levando em conta o efetivo funcionamento do sistema de garantia dos direitos da criança e do adolescente, com base na proteção integral do ECA, assinale a correta:</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>O ECA adota referidos princípios com um viés de utilidade social, tendo como base a atuação do Estado — família — sociedade e comunidade visando à proteção de crianças e adolescentes.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>As políticas sociais do ECA devem ser promovidas pelos pais, que têm o dever de assistir, criar e educar os filhos pelo exercício do poder familiar e pela sociedade.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>As políticas sociais públicas do ECA encontram óbices nos movimentos sociais, pois devem ser promovidas exclusivamente pelo Estado.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>A política de proteção integral delega ao Estado o dever de promoção do desenvolvimento infantojuvenil, com objetivo de alcançar maior número de pessoas.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>A política de proteção integral acompanha criança e adolescente à medida que vão se integrando à creche, escola e ao trabalho.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta A — CF art. 227 + ECA art. 4º</strong>. A Doutrina da Proteção Integral é baseada na cooperação corresponsável entre <strong>quatro pilares: Estado + Família + Sociedade + Comunidade</strong>. Nunca atribuir exclusivamente ao Estado ou à família.</div>
+    </div>
+
+    <div class="quiz-q" data-correct="e">
+      <div class="quiz-num">Q12 — Atividade Teleaula I (Videoaula 2)</div>
+      <div class="quiz-stem">Levando em consideração a condição peculiar da pessoa em desenvolvimento, analise as assertivas:
+        <span class="quiz-assert">I. Crianças e adolescentes têm o direito de crença e culto religioso, opinião, ir e vir em logradouros públicos e participar da vida política na forma da lei.</span>
+        <span class="quiz-assert">II. Os filhos havidos fora do casamento podem ser reconhecidos conjunta ou separadamente, no termo de nascimento, por testamento, escritura ou outro documento público, qualquer que seja a origem da filiação.</span>
+        <span class="quiz-assert">III. Qualquer pessoa maior de 18 anos pode adotar, independentemente do estado civil, exceto ascendentes e irmãos do adotando.</span>
+        <span class="quiz-assert">IV. Para efetivação da adoção, o adotante há de ser, pelo menos, dezesseis anos mais velho que o adotando.</span>
+      </div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-opt="a"><span class="quiz-letter">A</span>Somente estão corretas as assertivas I, II e IV.</button>
+        <button class="quiz-opt" data-opt="b"><span class="quiz-letter">B</span>Somente estão corretas as assertivas II e III.</button>
+        <button class="quiz-opt" data-opt="c"><span class="quiz-letter">C</span>Todas as assertivas estão incorretas.</button>
+        <button class="quiz-opt" data-opt="d"><span class="quiz-letter">D</span>Somente estão corretas as assertivas I e IV.</button>
+        <button class="quiz-opt" data-opt="e"><span class="quiz-letter">E</span>Todas as assertivas estão corretas.</button>
+      </div>
+      <div class="quiz-explain"><strong>Resposta E</strong>. I = art. 16 ECA (direito à liberdade); II = art. 26 ECA (reconhecimento de filhos); III = art. 42 caput + §1º ECA (vedados ascendentes e irmãos); IV = art. 42 §3º ECA (diferença mínima de 16 anos). Todas corretas — texto literal.</div>
+    </div>
+
+  </div>
+</article>
+
+<article class="section" id="s12">
+  <div class="section-header">
+    <span class="section-num">12</span>
+    <span class="section-title-text">Flashcards de Revisão — Exercícios U1</span>
+    <span class="pill pill-high">Alta prioridade</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:0.8rem;color:var(--fg-muted);margin-bottom:0.75rem">Clique no card para revelar a resposta.</p>
+    <h3 style="margin-bottom:0.5rem">Exercícios — Questionário U1 + Teleaula I</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q1 · Saúde</div><div class="fc-q">O poder público deve garantir o quê à gestante em unidade de privação de liberdade?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Ambiência conforme normas do SUS + educação para o filho.</div><div class="fc-law">Art. 8º §10 ECA (Lei 13.257/2016)</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q2 · Proteção Integral</div><div class="fc-q">Quais são os quatro pilares da Proteção Integral?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Estado + Família + Sociedade + Comunidade</div><div class="fc-law">CF art. 227 + ECA art. 4º</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q3 · Família Substituta</div><div class="fc-q">O que é exigido do adolescente maior de 12 anos em qualquer modalidade de família substituta?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Consentimento obrigatório, colhido em audiência judicial.</div><div class="fc-law">Arts. 28 §2º e 45 §2º ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q4 · Educação</div><div class="fc-q">Art. 53 PU ECA — qual direito é garantido aos pais ou responsáveis?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Ter ciência do processo pedagógico e participar das propostas educacionais.</div><div class="fc-law">Art. 53 PU ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q5 · Adoção</div><div class="fc-q">A adoção pode ser revogada? Existe algum prazo legal?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Não — a adoção é IRREVOGÁVEL. Nenhum prazo existe.</div><div class="fc-law">Art. 39 §1º ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q6 · Trabalho Artístico</div><div class="fc-q">Quem autoriza o trabalho artístico de criança menor de 14 anos?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Juízo da Infância e da Juventude (alvará judicial). Nunca autorização administrativa.</div><div class="fc-law">Art. 149 II ECA + STF ADI 5326 (2018)</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q7 · Aprendizagem</div><div class="fc-q">Qual a idade mínima para aprendizagem? E para direitos trabalhistas plenos?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Idade mínima: 14 anos (art. 60). Menor de 14: apenas bolsa de aprendizagem (art. 64). A partir de 14: direitos trabalhistas e previdenciários plenos (art. 65).</div><div class="fc-law">Arts. 60, 64 e 65 ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q8 · Dignidade</div><div class="fc-q">Qual a diferença entre castigo físico e tratamento cruel ou degradante?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Castigo físico: força física → sofrimento ou lesão. / Cruel/degradante: humilha, ameaça ou ridiculariza.</div><div class="fc-law">Art. 18-A PU I e II ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q9 · Inimputabilidade</div><div class="fc-q">Criança ou adolescente pode ser sujeito a prisão especial do CPP?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Não — são penalmente inimputáveis. Sujeitos ao ECA, não ao CPP.</div><div class="fc-law">Art. 104 ECA + CF art. 228</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q10 · Educação</div><div class="fc-q">Art. 53 II ECA — por quem a criança/adolescente tem direito de ser respeitado?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Pelos seus EDUCADORES. / (Não por outras crianças — pegadinha frequente)</div><div class="fc-law">Art. 53 II ECA</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q11 · Proteção Integral</div><div class="fc-q">O ECA atribui a proteção integral exclusivamente ao Estado?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Não — são quatro pilares: Estado + Família + Sociedade + Comunidade.</div><div class="fc-law">ECA art. 4º + CF art. 227</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Q12 · Adoção</div><div class="fc-q">Qual a diferença mínima de idade entre adotante e adotando?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Pelo menos 16 anos.</div><div class="fc-law">Art. 42 §3º ECA</div></div>
+      </div></div>
+    </div>
+
+    <h3>Conteúdo teórico — Histórico</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Hist · Internacional</div><div class="fc-q">Qual foi o 1º documento internacional de proteção à criança — e quando?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Declaração de Genebra (1924) — aprovada pela Liga das Nações após a 1ª Guerra Mundial.</div><div class="fc-law">Slide 2 / Videoaula 1</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Hist · UNICEF</div><div class="fc-q">Quando foi criado o UNICEF e qual era seu objetivo inicial?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">1947. Socorrer crianças em países devastados pela 2ª Guerra Mundial.</div><div class="fc-law">Slide 2</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Hist · Declaração 1959</div><div class="fc-q">O que estabeleceu a Declaração Universal dos Direitos da Criança (ONU, 20/11/1959)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Reconheceu a criança como sujeito de direito com prioridade absoluta; aprovou 10 direitos: sobrevivência, desenvolvimento e proteção contra exploração.</div><div class="fc-law">Slides 3–4</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Hist · Brasil 1726</div><div class="fc-q">O que era a Roda dos Expostos (1726)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Cilindro giratório na Santa Casa da Bahia para acolher crianças abandonadas; preservava o anonimato de quem abandonava.</div><div class="fc-law">Slide 5</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Hist · Brasil 1927</div><div class="fc-q">O que estabeleceu o Código de Menores de 1927?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Proibiu a Roda dos Expostos; tornou jovens inimputáveis até os 18 anos.</div><div class="fc-law">Slide 5</div></div>
+      </div></div>
+    </div>
+
+    <h3>Proteção Integral — Princípios</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">PI · Art. 4º PU</div><div class="fc-q">Quais são as 4 garantias de implementação da prioridade absoluta (art. 4º PU ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">a) Primazia de socorro em qualquer circunstância; b) Precedência no atendimento público; c) Preferência nas políticas sociais; d) Destinação privilegiada de recursos públicos.</div><div class="fc-law">ECA art. 4º PU</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">PI · Melhor Interesse</div><div class="fc-q">O que é o princípio do melhor interesse?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Princípio orientador para aplicadores do Direito; exige análise do caso concreto; não é presunção — é dever de ponderação fundamentada.</div><div class="fc-law">ECA art. 6º / Slides 11–12</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">PI · Art. 6º</div><div class="fc-q">O que é a interpretação teleológica do ECA (art. 6º)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Na interpretação do ECA considerar: fins sociais, bem comum, direitos/deveres individuais e coletivos e a condição peculiar de pessoa em desenvolvimento.</div><div class="fc-law">ECA art. 6º</div></div>
+      </div></div>
+    </div>
+
+    <h3>Família e Poder Familiar</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Fam · Art. 22</div><div class="fc-q">O que incumbe aos pais no exercício do poder familiar (art. 22 ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Dever de sustento, guarda e educação dos filhos menores + obrigação de cumprir determinações judiciais.</div><div class="fc-law">ECA art. 22 / Slide 20</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Fam · Extensa</div><div class="fc-q">O que é família extensa (art. 25 PU ECA) e quais vínculos ela exige?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Parentes próximos com quem a criança CONVIVE E mantém vínculos de AFINIDADE E AFETIVIDADE. Doutrina admite inclusão mesmo sem parentesco formal.</div><div class="fc-law">ECA art. 25 PU / Slide 21</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Fam · Art. 23</div><div class="fc-q">A pobreza isolada pode justificar a destituição do poder familiar?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">NUNCA. A falta de recursos materiais não é motivo suficiente. O Estado deve incluir a família em programas oficiais de proteção e apoio.</div><div class="fc-law">ECA art. 23 / Slide 26</div></div>
+      </div></div>
+    </div>
+
+    <h3>Família Substituta — Guarda e Tutela</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Sub · Guarda</div><div class="fc-q">Qual é o dever do detentor da guarda (art. 33 ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Prestar assistência material, moral e educacional; pode opor-se a terceiros, inclusive aos pais.</div><div class="fc-law">ECA art. 33 / Slide 22</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Sub · Tutela</div><div class="fc-q">O que pressupõe e implica a tutela (art. 36 ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Pressupõe: prévia decretação da perda/suspensão do poder familiar. Implica: dever de guarda + administração dos bens da criança + prestação de contas ao juízo.</div><div class="fc-law">ECA art. 36 / Slides 22–23</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Sub · Equipe</div><div class="fc-q">Quem deve ser ouvido antes de qualquer colocação em família substituta?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Equipe interprofissional, observando o grau de desenvolvimento e compreensão da criança; opinião deve ser devidamente considerada.</div><div class="fc-law">ECA art. 28 / Slide 22</div></div>
+      </div></div>
+    </div>
+
+    <h3>Trabalho e Profissionalização</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Trab · Art. 67</div><div class="fc-q">Quais são as 4 vedações ao trabalho do adolescente (art. 67 ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">I – noturno (22h–5h); II – perigoso, insalubre ou penoso; III – prejudicial ao desenvolvimento físico/psíquico/moral/social; IV – incompatível com frequência escolar.</div><div class="fc-law">ECA art. 67</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Trab · Art. 66</div><div class="fc-q">Qual trabalho é assegurado ao adolescente portador de deficiência?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Trabalho protegido.</div><div class="fc-law">ECA art. 66</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Trab · CLT 403</div><div class="fc-q">O que veda a CLT quanto ao local de trabalho do menor?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">O trabalho do menor não pode ser realizado em locais prejudiciais à sua formação, desenvolvimento físico/psíquico/moral/social nem em horários que impeçam a frequência à escola.</div><div class="fc-law">CLT art. 403 PU / Slide 31</div></div>
+      </div></div>
+    </div>
+
+    <h3>Ato Infracional</h3>
+    <div class="fc-grid">
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">AI · Art. 104 PU</div><div class="fc-q">Qual é a idade relevante para fins do ECA nos atos infracionais?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">A idade na DATA DO FATO — não na data da sentença nem no início do processo.</div><div class="fc-law">ECA art. 104 PU</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">AI · Internação</div><div class="fc-q">Quais são as hipóteses TAXATIVAS de internação (art. 122 ECA)?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">I – grave ameaça ou violência a pessoa; II – reiteração em infrações graves; III – descumprimento reiterado e injustificável da medida anterior. Fora dessas hipóteses: ilegal.</div><div class="fc-law">ECA art. 122 I–III</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">AI · Conselho Tutelar</div><div class="fc-q">O Conselho Tutelar pode aplicar todas as medidas protetivas do art. 101?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">Não — apenas os incisos I a VII. Guarda, tutela, adoção, suspensão e destituição do poder familiar são exclusivas do Juízo da Infância e da Juventude.</div><div class="fc-law">ECA art. 136 I</div></div>
+      </div></div>
+    </div>
+  </div>
+</article>
+
+<script>
+(function(){
+  var ok = 0, err = 0;
+  document.querySelectorAll('.quiz-q').forEach(function(q){
+    q.querySelectorAll('.quiz-opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(btn.disabled) return;
+        var correct = q.getAttribute('data-correct');
+        var chosen = btn.getAttribute('data-opt');
+        q.querySelectorAll('.quiz-opt').forEach(function(b){ b.disabled = true; });
+        if(chosen === correct){
+          btn.classList.add('correct');
+          ok++;
+          document.getElementById('q-ok').textContent = ok;
+        } else {
+          btn.classList.add('wrong');
+          err++;
+          document.getElementById('q-err').textContent = err;
+          q.querySelector('[data-opt="'+correct+'"]').classList.add('correct');
+        }
+        q.querySelector('.quiz-explain').classList.add('show');
+        var total = ok + err;
+        document.getElementById('q-total').textContent = total+'/12 respondidas ('+Math.round(total/12*100)+'%)';
+      });
+    });
+  });
+  window.resetQuiz = function(){
+    ok = 0; err = 0;
+    document.getElementById('q-ok').textContent = '0';
+    document.getElementById('q-err').textContent = '0';
+    document.getElementById('q-total').textContent = '';
+    document.querySelectorAll('.quiz-q').forEach(function(q){
+      q.querySelectorAll('.quiz-opt').forEach(function(b){
+        b.disabled = false;
+        b.classList.remove('correct','wrong');
+      });
+      q.querySelector('.quiz-explain').classList.remove('show');
+    });
+  };
+  document.querySelectorAll('.fc').forEach(function(fc){
+    fc.addEventListener('click', function(){ fc.classList.toggle('flipped'); });
+  });
+})();
+</script>
+
+<footer>
+  D83G — Direito da Criança, do Adolescente e Estatuto da Pessoa Idosa · Unidade I — ECA · UNIP<br>
+  Conteúdo extraído exclusivamente do material da disciplina: Slides, Videoaulas 1 e 2, Questionário e Atividade Teleaula
+</footer>
+
+</body>
+</html>
