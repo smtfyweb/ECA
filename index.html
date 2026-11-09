@@ -83,17 +83,64 @@ body {
   margin-bottom: 1.75rem;
   border-radius: 0 0 var(--radius) var(--radius);
 }
+.header-grid {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.book-cover-wrap {
+  flex-shrink: 0;
+  perspective: 900px;
+}
+.book-cover-img {
+  width: 135px;
+  height: auto;
+  aspect-ratio: 1 / 1.48;
+  border-radius: 3px 6px 6px 3px;
+  box-shadow: -4px 6px 18px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.12);
+  border-left: 3px solid rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+.book-cover-img:hover {
+  transform: translateY(-3px) rotateY(-4deg);
+  box-shadow: -6px 12px 24px rgba(0,0,0,0.32);
+}
+.header-main {
+  flex: 1;
+  min-width: 0;
+}
 .header-eyebrow {
   font-size: 0.63rem; font-weight: 700; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.5rem;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.4rem;
 }
 .page-header h1 {
-  font-size: clamp(1.3rem,3.5vw,1.85rem); font-weight: 800;
-  line-height: 1.1; text-wrap: balance; letter-spacing: -0.03em; color: var(--accent);
+  font-size: clamp(1.3rem,3.2vw,1.85rem); font-weight: 800;
+  line-height: 1.15; text-wrap: balance; letter-spacing: -0.03em; color: var(--accent);
+}
+.header-subtitle {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  margin-top: 0.35rem;
+  line-height: 1.4;
 }
 .header-rule {
   border: none; border-top: 1px solid var(--divider);
-  margin: 0.9rem 0 0.8rem;
+  margin: 0.8rem 0 0.75rem;
+}
+@media (max-width: 600px) {
+  .header-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .book-cover-img {
+    width: 120px;
+    margin: 0 auto;
+  }
+  .bio-row, .priority-legend {
+    justify-content: center;
+  }
 }
 .bio-row {
   display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.85rem;
@@ -534,19 +581,28 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <header class="page-header">
-  <div class="header-eyebrow">D83G · Unidade I · UNIP · Lei 8.069/1990</div>
-  <h1>ECA — Estatuto da Criança e do Adolescente</h1>
-  <hr class="header-rule">
-  <div class="bio-row">
-    <img class="bio-avatar" src="avatar.jpg" alt="André L. Silva">
-    <div class="bio-info">
-      <span class="bio-name">André L. Silva</span>
-      <span class="bio-sub">Graduando 10º Semestre | Direito Unip Alphaville</span>
+  <div class="header-grid">
+    <div class="book-cover-wrap">
+      <img src="capa_livro.jpg" alt="Capa do Livro: ECA — Estatuto da Criança e do Adolescente por André L. Silva" class="book-cover-img">
     </div>
-  </div>
-  <div class="priority-legend">
-    <span class="leg-item leg-high"><span class="leg-dot"></span>Alta prioridade</span>
-    <span class="leg-item leg-pega"><span class="leg-dot"></span>Pegadinha</span>
+    <div class="header-main">
+      <div class="header-eyebrow">D83G · UNIDADE I · UNIP DIREITO · 10º SEMESTRE · 2026</div>
+      <h1>ECA — Estatuto da Criança e do Adolescente</h1>
+      <p class="header-subtitle">Doutrina Sistematizada, Casos Práticos e Jurisprudência Aplicada (Lei 8.069/1990)</p>
+      <hr class="header-rule">
+      <div class="bio-row">
+        <img class="bio-avatar" src="avatar.jpg" alt="André L. Silva">
+        <div class="bio-info">
+          <span class="bio-name">André L. Silva</span>
+          <span class="bio-sub">Graduando 10º Semestre | Direito UNIP Alphaville</span>
+        </div>
+      </div>
+      <div class="priority-legend">
+        <span class="leg-item leg-high"><span class="leg-dot"></span>Alta prioridade</span>
+        <span class="leg-item leg-pega"><span class="leg-dot"></span>Pegadinha</span>
+        <span class="leg-item" style="color:var(--accent); font-weight:700;">Edição 2026</span>
+      </div>
+    </div>
   </div>
 </header>
 
