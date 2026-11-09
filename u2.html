@@ -1,1158 +1,1405 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EPI — Estatuto da Pessoa Idosa · D83G Unidade II</title>
-<meta name="description" content="Mini-aula técnica de véspera: ECA Unidade II + Estatuto da Pessoa Idosa. 10 seções teóricas, 12 exercícios comentados com gabarito e 30 flashcards. UNIP · D83G.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estatuto da Pessoa Idosa — Caderno de Estudos NP2 · UNIP D83G</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="EPI — Estatuto da Pessoa Idosa · D83G Unidade II">
-<meta property="og:description" content="Mini-aula técnica de véspera: ECA cont. + Estatuto da Pessoa Idosa. 10 seções, 12 exercícios, 30 flashcards. UNIP · Lei 10.741/2003.">
+<meta property="og:title" content="Estatuto da Pessoa Idosa — Caderno de Estudos e Revisão NP2 · UNIP D83G">
+<meta property="og:description" content="Caderno de estudos de André L. Silva para a NP2 de Estatuto da Pessoa Idosa e ECA Complementar (D83G). 12 questões oficiais com gabarito 10.0, popovers de lei literal e 32 flashcards.">
 <meta property="og:image" content="https://smtfyweb.github.io/ECA/og-u2.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://smtfyweb.github.io/ECA/u2.html">
-<meta property="og:site_name" content="Guia EPI — UNIP D83G">
+<meta property="og:site_name" content="Guia Estatuto da Pessoa Idosa — UNIP D83G">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EPI — Estatuto da Pessoa Idosa · D83G Unidade II">
-<meta name="twitter:description" content="Mini-aula técnica de véspera: ECA cont. + Estatuto da Pessoa Idosa. 10 seções, 12 exercícios, 30 flashcards.">
+<meta name="twitter:title" content="Estatuto da Pessoa Idosa — Caderno de Estudos e Revisão NP2 · UNIP D83G">
+<meta name="twitter:description" content="Caderno de estudos de André L. Silva para a NP2 de Estatuto da Pessoa Idosa e ECA (D83G). 12 questões gabaritadas, popovers de artigos e flashcards.">
 <meta name="twitter:image" content="https://smtfyweb.github.io/ECA/og-u2.png">
 <style>
 :root {
-  --accent: #2c4a6e;
-  --accent-light: #3d6494;
-  --accent-dark: #1e3350;
-  --accent-muted: #d1dff0;
-  --accent-bg: #f0f4fa;
-  --chip-bg: #e3ebf6;
+  --bg: #f0f4f8; --bg-card: #ffffff; --bg-alt: #e6edf5;
+  --fg: #0e1e34; --fg-muted: #4a5d78; --divider: #cbd7e6;
+  --accent: #122846; --accent-mid: #0b1a2e; --accent-light: #d9e6f5;
+  --pega: #8a5a00; --pega-bg: #fff3d6; --pega-border: #e0c060;
+  --art-fg: #0d325e; --art-bg: #e4edf8;
+  --high-bg: #e0eaf6; --med-bg: #fbeadb;
+  --th-bg: #122846; --tr-alt: #e8f0f8;
+  --gold: #b38b32;
   --radius: 10px;
-  --text: #1a2535;
-  --text-secondary: #4a5a72;
-  --bg: #f7f9fc;
-  --card: #ffffff;
-  --border: #d6e0ee;
-  --shadow: 0 2px 12px rgba(44,74,110,0.08);
-  --warn: #7a4a00;
-  --warn-bg: #fff8e1;
-  --warn-border: #f0c060;
-  --ok: #1a5c38;
-  --ok-bg: #e8f5ee;
-  --ok-border: #4caf80;
-  --err: #7a1515;
-  --err-bg: #fdeaea;
-  --err-border: #e57373;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --accent: #5a85c0;
-    --accent-light: #7aa0d8;
-    --accent-dark: #4068a0;
-    --accent-muted: #2a3d55;
-    --accent-bg: #1a2535;
-    --chip-bg: #233049;
-    --text: #e8eff8;
-    --text-secondary: #9ab0cc;
-    --bg: #111c2a;
-    --card: #192333;
-    --border: #2a3d55;
-    --shadow: 0 2px 12px rgba(0,0,0,0.3);
-    --warn: #d4a017;
-    --warn-bg: #2a2210;
-    --warn-border: #8a6a00;
-    --ok: #4caf80;
-    --ok-bg: #0f2a1c;
-    --ok-border: #2a7a4a;
-    --err: #e57373;
-    --err-bg: #2a0f0f;
-    --err-border: #7a2020;
-  }
+[data-theme="dark"] {
+  --bg: #070e18; --bg-card: #0d1a2c; --bg-alt: #13243c;
+  --fg: #e2eaf5; --fg-muted: #8ca3c3; --divider: #1f3452;
+  --accent: #5d98e2; --accent-mid: #4a80c4; --accent-light: #162842;
+  --pega: #f0c76a; --pega-bg: #3a2d0c; --pega-border: #7a6020;
+  --art-fg: #6cb0ff; --art-bg: #13243d;
+  --high-bg: #192a42; --med-bg: #3a2614;
+  --th-bg: #162842; --tr-alt: #13243c;
+  color-scheme: dark;
 }
-:root[data-theme="dark"] {
-  --accent: #5a85c0;
-  --accent-light: #7aa0d8;
-  --accent-dark: #4068a0;
-  --accent-muted: #2a3d55;
-  --accent-bg: #1a2535;
-  --chip-bg: #233049;
-  --text: #e8eff8;
-  --text-secondary: #9ab0cc;
-  --bg: #111c2a;
-  --card: #192333;
-  --border: #2a3d55;
-  --shadow: 0 2px 12px rgba(0,0,0,0.3);
-  --warn: #d4a017;
-  --warn-bg: #2a2210;
-  --warn-border: #8a6a00;
-  --ok: #4caf80;
-  --ok-bg: #0f2a1c;
-  --ok-border: #2a7a4a;
-  --err: #e57373;
-  --err-bg: #2a0f0f;
-  --err-border: #7a2020;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size: 15px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left,0px));
+  padding-right: max(16px, env(safe-area-inset-right,0px));
+  padding-block: 0 3rem; max-width: 900px; margin-inline: auto;
+  -webkit-font-smoothing: antialiased;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
-a{color:var(--accent-light);text-decoration:none}
-a:hover{text-decoration:underline}
+#theme-btn {
+  position: fixed; top: 12px; right: 16px; z-index: 999;
+  background: var(--accent); color: #fff; border: none;
+  border-radius: var(--radius); padding: 0.3rem 0.9rem;
+  font-size: 0.75rem; font-weight: 600; cursor: pointer;
+  font-family: system-ui,sans-serif; transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#btn-top, #btn-wa {
+  position: fixed; right: 16px; z-index: 998;
+  width: 44px; height: 44px; border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; cursor: pointer; border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: opacity 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+#btn-top {
+  bottom: 72px; background: var(--accent); color: #fff;
+  opacity: 0; pointer-events: none;
+}
+#btn-top.show { opacity: 1; pointer-events: auto; }
+#btn-top:hover { transform: translateY(-2px); }
+#btn-wa {
+  bottom: 16px; background: #25D366; color: #fff;
+}
+/* BARRA SUPERIOR DE NAVEGAÇÃO ENTRE UNIDADES */
+@media (max-width: 600px) {
+  .unit-nav { flex-direction: column; text-align: center; gap: 0.3rem; margin-top: 2.2rem; }
+}
+.unit-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--bg-alt); border: 1px solid var(--divider);
+  padding: 0.5rem 1rem; border-radius: var(--radius); margin: 0.75rem 0 1rem;
+  font-size: 0.8rem; font-weight: 600;
+}
+.unit-nav a {
+  color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.35rem;
+}
+.unit-nav a:hover { text-decoration: underline; }
+.unit-nav .active-unit {
+  color: var(--fg-muted); font-weight: 500;
+}
+/* CABEÇALHO EDITORIAL */
+.page-header {
+  background: var(--bg-card);
+  border: 1px solid var(--divider);
+  border-top: 3px solid var(--accent);
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin-bottom: 1.75rem;
+  border-radius: var(--radius);
+}
+.header-grid {
+  display: flex; align-items: center; gap: 1.5rem;
+}
+.book-cover-wrap {
+  flex-shrink: 0; perspective: 900px;
+}
+.book-cover-img {
+  width: 135px; height: auto; aspect-ratio: 1 / 1.48;
+  border-radius: 3px 6px 6px 3px;
+  box-shadow: -4px 6px 18px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.12);
+  border-left: 3px solid rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+.book-cover-img:hover {
+  transform: translateY(-3px) rotateY(-4deg);
+  box-shadow: -6px 12px 24px rgba(0,0,0,0.32);
+}
+.header-main { flex: 1; min-width: 0; }
+.header-eyebrow {
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.4rem;
+}
+.page-header h1 {
+  font-size: clamp(1.25rem,3.2vw,1.8rem); font-weight: 800;
+  line-height: 1.15; text-wrap: balance; letter-spacing: -0.03em; color: var(--accent);
+}
+.header-subtitle {
+  font-size: 0.85rem; color: var(--fg-muted); margin-top: 0.35rem; line-height: 1.4;
+}
+.header-rule {
+  border: none; border-top: 1px solid var(--divider); margin: 0.8rem 0 0.75rem;
+}
+@media (max-width: 600px) {
+  .header-grid { flex-direction: column; text-align: center; gap: 1rem; }
+  .book-cover-img { width: 120px; margin: 0 auto; }
+  .bio-row, .priority-legend { justify-content: center; }
+}
+.bio-row {
+  display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.85rem;
+}
+.bio-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  object-fit: cover; object-position: top center;
+  border: 2px solid var(--divider); flex-shrink: 0;
+}
+.bio-info { display: flex; flex-direction: column; gap: 0.05rem; }
+.bio-name { font-size: 0.88rem; font-weight: 700; color: var(--fg); }
+.bio-sub { font-size: 0.7rem; color: var(--fg-muted); font-style: italic; }
+.priority-legend { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+.leg-item {
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.67rem; color: var(--fg-muted); letter-spacing: 0.02em;
+}
+.leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.leg-high .leg-dot { background: var(--accent); }
+.leg-pega .leg-dot { background: var(--pega); }
 
-/* HEADER */
-.site-header{background:var(--accent);color:#fff;padding:28px 16px 20px;text-align:center;position:relative}
-.site-header .badge{display:inline-block;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:4px 14px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;margin-bottom:12px;text-transform:uppercase}
-.site-header h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1}
-.site-header .subtitle{font-size:0.95rem;opacity:0.85;margin-top:6px}
-.unit-pill{display:inline-block;background:rgba(255,255,255,0.2);border-radius:6px;padding:3px 10px;font-size:0.8rem;font-weight:700;margin-top:8px;letter-spacing:0.05em}
+/* ÍNDICE */
+.toc {
+  background: var(--bg-card); border: 1px solid var(--divider);
+  border-top: 3px solid var(--accent-mid); border-radius: var(--radius);
+  padding: 1rem 1.2rem 1.1rem; margin-bottom: 1.75rem;
+  font-size: 0.85rem; column-count: 2; column-gap: 1.5rem;
+}
+.toc-title {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--fg-muted); margin-bottom: 0.6rem; column-span: all;
+}
+.toc ol { padding-left: 1.3rem; }
+.toc li { margin-bottom: 0.25rem; break-inside: avoid; }
+.toc a { color: var(--accent); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+@media (max-width: 540px) { .toc { column-count: 1; } }
 
-/* THEME BUTTON */
-#theme-btn{position:fixed;top:12px;right:12px;z-index:999;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:6px 10px;cursor:pointer;font-size:1.1rem;box-shadow:var(--shadow);transition:background 0.2s}
-#theme-btn:hover{background:var(--accent-bg)}
+/* SEÇÕES */
+.section {
+  background: var(--bg-card); border: 1px solid var(--divider);
+  border-radius: var(--radius); margin-bottom: 1.5rem; overflow: hidden;
+}
+.section-header {
+  padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--divider);
+  background: var(--bg-alt); display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;
+}
+.sec-num {
+  font-size: 0.75rem; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.05em; font-variant-numeric: tabular-nums;
+}
+.section-header h2 {
+  font-size: 1.05rem; font-weight: 700; color: var(--fg);
+  letter-spacing: -0.01em; flex: 1; min-width: 200px;
+}
+.prio-badge {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 0.18rem 0.55rem;
+  border-radius: 999px; white-space: nowrap; margin-left: auto;
+}
+.prio-high { background: var(--high-bg); color: var(--accent); }
+.prio-med  { background: var(--med-bg);  color: #7c4010; }
+.prio-pega { background: var(--pega-bg); color: var(--pega); border: 1px solid var(--pega-border); }
+.section-body { padding: 1.15rem 1.25rem; }
+.section-body p { margin-bottom: 0.85rem; }
+.section-body ul, .section-body ol {
+  margin: 0.35rem 0 0.85rem 1.3rem;
+}
+.section-body li { margin-bottom: 0.3rem; }
 
-/* FLOATING BUTTONS */
-#btn-top,#btn-wa{position:fixed;right:16px;z-index:998;width:44px;height:44px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;cursor:pointer;border:none;box-shadow:0 2px 10px rgba(0,0,0,0.2);transition:opacity 0.2s,transform 0.2s;text-decoration:none}
-#btn-top{bottom:72px;background:var(--accent);color:#fff;opacity:0;pointer-events:none}
-#btn-top.show{opacity:1;pointer-events:auto}
-#btn-top:hover{transform:translateY(-2px)}
-#btn-wa{bottom:16px;background:#25D366;color:#fff}
-#btn-wa:hover{transform:translateY(-2px)}
+/* DESTAQUES E BOXES */
+.callout {
+  border-left: 3px solid var(--accent); background: var(--bg-alt);
+  padding: 0.75rem 1rem; border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 0.9rem 0; font-size: 0.88rem;
+}
+.callout-pega {
+  border-left: 3px solid var(--pega); background: var(--pega-bg);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.75rem 1rem; margin: 0.9rem 0; font-size: 0.88rem; color: var(--fg);
+}
+.callout-pega strong { color: var(--pega); }
 
-/* NAV */
-.nav-tabs{display:flex;gap:6px;padding:12px 16px;background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;overflow-x:auto;scrollbar-width:none}
-.nav-tabs::-webkit-scrollbar{display:none}
-.tab-btn{background:transparent;border:1px solid var(--border);border-radius:var(--radius);padding:7px 18px;font-size:0.88rem;font-weight:600;cursor:pointer;color:var(--text-secondary);white-space:nowrap;transition:all 0.15s}
-.tab-btn.active,.tab-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+/* TABELAS */
+.table-wrap { overflow-x: auto; margin: 0.9rem 0; }
+table {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem;
+}
+th {
+  background: var(--th-bg); color: #fff; text-align: left;
+  padding: 0.55rem 0.8rem; font-weight: 600; font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+td {
+  padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--divider); vertical-align: top;
+}
+tr:nth-child(even) td { background: var(--tr-alt); }
 
-/* MAIN */
-main{max-width:820px;margin:0 auto;padding:20px 16px 60px}
+/* POPOVER DE ARTIGOS */
+.art {
+  display: inline-block; font-family: monospace; font-size: 0.82em;
+  color: var(--art-fg); background: var(--art-bg);
+  padding: 0.1em 0.45em; border-radius: 4px; border: 1px solid currentColor;
+  text-decoration: none; cursor: pointer; line-height: 1.25; vertical-align: baseline;
+  transition: all 0.15s ease;
+}
+.art:hover, .art:focus-visible {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+#popover {
+  position: absolute; z-index: 1000;
+  background: var(--bg-card); color: var(--fg);
+  border: 1px solid var(--divider);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem 0.75rem;
+  width: min(380px, 92vw);
+  display: none; font-size: 0.82rem; line-height: 1.5;
+}
+#popover.open { display: block; }
+#popover-backdrop {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,0.25); display: none;
+}
+#popover-backdrop.open { display: block; }
+.pop-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 0.5rem; margin-bottom: 0.4rem; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--divider);
+}
+.pop-key {
+  font-family: monospace; font-weight: 700; color: var(--accent);
+  font-size: 0.82rem; letter-spacing: 0.02em;
+}
+.pop-label {
+  font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+  color: var(--fg-muted); letter-spacing: 0.05em;
+}
+.pop-close {
+  background: none; border: none; font-size: 1.2rem; cursor: pointer;
+  color: var(--fg-muted); line-height: 1; padding: 0 0.2rem; margin-left: 0.3rem;
+}
+.pop-close:hover { color: var(--fg); }
+.pop-body {
+  max-height: 240px; overflow-y: auto; padding-right: 0.25rem; font-style: normal;
+}
+.pop-body strong { color: var(--accent); }
 
-/* SECTION CARDS */
-.section-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
-.section-header{display:flex;align-items:center;gap:12px;padding:14px 18px;cursor:pointer;user-select:none}
-.section-header:hover{background:var(--accent-bg)}
-.section-num{background:var(--accent);color:#fff;border-radius:6px;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0}
-.section-title{font-size:0.98rem;font-weight:700;flex:1}
-.section-arts{font-size:0.75rem;color:var(--text-secondary);font-weight:500;white-space:nowrap}
-.chevron{font-size:0.75rem;color:var(--text-secondary);transition:transform 0.2s;flex-shrink:0}
-.section-body{display:none;padding:0 18px 18px;border-top:1px solid var(--border)}
-.section-body.open{display:block}
-.section-body h4{color:var(--accent);font-size:0.9rem;font-weight:700;margin:14px 0 6px}
-
-/* INFO BOXES */
-.info-box{border-left:4px solid var(--accent);background:var(--accent-bg);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:10px 0;font-size:0.88rem}
-.warn-box{border-left:4px solid var(--warn-border);background:var(--warn-bg);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:10px 0;font-size:0.88rem;color:var(--warn)}
-.ok-box{border-left:4px solid var(--ok-border);background:var(--ok-bg);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:10px 0;font-size:0.88rem;color:var(--ok)}
-
-/* TABLE */
-.data-table{width:100%;border-collapse:collapse;font-size:0.85rem;margin:10px 0}
-.data-table th{background:var(--accent);color:#fff;padding:7px 10px;text-align:left;font-weight:700}
-.data-table td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:top}
-.data-table tr:last-child td{border-bottom:none}
-.data-table tr:nth-child(even) td{background:var(--accent-bg)}
-
-/* CHIPS */
-.chip{display:inline-block;background:var(--chip-bg);color:var(--accent);border-radius:5px;padding:2px 8px;font-size:0.78rem;font-weight:700;margin:2px 2px 2px 0}
-.chip.ok{background:var(--ok-bg);color:var(--ok)}
-.chip.err{background:var(--err-bg);color:var(--err)}
-.chip.warn{background:var(--warn-bg);color:var(--warn)}
-
-/* ART LINKS */
-.art-link{cursor:pointer;color:var(--accent-light);font-weight:600;border-bottom:1px dashed var(--accent-light);white-space:nowrap}
-.art-link:hover{color:var(--accent)}
-
-/* ARTS POPOVER */
-#art-popover{display:none;position:fixed;z-index:1000;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;max-width:340px;min-width:260px;box-shadow:0 8px 32px rgba(0,0,0,0.18);font-size:0.84rem;line-height:1.5}
-#art-popover strong{color:var(--accent);font-size:0.9rem;display:block;margin-bottom:4px}
-#art-popover .law-tag{font-size:0.72rem;color:var(--text-secondary);font-weight:600;letter-spacing:0.04em}
-#art-popover-close{float:right;cursor:pointer;font-size:1rem;color:var(--text-secondary);background:none;border:none;padding:0 0 4px 8px;line-height:1}
-
-/* QUIZ */
-.quiz-wrap{display:flex;flex-direction:column;gap:14px}
-.quiz-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-.quiz-header{padding:12px 16px 10px;border-bottom:1px solid var(--border)}
-.quiz-num{font-size:0.75rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em}
-.quiz-q{font-weight:700;font-size:0.95rem;margin-top:4px;line-height:1.5}
-.quiz-q sub{font-size:0.75em;color:var(--text-secondary)}
-.quiz-options{padding:10px 16px;display:flex;flex-direction:column;gap:6px}
-.opt{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;border-radius:8px;cursor:pointer;border:1px solid var(--border);font-size:0.88rem;transition:background 0.15s;user-select:none}
-.opt:hover{background:var(--accent-bg)}
-.opt-letter{background:var(--chip-bg);color:var(--accent);border-radius:5px;min-width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;flex-shrink:0}
-.opt.selected .opt-letter{background:var(--accent);color:#fff}
-.opt.correct{background:var(--ok-bg);border-color:var(--ok-border)}
-.opt.correct .opt-letter{background:var(--ok);color:#fff}
-.opt.wrong{background:var(--err-bg);border-color:var(--err-border)}
-.opt.wrong .opt-letter{background:var(--err);color:#fff}
-.quiz-reveal{display:none;padding:10px 16px 14px;border-top:1px solid var(--border);background:var(--accent-bg);font-size:0.85rem}
-.quiz-reveal.show{display:block}
-.quiz-reveal .label{font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
-.quiz-reveal .label.ok{color:var(--ok)}
-.quiz-reveal .label.err{color:var(--err)}
-.quiz-actions{padding:4px 16px 12px;display:flex;gap:8px}
-.btn-check{background:var(--accent);color:#fff;border:none;border-radius:var(--radius);padding:7px 18px;font-size:0.85rem;font-weight:700;cursor:pointer}
-.btn-check:hover{background:var(--accent-dark)}
-.btn-reset{background:transparent;color:var(--text-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:7px 14px;font-size:0.82rem;cursor:pointer}
-.btn-reset:hover{background:var(--accent-bg)}
-.quiz-fundamento{font-size:0.82rem;color:var(--text-secondary);margin-top:6px;padding-top:6px;border-top:1px solid var(--border)}
+/* EXERCÍCIOS */
+.q-card {
+  border: 1px solid var(--divider); border-radius: var(--radius);
+  margin-bottom: 1.2rem; padding: 1.1rem; background: var(--bg-card);
+}
+.q-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 0.6rem; font-size: 0.75rem; font-weight: 700;
+  color: var(--accent);
+}
+.q-tag {
+  background: var(--bg-alt); padding: 0.15rem 0.55rem; border-radius: 999px;
+  font-size: 0.65rem; color: var(--fg-muted); font-weight: 600;
+}
+.q-text { font-weight: 600; margin-bottom: 0.85rem; font-size: 0.92rem; }
+.q-opts { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 0.85rem; }
+.q-opt {
+  display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.8rem;
+  border: 1px solid var(--divider); border-radius: 6px; cursor: pointer;
+  background: var(--bg-alt); transition: all 0.15s ease; font-size: 0.86rem; text-align: left;
+}
+.q-opt:hover { border-color: var(--accent); }
+.q-opt.correct { background: #e6f4ea; border-color: #34a853; color: #137333; font-weight: 600; }
+.q-opt.wrong { background: #fce8e6; border-color: #ea4335; color: #c5221f; }
+.q-exp {
+  display: none; padding: 0.75rem 0.9rem; background: var(--bg-alt);
+  border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+  font-size: 0.82rem; margin-top: 0.65rem; line-height: 1.5;
+}
+.q-exp.show { display: block; }
+.q-exp strong { color: var(--accent); }
 
 /* FLASHCARDS */
-.fc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.fc-wrap{perspective:800px}
-.fc{width:100%;min-height:120px;position:relative;transform-style:preserve-3d;transition:transform 0.45s;cursor:pointer}
-.fc.flipped{transform:rotateY(180deg)}
-.fc-f,.fc-a{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:center;padding:16px;font-size:0.85rem;line-height:1.5;border:1px solid var(--border)}
-.fc-f{background:var(--card);box-shadow:var(--shadow)}
-.fc-a{background:var(--accent);color:#fff;transform:rotateY(180deg);box-shadow:var(--shadow)}
-.fc-num{font-size:0.7rem;font-weight:700;color:var(--text-secondary);margin-bottom:6px;letter-spacing:0.06em}
-.fc-f .fc-num{color:var(--text-secondary)}
-.fc-a .fc-num{color:rgba(255,255,255,0.65)}
-.fc-hint{font-size:0.72rem;color:var(--text-secondary);margin-top:8px;font-style:italic}
-
-/* SECTION TABS CONTENT */
-.tab-content{display:none}
-.tab-content.active{display:block}
-
-/* PROGRESS BAR */
-.progress-wrap{background:var(--accent-muted);border-radius:4px;height:6px;margin:16px 0 4px;overflow:hidden}
-.progress-bar{height:100%;background:var(--accent);border-radius:4px;transition:width 0.3s}
-.progress-label{font-size:0.78rem;color:var(--text-secondary);margin-bottom:14px}
-
-/* FOOTER / BIO */
-.bio-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;gap:16px;align-items:flex-start;margin-top:24px;box-shadow:var(--shadow)}
-.bio-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--accent)}
-.bio-name{font-weight:800;font-size:1rem}
-.bio-sub{font-size:0.82rem;color:var(--text-secondary);margin-top:2px}
-.bio-links{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-.bio-link{font-size:0.78rem;background:var(--chip-bg);color:var(--accent);border-radius:5px;padding:3px 10px;font-weight:600}
-
-.section-body p{margin-top:8px;font-size:0.9rem}
-.section-body ul,.section-body ol{margin:8px 0 8px 20px;font-size:0.9rem}
-.section-body li{margin-bottom:4px}
-.section-body strong{color:var(--accent)}
-
-.case-box{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:var(--radius);padding:12px 16px;margin:12px 0;font-size:0.88rem}
-.case-box .case-title{font-weight:700;color:var(--warn);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
-
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
-@media(max-width:500px){.two-col{grid-template-columns:1fr}}
-
-.divider{border:none;border-top:1px solid var(--border);margin:16px 0}
+.fc-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem; margin-top: 1rem;
+}
+.fc-card {
+  perspective: 1000px; height: 165px; cursor: pointer;
+}
+.fc-inner {
+  position: relative; width: 100%; height: 100%; text-align: center;
+  transition: transform 0.45s; transform-style: preserve-3d;
+  border: 1px solid var(--divider); border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.fc-card.flipped .fc-inner { transform: rotateY(180deg); }
+.fc-front, .fc-back {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  padding: 1.1rem; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; border-radius: var(--radius);
+}
+.fc-front { background: var(--bg-card); color: var(--fg); }
+.fc-front .fc-q { font-size: 0.88rem; font-weight: 700; color: var(--accent); line-height: 1.35; }
+.fc-front .fc-hint { font-size: 0.65rem; color: var(--fg-muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.fc-back {
+  background: var(--accent); color: #fff; transform: rotateY(180deg);
+  font-size: 0.84rem; line-height: 1.4; padding: 0.9rem 1.1rem;
+}
+.fc-back strong { color: var(--gold); }
 </style>
 </head>
 <body>
 
-<button id="theme-btn" title="Alternar tema" onclick="(function(){var r=document.documentElement;var t=r.dataset.theme;if(!t){var d=window.matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=d?'light':'dark'}else{r.dataset.theme=t==='dark'?'light':'dark'}})()">🌓</button>
+<button id="theme-btn" title="Alternar tema">🌓 Tema</button>
+<a href="#top" id="btn-top" title="Voltar ao topo">↑</a>
+<a href="https://wa.me/?text=Confira%20o%20Caderno%20de%20Estudos%20NP2%20de%20Estatuto%20da%20Pessoa%20Idosa%20(D83G)%20por%20Andr%C3%A9%20L.%20Silva:%20https://smtfyweb.github.io/ECA/u2.html" id="btn-wa" target="_blank" rel="noopener" title="Compartilhar no WhatsApp">💬</a>
 
-<header class="site-header">
-  <div class="badge">D83G · Direito da Criança, Adolescente e Estatuto da Pessoa Idosa</div>
-  <h1>Estatuto da Pessoa Idosa</h1>
-  <div class="subtitle">ECA — Unidade II + Lei 10.741/2003</div>
-  <div class="unit-pill">UNIDADE II</div>
+<!-- Barra de Navegação Rápida entre Unidades -->
+<div class="unit-nav" id="top">
+  <a href="index.html">← Ir para Unidade I (ECA)</a>
+  <span class="active-unit">Você está na <strong>Unidade II (Estatuto da Pessoa Idosa)</strong></span>
+</div>
+
+<header class="page-header">
+  <div class="header-grid">
+    <div class="book-cover-wrap">
+      <img src="capa_livro_idoso.jpg" alt="Capa: Estatuto da Pessoa Idosa — Caderno de Estudos Dirigidos e Revisão NP2 por André L. Silva" class="book-cover-img">
+    </div>
+    <div class="header-main">
+      <div class="header-eyebrow">D83G · UNIDADE II · UNIP DIREITO · 10º SEMESTRE · PREPARAÇÃO NP2</div>
+      <h1>Estatuto da Pessoa Idosa &amp; ECA Complementar</h1>
+      <p class="header-subtitle">Caderno de Estudos Dirigidos · Lei 10.741/2003, Lei 14.423/2022 e ECA (Viagem e Ato Infracional)</p>
+      <hr class="header-rule">
+      <div class="bio-row">
+        <img class="bio-avatar" src="avatar.jpg" alt="André L. Silva">
+        <div class="bio-info">
+          <span class="bio-name">André L. Silva</span>
+          <span class="bio-sub">Graduando 10º Semestre | Direito UNIP Alphaville</span>
+        </div>
+      </div>
+      <div class="priority-legend">
+        <span class="leg-item leg-high"><span class="leg-dot"></span>Alta prioridade</span>
+        <span class="leg-item leg-pega"><span class="leg-dot"></span>Pegadinha</span>
+        <span class="leg-item" style="color:var(--accent); font-weight:700;">Edição 2026</span>
+      </div>
+    </div>
+  </div>
 </header>
 
-<nav class="nav-tabs" role="tablist">
-  <button class="tab-btn active" onclick="showTab('teoria',this)" role="tab">Teoria (10)</button>
-  <button class="tab-btn" onclick="showTab('quiz',this)" role="tab">Exercícios (12)</button>
-  <button class="tab-btn" onclick="showTab('flashcards',this)" role="tab">Flashcards (30)</button>
+<nav class="toc">
+  <div class="toc-title">Sumário do Caderno</div>
+  <ol>
+    <li><a href="#s1">ECA — Autorização para Viagem Nacional e Internacional</a></li>
+    <li><a href="#s2">Política de Atendimento e Linhas de Ação</a></li>
+    <li><a href="#s3">Medidas de Proteção e Afastamento Cautelar do Agressor</a></li>
+    <li><a href="#s4">Ato Infracional e Medidas Socioeducativas (Caso Malaquias)</a></li>
+    <li><a href="#s5">Estatuto da Pessoa Idosa — Conceito, Evolução e Princípios</a></li>
+    <li><a href="#s6">Alimentos e Direito à Vida e à Saúde</a></li>
+    <li><a href="#s7">Educação, Cultura, Esporte e Lazer</a></li>
+    <li><a href="#s8">Profissionalização, Trabalho e Concursos Públicos</a></li>
+    <li><a href="#s9">Habitação, Acolhimento e Transporte Coletivo</a></li>
+    <li><a href="#s10">Mapa de Pegadinhas Críticas de Prova</a></li>
+    <li><a href="#s11">Exercícios Oficiais Comentados (12 Questões)</a></li>
+    <li><a href="#s12">Flashcards de Memorização Ativa (32 Cards)</a></li>
+  </ol>
 </nav>
 
-<main>
-
-<!-- ===== TEORIA ===== -->
-<div id="tab-teoria" class="tab-content active">
-
 <!-- S1 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">1</div>
-    <div class="section-title">Autorização para Viagem de Crianças e Adolescentes</div>
-    <div class="section-arts">Arts. 83–85</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s1">
+  <div class="section-header">
+    <span class="sec-num">01</span>
+    <h2>ECA — Autorização para Viagem Nacional e Internacional</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <div class="info-box"><strong>Regra geral (Art. 83):</strong> criança/adolescente menor de 16 anos só viaja em condições especiais. Objetivo: prevenir ameaça ou violação de direitos.</div>
-    <h4>Viagem Nacional — menor de 16 anos</h4>
-    <p>Autorização <strong>dispensada</strong> se:</p>
+    <p>O controle estatal e parental sobre o deslocamento de crianças e adolescentes visa prevenir a subtração de incapazes, o tráfico internacional, a exploração sexual e a violação de direitos fundamentais (<span class="art" data-key="ECA83">ECA art. 83</span>).</p>
+    
+    <h4>1. Viagem Nacional — Menores de 16 Anos</h4>
+    <p>A autorização é <strong>dispensada</strong> quando a criança ou adolescente menor de 16 anos estiver acompanhado de:</p>
     <ul>
-      <li>Acompanhado dos pais; <strong>ou</strong></li>
-      <li>Acompanhado de parente até 3º grau (avós, tios); <strong>ou</strong></li>
-      <li>Autorização de qualquer um dos pais por escritura pública ou documento particular com <strong>firma reconhecida em cartório</strong>.</li>
+      <li>Ambos os pais ou do responsável legal;</li>
+      <li>Parente de até o <strong>3º grau</strong> (avós, bisavós, tios ou irmãos maiores de 18 anos), comprovado documentalmente o parentesco;</li>
+      <li>Pessoa maior expressamente autorizada por qualquer um dos pais por meio de <strong>escritura pública ou documento particular com firma reconhecida em cartório</strong>.</li>
     </ul>
-    <div class="warn-box"><strong>Atenção:</strong> sem parentesco e sem autorização escrita → não pode viajar.</div>
-    <h4>Adolescente ≥ 16 anos — viagem nacional</h4>
-    <p>Pode viajar pelo território nacional portando apenas o <strong>documento oficial de identidade (RG)</strong>. Dispensa autorização judicial ou dos pais.</p>
-    <h4>Viagem ao Exterior — <span class="art-link" data-art="84eca">Art. 84</span></h4>
-    <p>Autorização <strong>dispensada</strong> se acompanhado:</p>
+    
+    <div class="callout-pega">
+      <strong>⚠️ Pegadinha de Prova:</strong> O adolescente com <strong>16 anos completos ou mais</strong> pode viajar por todo o território nacional desacompanhado portando apenas o seu <strong>RG original</strong>. Não necessita de autorização judicial e nem dos pais.
+    </div>
+
+    <h4>2. Viagem ao Exterior (<span class="art" data-key="ECA84">ECA art. 84</span>)</h4>
+    <p>A autorização judicial é <strong>dispensável</strong> se a criança ou adolescente estiver acompanhado:</p>
     <ul>
-      <li><strong>De ambos os pais</strong> (ou responsável); <strong>ou</strong></li>
-      <li>De <strong>um dos pais</strong>, com autorização expressa do outro, por documento com <strong>firma reconhecida</strong>.</li>
+      <li>De ambos os pais ou responsáveis legais;</li>
+      <li>De apenas um dos pais, <strong>desde que expressamente autorizado pelo outro genitor</strong> por meio de documento com firma reconhecida.</li>
     </ul>
-    <p>Exigência fundamental: impede subtração internacional de incapazes por genitor em litígio familiar.</p>
-    <h4>Viagem com Estrangeiro — <span class="art-link" data-art="85eca">Art. 85</span></h4>
-    <div class="warn-box"><strong>SEMPRE necessita:</strong> prévia e expressa autorização judicial. Nenhuma criança ou adolescente nascido em território nacional pode sair do país com estrangeiro residente/domiciliado no exterior sem ela.</div>
-    <p>Finalidade: prevenir tráfico internacional, trabalho degradante, exploração sexual e remoção ilegal de órgãos.</p>
-    <table class="data-table">
-      <tr><th>Situação</th><th>Requisito</th></tr>
-      <tr><td>Nacional, &lt;16, com pais</td><td>Nenhum</td></tr>
-      <tr><td>Nacional, &lt;16, com parente 3º grau</td><td>Nenhum</td></tr>
-      <tr><td>Nacional, &lt;16, sozinho ou 3º</td><td>Autorização escrita + firma reconhecida</td></tr>
-      <tr><td>Nacional, ≥16</td><td>Apenas RG</td></tr>
-      <tr><td>Exterior, com ambos os pais</td><td>Nenhum</td></tr>
-      <tr><td>Exterior, com um dos pais</td><td>Autorização do outro, firma reconhecida</td></tr>
-      <tr><td>Exterior, com estrangeiro</td><td>Autorização judicial SEMPRE</td></tr>
-    </table>
+
+    <h4>3. Saída do País em Companhia de Estrangeiro (<span class="art" data-key="ECA85">ECA art. 85</span>)</h4>
+    <div class="callout">
+      <strong>Regra Inflexível:</strong> Sem prévia e expressa <strong>autorização judicial</strong>, nenhuma criança ou adolescente nascido em território nacional poderá sair do País em companhia de estrangeiro residente ou domiciliado no exterior.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Modalidade de Viagem</th><th>Idade / Situação</th><th>Requisito Legal Exigido</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nacional</td><td>Menor de 16 anos desacompanhado</td><td>Autorização escrita com firma reconhecida ou autorização judicial (válida por até 2 anos)</td></tr>
+          <tr><td>Nacional</td><td>Adolescente ≥ 16 anos</td><td>Apenas Documento Oficial com foto (RG)</td></tr>
+          <tr><td>Internacional</td><td>Com um dos pais apenas</td><td>Autorização expressa do outro genitor com firma reconhecida</td></tr>
+          <tr><td>Internacional</td><td>Com estrangeiro residente fora</td><td><strong>Autorização Judicial Obrigatória SEMPRE</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- S2 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">2</div>
-    <div class="section-title">Política de Atendimento</div>
-    <div class="section-arts">Art. 86</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s2">
+  <div class="section-header">
+    <span class="sec-num">02</span>
+    <h2>Política de Atendimento e Linhas de Ação</h2>
+    <span class="prio-badge prio-med">Média Prioridade</span>
   </div>
   <div class="section-body">
-    <p>A política de atendimento dos direitos da criança e do adolescente far-se-á por meio de um conjunto articulado de ações governamentais e não governamentais, fundado em dois pilares:</p>
-    <div class="two-col">
-      <div class="info-box"><strong>Descentralização político-administrativa</strong><br>As ações são distribuídas entre União, Estados e Municípios, não centralizadas.</div>
-      <div class="info-box"><strong>Municipalização do atendimento</strong><br>O atendimento ocorre preferencialmente no município, onde a criança e a família vivem.</div>
-    </div>
-    <h4>Atores de atendimento</h4>
+    <p>A política de atendimento dos direitos infantojuvenis é articulada entre Poder Público e Sociedade Civil (<span class="art" data-key="ECA86">ECA art. 86</span>), alicerçada sobre diretrizes centrais:</p>
     <ul>
-      <li><strong>Conselhos Tutelares</strong> — aplicam medidas de proteção;</li>
-      <li><strong>Conselhos de Direitos</strong> (municipal, estadual, federal) — formulam políticas;</li>
-      <li><strong>Fundos da Infância e Adolescência (FIA)</strong> — financiam programas.</li>
+      <li><strong>Municipalização do atendimento:</strong> descentralização político-administrativa para aproximar os serviços das bases comunitárias onde vivem as famílias;</li>
+      <li><strong>Criação e manutenção dos Conselhos Tutelares:</strong> órgãos permanentes e autônomos, não jurisdicionais, encarregados de zelar pelo cumprimento dos direitos (<span class="art" data-key="ECA131">ECA art. 131</span>);</li>
+      <li><strong>Conselho Municipal dos Direitos da Criança e do Adolescente (CMDCA):</strong> órgão deliberativo e controlador das políticas e gestor do Fundo dos Direitos da Infância (FIA);</li>
+      <li><strong>Integração operacional:</strong> articulação entre Judiciário, Ministério Público, Defensoria, Segurança e Assistência Social para agilizar a apuração de atos infracionais e a proteção de acolhidos.</li>
     </ul>
   </div>
-</div>
+</section>
 
 <!-- S3 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">3</div>
-    <div class="section-title">Medidas Protetivas, Pais e Afastamento</div>
-    <div class="section-arts">Arts. 101, 129, 130</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s3">
+  <div class="section-header">
+    <span class="sec-num">03</span>
+    <h2>Medidas de Proteção e Afastamento Cautelar do Agressor</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Acolhimento Institucional e Familiar — <span class="art-link" data-art="101eca">Art. 101 §1º</span></h4>
-    <div class="info-box">São medidas <strong>provisórias e excepcionais</strong>, utilizadas como transição para a reintegração familiar ou colocação em família substituta. <strong>Não implicam privação de liberdade.</strong></div>
-    <h4>Medidas pertinentes aos pais ou responsáveis — <span class="art-link" data-art="129eca">Art. 129</span></h4>
-    <p>O sistema intervém no núcleo familiar quando necessário para proteger a criança/adolescente:</p>
+    <p>As medidas de proteção (<span class="art" data-key="ECA98">ECA art. 98</span>) são aplicáveis sempre que os direitos forem ameaçados ou violados por: (I) ação ou omissão da sociedade ou do Estado; (II) falta, omissão ou abuso dos pais ou responsável; ou (III) em razão da própria conduta da criança ou adolescente.</p>
+    
+    <h4>Rol de Medidas de Proteção (<span class="art" data-key="ECA101">ECA art. 101</span>):</h4>
     <ol>
-      <li>Encaminhamento a programas de proteção e promoção da família;</li>
+      <li>Encaminhamento aos pais ou responsável, mediante termo de responsabilidade;</li>
+      <li>Orientação, apoio e acompanhamento temporários;</li>
+      <li>Matrícula e frequência obrigatórias em estabelecimento oficial de ensino;</li>
+      <li>Inclusão em programas comunitários de auxílio à família;</li>
+      <li>Requisição de tratamento médico, psicológico ou psiquiátrico;</li>
       <li>Inclusão em programa de tratamento a alcoólatras e toxicômanos;</li>
-      <li>Encaminhamento a tratamento psicológico ou psiquiátrico;</li>
-      <li>Encaminhamento a cursos de orientação parental;</li>
-      <li>Obrigação de matricular o filho na rede escolar e acompanhar frequência/aproveitamento;</li>
-      <li>Advertência, perda da guarda, destituição da tutela e suspensão/perda do poder familiar.</li>
+      <li><strong>Acolhimento institucional</strong> e <strong>Acolhimento familiar</strong> (medidas provisórias e excepcionais, utilizáveis como transição para reintegração familiar ou adoção, sem implicar privação de liberdade);</li>
+      <li>Colocação em família substituta (guarda, tutela ou adoção).</li>
     </ol>
-    <h4>Afastamento do agressor — <span class="art-link" data-art="130eca">Art. 130</span></h4>
-    <div class="warn-box">Verificada hipótese de <strong>maus-tratos, opressão ou abuso sexual</strong> praticados pelos pais ou responsáveis, a autoridade judiciária poderá determinar <strong>cautelarmente o afastamento do agressor</strong> da moradia comum.</div>
-    <h4>Papel da escola e da saúde</h4>
-    <p>Desempenham vigilância ativa para identificar sinais de maus-tratos ou negligência. <strong>Dever de notificar</strong> casos suspeitos.</p>
+
+    <div class="callout">
+      <strong>Divisão de Competências:</strong> O Conselho Tutelar tem competência para aplicar as medidas dos incisos I a VII do art. 101 (<span class="art" data-key="ECA136">ECA art. 136, I</span>). Contudo, a colocação em família substituta, perda de guarda, tutela e destituição do poder familiar são de <strong>competência exclusiva da Autoridade Judiciária</strong>.
+    </div>
+
+    <h4>Afastamento Cautelar do Agressor (<span class="art" data-key="ECA130">ECA art. 130</span>)</h4>
+    <p>Verificada a prática de maus-tratos, opressão ou abuso sexual perpetrados pelos pais ou responsáveis, a autoridade judiciária poderá determinar cautelarmente o <strong>afastamento imediato do agressor da moradia comum</strong>, preservando a criança em seu lar.</p>
   </div>
-</div>
+</section>
 
 <!-- S4 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">4</div>
-    <div class="section-title">Ato Infracional e Inimputabilidade Penal</div>
-    <div class="section-arts">Arts. 103–105</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s4">
+  <div class="section-header">
+    <span class="sec-num">04</span>
+    <h2>Ato Infracional e Medidas Socioeducativas (Caso Malaquias)</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Conceito — <span class="art-link" data-art="103eca">Art. 103</span></h4>
-    <p>Considera-se ato infracional a <strong>conduta descrita como crime ou contravenção penal</strong>.</p>
-    <h4>Inimputabilidade — <span class="art-link" data-art="104eca">Art. 104</span></h4>
-    <div class="info-box">Os menores de 18 anos são <strong>penalmente inimputáveis</strong>. Não incide o Código Penal nem o conceito de culpabilidade penal. Sujeitam-se exclusivamente às normas do ECA.<br><strong>Referência temporal:</strong> considera-se a <strong>idade à data do fato</strong>.</div>
-    <h4>Criança vs. Adolescente</h4>
-    <div class="two-col">
-      <div class="warn-box"><strong>Criança (&lt;12 anos incompletos)</strong><br>Pratica conduta análoga a crime → NÃO se aplica art. 112. Sujeita-se <strong>exclusivamente às medidas de proteção do art. 101</strong>, pelo Conselho Tutelar e pelos pais.</div>
-      <div class="ok-box"><strong>Adolescente (12 a 18 anos)</strong><br>Sujeita-se às <strong>medidas socioeducativas do art. 112</strong>, que podem ser aplicadas cumulativamente com as protetivas.</div>
+    <p>Considera-se <strong>ato infracional</strong> a conduta descrita na legislação como crime ou contravenção penal (<span class="art" data-key="ECA103">ECA art. 103</span>). Os menores de 18 anos são penalmente inimputáveis (<span class="art" data-key="CF228">CF art. 228</span> c/c <span class="art" data-key="ECA104">ECA art. 104</span>), sendo a idade aferida estritamente na <strong>data do fato</strong>.</p>
+
+    <div class="callout-pega">
+      <strong>🎯 Caso Malaquias (A Clássica Questão de Prova UNIP):</strong><br>
+      "Malaquias, com 11 anos e 10 meses de idade, praticou conduta análoga a roubo qualificado com emprego de arma."<br>
+      <strong>Solução Jurídica:</strong> Como Malaquias tem menos de 12 anos, ele é categorizado legalmente como <strong>CRIANÇA</strong> (<span class="art" data-key="ECA2">ECA art. 2º</span>). Às crianças autoras de ato infracional <strong>JAMAIS se aplicam medidas socioeducativas do art. 112</strong> (internação, semiliberdade, etc.). Aplicam-se exclusivamente as <strong>medidas protetivas do art. 101</strong> (<span class="art" data-key="ECA105">ECA art. 105</span>), pelo Conselho Tutelar.
     </div>
-    <h4>Art. 105</h4>
-    <p>Ao ato infracional praticado por <strong>criança</strong> corresponderão as medidas previstas no <span class="art-link" data-art="101eca">art. 101</span>.</p>
-    <div class="case-box">
-      <div class="case-title">Caso Malaquias — Interatividade Videoaula 1</div>
-      <p><strong>Fato:</strong> Malaquias, 11 anos e 10 meses, praticou ato análogo ao roubo.</p>
-      <p><strong>Resposta (D):</strong> É <strong>criança</strong> (menos de 12 anos completos). Aplica-se exclusivamente o art. 101 (medidas de proteção). Não cabem as socioeducativas do art. 112.</p>
+
+    <h4>Medidas Socioeducativas — Aplicáveis Exclusivamente a Adolescentes (<span class="art" data-key="ECA112">ECA art. 112</span>):</h4>
+    <ul>
+      <li>Advertência verbal;</li>
+      <li>Obrigação de reparar o dano causado à vítima;</li>
+      <li>Prestação de serviços comunitários (máximo de 8 horas semanais por até 6 meses);</li>
+      <li>Liberdade assistida (mínimo de 6 meses);</li>
+      <li>Regime de Semiliberdade;</li>
+      <li><strong>Internação em estabelecimento educacional:</strong> medida extrema de privação de liberdade.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Hipóteses Taxativas de Internação (<span class="art" data-key="ECA122">ECA art. 122</span>):</strong>
+      <ol>
+        <li>Ato infracional cometido mediante <strong>grave ameaça ou violência à pessoa</strong>;</li>
+        <li><strong>Reiteração</strong> no cometimento de outras infrações graves;</li>
+        <li><strong>Descumprimento reiterado e injustificável</strong> de medida socioeducativa anteriormente imposta.</li>
+      </ol>
+      <em>Prazo improrrogável máximo de 3 anos, com desinternação compulsória e obrigatória aos 21 anos completos.</em>
     </div>
   </div>
-</div>
+</section>
 
 <!-- S5 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">5</div>
-    <div class="section-title">Medidas Socioeducativas e Internação</div>
-    <div class="section-arts">Arts. 112, 122</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s5">
+  <div class="section-header">
+    <span class="sec-num">05</span>
+    <h2>Estatuto da Pessoa Idosa — Conceito, Evolução e Princípios</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Rol de medidas socioeducativas — <span class="art-link" data-art="112eca">Art. 112</span></h4>
-    <ol>
-      <li>Advertência;</li>
-      <li>Obrigação de reparar o dano;</li>
-      <li>Prestação de serviços à comunidade (PSC);</li>
-      <li>Liberdade assistida (LA);</li>
-      <li>Semiliberdade;</li>
-      <li><strong>Internação</strong> — única com privação de liberdade.</li>
-    </ol>
-    <h4>Internação — hipóteses taxativas — <span class="art-link" data-art="122eca">Art. 122</span></h4>
-    <div class="warn-box"><strong>Medida extrema.</strong> Somente é aplicável se:</div>
-    <ol>
-      <li>Ato infracional cometido mediante <strong>grave ameaça ou violência à pessoa</strong>;</li>
-      <li><strong>Reiteração</strong> no cometimento de outras infrações graves;</li>
-      <li><strong>Descumprimento reiterado e injustificável</strong> de medida anteriormente imposta.</li>
-    </ol>
-    <div class="info-box">O rol do art. 122 é <strong>taxativo</strong> (numerus clausus). Fora dessas três hipóteses, não cabe internação.</div>
+    <p>Instituído pela <strong>Lei nº 10.741/2003</strong> e atualizado formalmente pela <strong>Lei nº 14.423/2022</strong>, substituiu-se o termo 'idoso' pela expressão inclusiva <strong>'Pessoa Idosa'</strong>, acolhendo a realidade demográfica da feminização do envelhecimento e superando estereótipos pejorativos.</p>
+
+    <h4>Conceito Legal e Direitos Fundamentais</h4>
+    <ul>
+      <li><strong>Faixa Etária:</strong> Pessoa com idade igual ou superior a <strong>60 anos</strong> (<span class="art" data-key="EPI1">EPI art. 1º</span>);</li>
+      <li><strong>Direito Personalíssimo:</strong> O envelhecimento é um direito personalíssimo e a sua proteção é um <strong>direito social</strong> (<span class="art" data-key="EPI2">EPI art. 2º</span>);</li>
+      <li><strong>Dever Constitucional Solidário:</strong> A família, a sociedade e o Estado têm o dever de amparar as pessoas idosas, defendendo sua dignidade, bem-estar e o direito à vida (<span class="art" data-key="CF230">CF art. 230</span> e <span class="art" data-key="CF229">CF art. 229</span>).</li>
+    </ul>
+
+    <div class="callout-pega">
+      <strong>🚨 A Superprioridade dos Maiores de 80 Anos (<span class="art" data-key="EPI3">EPI art. 3º, § 2º</span> — Lei 13.466/2017):</strong><br>
+      Dentre as pessoas idosas, é assegurada prioridade especial aos <strong>maiores de oitenta anos</strong>, atendendo-se suas necessidades sempre preferencialmente em relação aos demais idosos. Em atendimentos de saúde, essa preferência só cede diante de situações de emergência médica.
+    </div>
+
+    <h4>Princípios Estruturantes da Matéria</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Princípio</th><th>Fundamento Legal</th><th>Aplicação Prática</th></tr></thead>
+        <tbody>
+          <tr><td>Ampla Proteção</td><td>CF art. 230 e EPI art. 3º</td><td>Políticas públicas protetivas, ajuda social continuada e rede de suporte estatal</td></tr>
+          <tr><td>Dignidade Humana</td><td>CF art. 1º, III e EPI art. 10</td><td>Inviolabilidade física, psíquica e moral; vedação a tratamento vexatório ou violento</td></tr>
+          <tr><td>Participação Social</td><td>EPI art. 3º, I e art. 20</td><td>Integração comunitária ativa; proibição de segregação e isolamento forçado</td></tr>
+          <tr><td>Independência e Autonomia</td><td>EPI art. 2º e art. 10, § 1º</td><td>Livre arbítrio patrimonial e existencial; direito de gerir sua própria vida</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- S6 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">6</div>
-    <div class="section-title">Estatuto da Pessoa Idosa — Contexto e Base Constitucional</div>
-    <div class="section-arts">Lei 10.741/2003</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s6">
+  <div class="section-header">
+    <span class="sec-num">06</span>
+    <h2>Alimentos e Direito à Vida e à Saúde</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Marcos internacionais (ONU)</h4>
+    <h4>1. A Obrigação de Prestar Alimentos (<span class="art" data-key="EPI11">EPI arts. 11 a 14</span>)</h4>
+    <p>A prestação de alimentos à pessoa idosa obedece a regras especiais altamente cobradas pela banca examinadora:</p>
     <ul>
-      <li><strong>1ª Assembleia — Viena (1992):</strong> plano de ação para promover a independência das pessoas idosas;</li>
-      <li><strong>2ª Assembleia — Madri (2002):</strong> políticas públicas para proteção integral do idoso.</li>
+      <li>Os alimentos são prestados à pessoa idosa <strong>na forma da lei civil</strong> (<span class="art" data-key="EPI11">EPI art. 11</span>);</li>
+      <li><strong>Solidariedade Passiva com Faculdade de Escolha:</strong> A obrigação alimentar é solidária entre os filhos/prestadores, <em>sendo expressamente facultado à pessoa idosa optar entre os prestadores de alimentos</em> (<span class="art" data-key="EPI12">EPI art. 12</span>). Não há litisconsórcio passivo necessário;</li>
+      <li><strong>Subsidiariedade da Assistência Social:</strong> Se a pessoa idosa ou seus familiares não possuírem condições econômicas de prover seu sustento, impõe-se ao <strong>Poder Público</strong> esse provimento, no âmbito da assistência social (<span class="art" data-key="EPI14">EPI art. 14</span>).</li>
     </ul>
-    <h4>Fundamentação constitucional</h4>
-    <table class="data-table">
-      <tr><th>Art. CF/88</th><th>Conteúdo</th></tr>
-      <tr><td><strong>Art. 1º, III</strong></td><td>Dignidade da pessoa humana como fundamento da República</td></tr>
-      <tr><td><strong>Art. 3º, IV</strong></td><td>Objetivo de promover o bem de todos, sem discriminação de idade</td></tr>
-      <tr><td><strong>Art. 229</strong></td><td>Filhos maiores têm <strong>dever legal</strong> de ajudar e amparar os pais na velhice, carência ou enfermidade</td></tr>
-      <tr><td><strong>Art. 230</strong></td><td>Família, sociedade e Estado têm dever de amparar as pessoas idosas</td></tr>
-    </table>
-    <div class="info-box">O art. 229 impõe dever <strong>recíproco e imperativo</strong>: pais cuidam dos filhos menores; filhos cuidam dos pais idosos.</div>
+
+    <h4>2. Direito à Saúde no SUS (<span class="art" data-key="EPI15">EPI art. 15</span>)</h4>
+    <ul>
+      <li>Atenção integral à saúde, garantindo-se <strong>medicamentos de uso continuado gratuitos</strong>, bem como próteses e órteses de reabilitação;</li>
+      <li>Atendimento domiciliar para a pessoa idosa enferma e impossibilitada de locomoção;</li>
+      <li><strong>Atendimento Especializado:</strong> As pessoas idosas com deficiência ou com limitação incapacitante <em>terão atendimento especializado compulsório</em> (<span class="art" data-key="EPI15_4">EPI art. 15, § 1º, IV</span>);</li>
+      <li>Direito a acompanhante em casos de internação hospitalar ou observação médica;</li>
+      <li><strong>Vedação a Planos de Saúde:</strong> É terminantemente vedada a discriminação da pessoa idosa nos planos de saúde pela cobrança de valores diferenciados em razão exclusiva da idade (<span class="art" data-key="EPI15_3">EPI art. 15, § 3º</span>).</li>
+    </ul>
   </div>
-</div>
+</section>
 
 <!-- S7 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">7</div>
-    <div class="section-title">Conceito, Nomenclatura e Princípios Fundamentais</div>
-    <div class="section-arts">Arts. 1º–4º</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s7">
+  <div class="section-header">
+    <span class="sec-num">07</span>
+    <h2>Educação, Cultura, Esporte e Lazer</h2>
+    <span class="prio-badge prio-med">Média Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Conceito legal</h4>
-    <div class="info-box"><strong>Pessoa idosa:</strong> idade <strong>igual ou superior a 60 anos</strong>. O Estatuto possui <strong>118 artigos</strong>.</div>
-    <h4>Nomenclatura</h4>
-    <p>A Lei nº 14.423/2022 (vigência a partir de <strong>25/07/2023</strong>) alterou "Estatuto do Idoso" para <strong>"Estatuto da Pessoa Idosa"</strong> (projeto Sen. Paulo Paim). Motivo: reconhecer a "feminização do envelhecimento" e garantir linguagem inclusiva.</p>
-    <h4>Prioridade especial</h4>
-    <div class="warn-box"><strong>Art. 3º, §2º (Lei 13.466/2017):</strong> É assegurada <strong>prioridade especial aos maiores de 80 anos</strong>, atendendo-se suas necessidades preferencialmente em relação às demais pessoas idosas.</div>
-    <h4>4 Princípios Fundamentais</h4>
-    <ol>
-      <li><strong>Ampla Proteção:</strong> atuação positiva e solidária de família, sociedade e Estado (art. 230, CF). Qualquer dos atores pode ser acionado sem ordem de hierarquia rígida.</li>
-      <li><strong>Dignidade:</strong> envelhecimento não retira a condição de sujeito pleno de direitos. Vedado tratamento desumano ou vexatório. Idade avançada não gera presunção de incapacidade civil.</li>
-      <li><strong>Participação:</strong> combate à segregação e ao isolamento social. Convivência intergeracional preserva saúde mental e cognição.</li>
-      <li><strong>Independência:</strong> livre exercício dos direitos de liberdade, propriedade, igualdade e segurança, sem exigência de acompanhamento ou justificativa familiar.</li>
-    </ol>
-    <h4>Art. 2º — base</h4>
-    <p><span class="art-link" data-art="2epi">Art. 2º</span>: "A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana. O envelhecimento é um direito <strong>personalíssimo</strong> e sua proteção é um <strong>direito social</strong>."</p>
+    <p>O Poder Público deve garantir o acesso a equipamentos culturais, educacionais e desportivos (<span class="art" data-key="EPI20">EPI arts. 20 a 25</span>):</p>
+    <ul>
+      <li><strong>Desconto Cultural de 50%:</strong> É assegurado à pessoa idosa desconto de no mínimo <strong>50% (meia-entrada)</strong> nos ingressos para eventos artísticos, culturais, esportivos e de lazer, bem como o acesso preferencial aos locais (<span class="art" data-key="EPI23">EPI art. 23</span>);</li>
+      <li><strong>Currículos Escolares:</strong> Os currículos dos diversos níveis de ensino incluirão conteúdos voltados ao processo de envelhecimento, ao respeito e à valorização da pessoa idosa, visando erradicar o preconceito (<span class="art" data-key="EPI22">EPI art. 22</span>);</li>
+      <li>Programas universitários e cursos de extensão próprios para a terceira idade (Universidade Aberta à Terceira Idade).</li>
+    </ul>
   </div>
-</div>
+</section>
 
 <!-- S8 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">8</div>
-    <div class="section-title">Direitos: Alimentos, Saúde e Planos</div>
-    <div class="section-arts">Arts. 9, 11–15</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s8">
+  <div class="section-header">
+    <span class="sec-num">08</span>
+    <h2>Profissionalização, Trabalho e Concursos Públicos</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Direito à Vida — <span class="art-link" data-art="9epi">Art. 9º</span></h4>
-    <p>É obrigação do <strong>Estado</strong> garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade.</p>
-    <h4>Alimentos — Arts. 11, 12 e 14</h4>
-    <div class="two-col">
-      <div class="info-box"><strong>Art. 11:</strong> alimentos prestados <strong>na forma da lei civil</strong> (Código Civil), não do Estatuto.</div>
-      <div class="info-box"><span class="art-link" data-art="12epi">Art. 12</span>: obrigação alimentar é <strong>solidária</strong>; <strong>facultado à pessoa idosa optar</strong> entre os prestadores.</div>
+    <p>A pessoa idosa tem pleno direito ao exercício de atividade profissional, respeitadas suas condições físicas, intelectuais e psíquicas (<span class="art" data-key="EPI26">EPI art. 26</span>).</p>
+
+    <div class="callout">
+      <strong>Regra no Mercado de Trabalho (<span class="art" data-key="EPI27">EPI art. 27</span>):</strong><br>
+      Na admissão da pessoa idosa em qualquer trabalho ou emprego, são vedadas a discriminação e a fixação de limite máximo de idade, <strong>inclusive para concursos públicos</strong>, ressalvados os estritos casos em que a natureza técnica do cargo comprovadamente o exigir.
     </div>
-    <div class="ok-box"><span class="art-link" data-art="14epi">Art. 14</span>: se a pessoa idosa ou seus familiares não possuírem condições econômicas de prover o sustento, impõe-se ao <strong>Poder Público</strong> esse provimento, no âmbito da <strong>assistência social (BPC/LOAS)</strong>.</div>
-    <div class="warn-box"><strong>Pegadinha:</strong> Art. 12 diz que é facultado OPTAR entre prestadores — a assertiva que diz "vedado optar" está errada!</div>
-    <h4>Saúde — Arts. 15 a 19</h4>
-    <ul>
-      <li>Atenção integral pelo SUS (prevenção, vacinação domiciliar, atendimento geriátrico, medicação gratuita e próteses);</li>
-      <li>Direito a <strong>acompanhante durante internações</strong> hospitalares;</li>
-      <li>Proibição de exigência de comparecimento físico do idoso enfermo a órgãos públicos;</li>
-      <li>Pessoa idosa lúcida pode <strong>recusar procedimentos médicos invasivos</strong>;</li>
-      <li>Atendimento especializado a idosos com deficiência ou limitação incapacitante (<span class="art-link" data-art="15epi">art. 15 §1º IV</span>);</li>
-      <li><strong>Notificação compulsória</strong> de violência contra o idoso.</li>
-    </ul>
-    <h4>Planos de saúde — <span class="art-link" data-art="15epi">Art. 15 §3º</span></h4>
-    <div class="warn-box"><strong>Vedada</strong> a cobrança de valores diferenciados nos planos de saúde em razão da <strong>idade</strong>.</div>
+
+    <div class="callout-pega">
+      <strong>🚨 A Pegadinha de Ouro de Concurso Público (<span class="art" data-key="EPI27_PU">EPI art. 27, parágrafo único</span>):</strong><br>
+      Em caso de empate em concurso público, <strong>o primeiro critério de desempate será a idade</strong>, dando-se preferência ao candidato de idade mais elevada. É falso afirmar que o critério etário é proibido no desempate; ele é o primeiro obrigatório!
+    </div>
   </div>
-</div>
+</section>
 
 <!-- S9 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">9</div>
-    <div class="section-title">Direitos: Educação, Trabalho e Habitação</div>
-    <div class="section-arts">Arts. 20–28, 37–38</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s9">
+  <div class="section-header">
+    <span class="sec-num">09</span>
+    <h2>Habitação, Acolhimento e Transporte Coletivo</h2>
+    <span class="prio-badge prio-high">Alta Prioridade</span>
   </div>
   <div class="section-body">
-    <h4>Educação, Cultura, Esporte e Lazer — Arts. 20–25</h4>
-    <div class="info-box">Desconto de <strong>50%</strong> no valor dos ingressos para eventos artísticos, culturais, esportivos e de lazer. Justificativa: redução de renda com aposentadoria.</div>
-    <p>Inclusão de conteúdos sobre envelhecimento nos currículos escolares; criação de equipamentos públicos adaptados em praças e parques.</p>
-    <h4>Trabalho — Arts. 26–28</h4>
-    <div class="ok-box"><span class="art-link" data-art="27epi">Art. 27, caput:</span> <strong>Vedada</strong> a discriminação e a fixação de <strong>limite máximo de idade</strong> na admissão para trabalho ou emprego, inclusive concursos públicos — ressalvados casos em que a natureza do cargo o exigir.</div>
-    <div class="warn-box"><strong>Art. 27, PU:</strong> o <strong>primeiro critério de desempate</strong> em concurso público será a idade, dando-se preferência ao de <strong>idade mais elevada</strong>.</div>
-    <p><strong>Art. 26:</strong> pessoa idosa tem direito ao exercício de atividade profissional, respeitadas suas condições físicas, intelectuais e psíquicas.<br><strong>Art. 28, III:</strong> estímulo às empresas privadas para admissão de pessoas idosas.</p>
-    <h4>Habitação — Arts. 37–38</h4>
-    <p><span class="art-link" data-art="37epi">Art. 37, caput:</span> direito à moradia digna no seio da família natural ou substituta, ou <strong>desacompanhada por opção própria</strong>.</p>
-    <div class="info-box"><strong>Art. 37, §2º (ILPIs):</strong> Instituições que abrigarem pessoas idosas são obrigadas a manter padrões de habitação compatíveis com as necessidades delas, bem como alimentação regular e higiene indispensáveis às normas sanitárias.</div>
-    <div class="info-box"><span class="art-link" data-art="38epi">Art. 38, PU:</span> As unidades residenciais reservadas para atendimento à pessoa idosa devem situar-se, <strong>preferencialmente, no pavimento térreo</strong>.</div>
+    <h4>1. Habitação e Entidades de Acolhimento (<span class="art" data-key="EPI37">EPI arts. 37 e 38</span>)</h4>
+    <ul>
+      <li>Direito à moradia digna no seio da família ou <strong>desacompanhado por opção própria</strong> quando assim desejar (não é obrigado a residir em abrigo);</li>
+      <li>As Instituições de Longa Permanência para Idosos (ILPIs) são obrigadas a manter padrões sanitários e de habitação dignos, com alimentação regular e identificação externa visível;</li>
+      <li>Nos programas habitacionais públicos, reserva mínima de <strong>3% das unidades</strong> residenciais, devendo situar-se preferencialmente no <strong>pavimento térreo</strong> (<span class="art" data-key="EPI38_PU">EPI art. 38, parágrafo único</span>).</li>
+    </ul>
+
+    <h4>2. Transporte Coletivo (<span class="art" data-key="EPI39">EPI arts. 39 a 42</span>)</h4>
+    <p>Aos maiores de <strong>65 anos</strong> é assegurada a <strong>gratuidade</strong> dos transportes coletivos públicos urbanos e semiurbanos mediante a simples apresentação de documento de identidade oficial (<span class="art" data-key="EPI39">EPI art. 39</span>).</p>
+
+    <div class="callout-pega">
+      <strong>⚠️ A Exceção da Gratuidade no Transporte (<span class="art" data-key="EPI39_2">EPI art. 39, § 2º</span>):</strong><br>
+      A gratuidade <strong>NÃO abrange</strong> os serviços seletivos e especiais, quando prestados paralelamente aos serviços regulares (ex: ônibus executivos com ar-condicionado de valor superior). É incorreta a assertiva que afirma que a gratuidade é irrestrita e não comporta exceção!
+    </div>
+
+    <ul>
+      <li>Reserva de no mínimo <strong>10% dos assentos</strong> identificados nos veículos de transporte coletivo;</li>
+      <li>Reserva obrigatória de <strong>5% das vagas</strong> nos estacionamentos públicos e privados, posicionadas para garantir melhor comodidade (<span class="art" data-key="EPI41">EPI art. 41</span>);</li>
+      <li>Transporte aéreo: <em>não há gratuidade de passagens</em>, mas há prioridade absoluta de embarque e desembarque.</li>
+    </ul>
   </div>
-</div>
+</section>
 
 <!-- S10 -->
-<div class="section-card">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-num">10</div>
-    <div class="section-title">Direitos: Transporte, Prioridade e Interatividades</div>
-    <div class="section-arts">Arts. 39–42, 3º</div>
-    <div class="chevron">▼</div>
+<section class="section" id="s10">
+  <div class="section-header">
+    <span class="sec-num">10</span>
+    <h2>Mapa de Pegadinhas Críticas de Prova UNIP</h2>
+    <span class="prio-badge prio-pega">Atenção Máxima</span>
   </div>
   <div class="section-body">
-    <h4>Transporte — Arts. 39–42</h4>
-    <div class="ok-box"><span class="art-link" data-art="39epi">Art. 39:</span> <strong>Gratuidade</strong> nos transportes coletivos <strong>urbanos e semiurbanos</strong> para maiores de <strong>65 anos</strong>, mediante documento oficial com foto.</div>
-    <div class="warn-box"><strong>Exceção (Art. 39, §2º):</strong> a gratuidade NÃO abrange os <strong>serviços seletivos e especiais</strong>, quando prestados paralelamente aos regulares. — Pegadinha recorrente: quem diz que "não comporta exceção" erra!</div>
-    <ul>
-      <li><span class="art-link" data-art="41epi">Art. 41:</span> reserva de <strong>5% das vagas</strong> em estacionamentos públicos e privados, posicionadas próximas aos acessos;</li>
-      <li>Transporte aéreo: <strong>sem gratuidade legal</strong>, mas assegurada <strong>prioridade no embarque</strong>.</li>
-    </ul>
-    <h4>Prioridade — Art. 3º, §1º</h4>
-    <p>São prioritários em 6 categorias (atendimento de saúde, tramitação de processos, execução de atos administrativos, proteção e socorro, embarque no sistema de transporte, acesso a serviços). Inclui <strong>prioridade de recebimento da restituição do IR</strong> (inciso IX).</p>
-    <div class="case-box">
-      <div class="case-title">Interatividade Videoaula 2 — Assertivas I–IV</div>
-      <p><strong>I.</strong> Envelhecimento = direito personalíssimo; proteção = direito social. <span class="chip ok">CORRETA</span> (art. 2º)</p>
-      <p><strong>II.</strong> Obrigação alimentar é solidária para todos os filhos. <span class="chip ok">CORRETA</span> (art. 12)</p>
-      <p><strong>III.</strong> Vedada fixação de limite de idade para trabalho/concursos, salvo natureza do cargo. <span class="chip ok">CORRETA</span> (art. 27)</p>
-      <p><strong>IV.</strong> Gratuidade a <em>todos</em> os meios de transporte, "não comportando exceção". <span class="chip err">INCORRETA</span> — art. 39 §2º prevê exceção para seletivos/especiais.</p>
-      <p><strong>Resposta (C):</strong> apenas I, II e III corretas.</p>
+    <div class="callout-pega">
+      <strong>1. Malaquias e a Criança Infratora:</strong> Criança (&lt;12 anos) não cumpre medida socioeducativa do art. 112 (nunca internação!). Submete-se unicamente às medidas protetivas do art. 101.
+    </div>
+    <div class="callout-pega">
+      <strong>2. Alimentos Solidários:</strong> O idoso pode escolher livremente de qual filho cobrar a pensão integral. O filho demandado não pode exigir que o pai processe todos os outros irmãos.
+    </div>
+    <div class="callout-pega">
+      <strong>3. Idades Críticas Diferenciadas:</strong>
+      <ul>
+        <li>Pessoa Idosa geral: <strong>≥ 60 anos</strong> (EPI art. 1º);</li>
+        <li>Gratuidade no Transporte Coletivo Urbano: <strong>≥ 65 anos</strong> (EPI art. 39);</li>
+        <li>Superprioridade Especial em filas e saúde: <strong>≥ 80 anos</strong> (EPI art. 3º, § 2º). Não confunda com 70 ou 75 anos!</li>
+      </ul>
+    </div>
+    <div class="callout-pega">
+      <strong>4. Concursos Públicos:</strong> A idade mais avançada é o primeiro critério de desempate, sendo obrigatório aplicá-la em primeiro lugar.
+    </div>
+    <div class="callout-pega">
+      <strong>5. Viagem ao Exterior com Estrangeiro:</strong> É a única hipótese do ECA que <em>SEMPRE e impreterivelmente</em> depende de autorização judicial prévia, mesmo que haja consentimento dos pais (art. 85).
     </div>
   </div>
-</div>
+</section>
 
-</div><!-- /tab-teoria -->
-
-<!-- ===== QUIZ ===== -->
-<div id="tab-quiz" class="tab-content">
-
-<div class="progress-wrap"><div class="progress-bar" id="quiz-progress-bar" style="width:0%"></div></div>
-<div class="progress-label" id="quiz-progress-label">0 de 12 respondidas</div>
-
-<div class="quiz-wrap">
-
-<!-- Q1 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 1</div>
-    <div class="quiz-q">No tocante ao direito fundamental "à vida" previsto no Estatuto da Pessoa Idosa, podemos afirmar que:</div>
+<!-- S11: EXERCÍCIOS OFICIAIS -->
+<section class="section" id="s11">
+  <div class="section-header">
+    <span class="sec-num">11</span>
+    <h2>Exercícios Oficiais Comentados (Gabarito Oficial AVA 10.0)</h2>
+    <span class="prio-badge prio-high">12 Questões Oficiais</span>
   </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Nenhuma pessoa idosa será objeto de qualquer tipo de negligência, discriminação, violência, crueldade ou opressão; e todo atentado aos seus direitos, por ação ou omissão, será punido na forma da lei.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>É obrigação do Estado e da sociedade assegurar à pessoa idosa a liberdade, o respeito e a dignidade, como pessoa humana e sujeito de direitos civis, políticos, individuais e sociais, garantidos na Constituição e nas leis.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>É obrigação do Estado garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>O direito ao respeito consiste na inviolabilidade da integridade física, psíquica e moral, abrangendo a preservação da imagem, da identidade, da autonomia, de valores, ideias e crenças, dos espaços e dos objetos pessoais.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>É dever de todos zelar pela dignidade da pessoa idosa, colocando-a a salvo de qualquer tratamento desumano, violento, aterrorizante, vexatório ou constrangedor.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div>Art. 9º — compõe o <em>Capítulo I – Do Direito à Vida</em>. As demais alternativas referem-se ao direito à liberdade/respeito/dignidade (art. 10) ou disposições gerais (art. 4º).</div>
-    <div class="quiz-fundamento">Fundamento: art. 9º da Lei 10.741/2003.</div>
-  </div>
-</div>
+  <div class="section-body">
+    <p style="font-size:0.88rem; color:var(--fg-muted); margin-bottom:1.2rem;">
+      Todas as 12 questões foram extraídas do Questionário e da Teleaula da Unidade II do AVA UNIP. Clique na opção para conferir a correção imediata e a fundamentação legal detalhada.
+    </p>
 
-<!-- Q2 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 2</div>
-    <div class="quiz-q">Sobre a pessoa idosa que não tiver condições de se manter quanto aos alimentos, analise:<br>
-    <sub>I. A obrigação de prestar alimentos é solidária, sendo vedado à pessoa idosa optar entre os prestadores. / II. Se a pessoa idosa ou seus familiares não possuírem condições econômicas, impõe-se ao Poder Público esse provimento, no âmbito da assistência social. / III. A prestação de alimentos à pessoa idosa será prestada na forma estabelecida no Estatuto da Pessoa Idosa.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Somente as assertivas I e II estão corretas.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Somente a assertiva I está correta.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Somente a assertiva II está correta.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Somente a assertiva III está correta.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Todas as assertivas estão incorretas.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div><strong>I — Errada:</strong> art. 12 diz que é <em>facultado</em> optar, não vedado. <strong>II — Correta:</strong> art. 14 (Poder Público supre no âmbito da assistência social). <strong>III — Errada:</strong> art. 11 — alimentos prestados na forma da <em>lei civil</em>, não do Estatuto.</div>
-    <div class="quiz-fundamento">Arts. 11, 12 e 14 da Lei 10.741/2003.</div>
-  </div>
-</div>
+    <!-- Q1 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 01 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Direito à Vida e à Saúde</span>
+      </div>
+      <div class="q-text">
+        No tocante ao direito fundamental “à vida” previsto no Estatuto da Pessoa Idosa, podemos afirmar que:
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Nenhuma pessoa idosa será objeto de qualquer tipo de negligência, discriminação, violência...</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> É obrigação do Estado e da sociedade assegurar à pessoa idosa a liberdade, o respeito e a dignidade...</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> É obrigação do Estado garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> O direito ao respeito consiste na inviolabilidade da integridade física, psíquica e moral...</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> É dever de todos zelar pela dignidade da pessoa idosa, colocando-a a salvo de qualquer tratamento desumano...</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> Conforme o <span class="art" data-key="EPI9">Art. 9º do Estatuto da Pessoa Idosa</span> (Capítulo I – Do Direito à Vida): <em>"É obrigação do Estado garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade"</em>. As demais alternativas tratam do Direito à Dignidade/Respeito (Art. 10) ou do dever geral de prevenção (Art. 4º).
+      </div>
+    </div>
 
-<!-- Q3 -->
-<div class="quiz-card" data-correct="b">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 3</div>
-    <div class="quiz-q">Sobre o Princípio da Ampla Proteção, analise:<br>
-    <sub>I. É obrigação da família, da comunidade, da sociedade e do Poder Público assegurar à pessoa idosa, com absoluta prioridade, a efetivação do direito à vida, à saúde, à alimentação... / II. Para políticas de proteção social básica, não há como assegurar prioridade especial por idade, sob pena de violar a isonomia. / III. É dever de todos prevenir a ameaça ou violação aos direitos da pessoa idosa.</sub></div>
+    <!-- Q2 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 02 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Alimentos à Pessoa Idosa</span>
+      </div>
+      <div class="q-text">
+        A pessoa idosa que, por sua condição, não tiver condições de se manter, no tocante aos alimentos. Analise as assertivas a seguir e assinale a alternativa correta sobre esse assunto:<br><br>
+        I. A obrigação de prestar alimentos é solidária, sendo vedado à pessoa idosa optar entre os prestadores de alimentos.<br>
+        II. Se a pessoa idosa ou seus familiares não possuírem condições econômicas de prover o seu sustento, impõe-se ao Poder Público esse provimento, no âmbito da assistência social.<br>
+        III. A prestação de alimentos à pessoa idosa será prestada na forma estabelecida no Estatuto da Pessoa Idosa.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Somente as assertivas I e II estão corretas.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Somente a assertiva I está correta.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Somente a assertiva II está correta.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Somente a assertiva III está correta.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong><br>
+        • Assertiva I incorreta: O <span class="art" data-key="EPI12">Art. 12 do Estatuto</span> estabelece que é <em>facultado à pessoa idosa optar entre os prestadores</em>.<br>
+        • Assertiva II correta: Transcreve literalmente o <span class="art" data-key="EPI14">Art. 14 do Estatuto</span>.<br>
+        • Assertiva III incorreta: O <span class="art" data-key="EPI11">Art. 11</span> prevê que os alimentos serão prestados <em>"na forma da lei civil"</em> (Código Civil).
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-card" data-correct="b">
+      <div class="q-meta">
+        <span>QUESTÃO 03 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Princípio da Ampla Proteção</span>
+      </div>
+      <div class="q-text">
+        O Princípio da Ampla Proteção, instituído no Estatuto da Pessoa Idosa, envolve políticas públicas de proteções sociais básicas, ajuda social e políticas correcionais. Nesse sentido, analise as assertivas e assinale a correta:<br><br>
+        I. É obrigação da família, da comunidade, da sociedade e do Poder Público assegurar à pessoa idosa, com absoluta prioridade, a efetivação dos direitos fundamentais.<br>
+        II. Para a execução das políticas públicas de proteção social básica, dentre as pessoas idosas, não há como se assegurar prioridade especial em decorrência da idade, sob pena de violar a isonomia.<br>
+        III. É dever de todos prevenir a ameaça ou violação aos direitos da pessoa idosa.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Somente estão corretas as assertivas II e III.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Somente estão corretas as assertivas I e III.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Somente estão corretas as assertivas I e II.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Todas as assertivas estão corretas.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito B):</strong><br>
+        • I correta (<span class="art" data-key="EPI3">Art. 3º caput</span>);<br>
+        • II incorreta: O <span class="art" data-key="EPI3">Art. 3º, § 2º</span> prevê expressamente a prioridade especial aos <strong>maiores de 80 anos</strong> sobre os demais idosos;<br>
+        • III correta (<span class="art" data-key="EPI4">Art. 4º, § 1º</span>).
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 04 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Direitos Fundamentais</span>
+      </div>
+      <div class="q-text">
+        A respeito dos direitos fundamentais destinados às pessoas maiores de 60 anos, analise as assertivas e assinale a alternativa correta:<br><br>
+        I. O envelhecimento é um direito personalíssimo e a sua proteção é um direito social.<br>
+        II. Os alimentos são prestados à pessoa idosa na forma da lei civil e de forma solidária entre os prestadores.<br>
+        III. Na admissão da pessoa idosa em qualquer trabalho ou emprego, é vedada a fixação de limite máximo de idade, inclusive para concursos, ressalvados os casos em que a natureza do cargo o exigir.<br>
+        IV. Aos maiores de 65 anos, é assegurada, pelo Princípio da Assistência Integral, a gratuidade a todos os meios de transportes coletivos públicos urbanos e semiurbanos.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> I, II, III e IV.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> I e IV.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> I, II e III.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> II, III e IV.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> II e III.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> As assertivas I (<span class="art" data-key="EPI2">Art. 2º</span>), II (<span class="art" data-key="EPI11">Arts. 11 e 12</span>) e III (<span class="art" data-key="EPI27">Art. 27</span>) estão corretas. A assertiva IV erra ao generalizar, pois o <span class="art" data-key="EPI39_2">Art. 39, § 2º</span> exclui expressamente os serviços de transporte seletivos e especiais.
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 05 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">ECA — Autorização para Viagem</span>
+      </div>
+      <div class="q-text">
+        Analise as alternativas a seguir e assinale a correta sobre autorização para viagens:
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Nenhuma criança ou adolescente menor de 14 anos poderá viajar para fora da comarca desacompanhado sem autorização judicial.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Em viagem ao exterior, a autorização é dispensável se estiver acompanhado pelo pai ou pela mãe.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Sem prévia e expressa autorização judicial, nenhuma criança ou adolescente nascido em território nacional poderá sair do País em companhia de estrangeiro residente ou domiciliado no exterior.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> A autoridade judiciária poderá, a pedido dos pais, conceder autorização válida por um ano.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> O adolescente maior de 16 anos poderá viajar com pessoa maior desde que expressamente autorizado.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> Trata-se da dicção textual e literal do <span class="art" data-key="ECA85">Art. 85 do ECA</span>. Incorreções: a idade limite nacional é 16 anos (art. 83); com apenas um dos pais ao exterior exige firma reconhecida do outro (art. 84, II); e a autorização judicial pode valer por até 2 anos (art. 83, § 2º).
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-card" data-correct="d">
+      <div class="q-meta">
+        <span>QUESTÃO 06 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Trabalho e Concursos</span>
+      </div>
+      <div class="q-text">
+        No tocante à profissionalização e à proteção ao trabalho, analise as assertivas e assinale a correta:<br><br>
+        I. Na admissão da pessoa idosa em qualquer trabalho ou emprego, são vedadas a discriminação e a fixação de limite de idade, inclusive para concursos, não podendo ser utilizado o critério de idade para desempate.<br>
+        II. Estímulo às empresas privadas para admissão de pessoas idosas ao trabalho.<br>
+        III. Pessoa idosa tem direito ao exercício de atividade profissional, respeitadas suas condições físicas, intelectuais e psíquicas.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Somente a assertiva II está correta.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Somente a assertiva I está correta.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Somente a assertiva III está correta.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Estão corretas as assertivas II e III.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Estão corretas as assertivas I e II.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito D):</strong> A assertiva I erra feio porque o <span class="art" data-key="EPI27_PU">Art. 27, parágrafo único</span> determina que <em>o primeiro critério de desempate em concurso público será a idade mais elevada</em>. As assertivas II (<span class="art" data-key="EPI28">Art. 28, III</span>) e III (<span class="art" data-key="EPI26">Art. 26</span>) estão corretas.
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-card" data-correct="b">
+      <div class="q-meta">
+        <span>QUESTÃO 07 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Direito à Moradia</span>
+      </div>
+      <div class="q-text">
+        Com base na Política Nacional voltada à pessoa idosa com o objetivo de assegurar seus direitos sociais, promovendo autonomia e direito à moradia, analise as assertivas:<br><br>
+        I. A pessoa idosa tem direito à moradia digna, no seio da família natural ou substituta, ou desacompanhada, desde que em instituição pública ou privada.<br>
+        II. As instituições que abrigarem pessoas idosas são obrigadas a manter padrões de habitação compatíveis com as necessidades delas, bem como provê-las com alimentação regular e higiene indispensáveis.<br>
+        III. As unidades residenciais reservadas para atendimento à pessoa idosa devem situar-se, preferencialmente, no pavimento térreo.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Todas as assertivas estão corretas.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Estão corretas as assertivas II e III.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Estão corretas as assertivas I e III.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Estão corretas as assertivas I e II.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Todas as assertivas estão incorretas.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito B):</strong> A assertiva I é falsa porque o <span class="art" data-key="EPI37">Art. 37</span> assegura à pessoa idosa morar desacompanhada por sua própria escolha em sua casa particular, não se limitando a instituições. II (<span class="art" data-key="EPI37">Art. 37, § 2º</span>) e III (<span class="art" data-key="EPI38_PU">Art. 38, parágrafo único</span>) estão perfeitas.
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-card" data-correct="b">
+      <div class="q-meta">
+        <span>QUESTÃO 08 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Garantias e Prioridades</span>
+      </div>
+      <div class="q-text">
+        Dentre as garantias destinadas às pessoas idosas, analise as assertivas e assinale a alternativa correta:<br><br>
+        I. É dever da família e da comunidade prevenir a ameaça ou violação aos direitos da pessoa idosa.<br>
+        II. A pessoa idosa deve ter prioridade no recebimento da restituição do Imposto de Renda.<br>
+        III. Dentre as pessoas idosas, é assegurada prioridade especial aos maiores de 75 anos.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Somente a assertiva I está correta.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Somente a assertiva II está correta.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Somente a assertiva III está correta.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Todas as assertivas estão corretas.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Estão corretas as assertivas II e III.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito B):</strong> O <span class="art" data-key="EPI3_IR">Art. 3º, § 1º, IX</span> prevê prioridade no recebimento da restituição do Imposto de Renda (Assertiva II correta). A assertiva I peca pois o dever de prevenção é de <em>todos</em> (família, comunidade, sociedade e poder público), e a III erra a idade da superprioridade, que é <strong>80 anos</strong> (<span class="art" data-key="EPI3">Art. 3º, § 2º</span>), e não 75 anos.
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 09 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Manutenção da Saúde</span>
+      </div>
+      <div class="q-text">
+        Assinale a alternativa incorreta relacionada à prevenção e à manutenção da saúde da pessoa idosa:
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Devem ser efetivadas por unidades geriátricas com pessoal especializado em geriatria e gerontologia.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> É vedada a discriminação em planos de saúde pela cobrança de valores diferenciados em razão da idade.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Em razão da não discriminação, pessoas idosas com deficiência ou limitação incapacitante não terão atendimento especializado.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Quando de interesse do Poder Público, o agente promoverá o contato necessário com a pessoa idosa em sua residência.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Em todo atendimento de saúde, os maiores de 80 anos terão preferência sobre os demais idosos, exceto emergência.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> A alternativa C é falsa (e por isso o gabarito procurado), pois o <span class="art" data-key="EPI15_4">Art. 15, § 1º, IV</span> impõe o dever de fornecer <strong>atendimento especializado às pessoas idosas com deficiência ou com limitação incapacitante</strong>.
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 10 · QUESTIONÁRIO AVA UNIP</span>
+        <span class="q-tag">Direitos Inerentes à Pessoa Humana</span>
+      </div>
+      <div class="q-text">
+        Analisando os direitos fundamentais da pessoa idosa, é correto afirmar que:
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> É assegurada, prioritariamente, a saúde mental da pessoa idosa.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> O Estatuto da Pessoa Idosa é taxativo na implementação de direitos previstos unicamente nele.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Não há previsão do seu aperfeiçoamento moral, mas apenas intelectual e social.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> O envelhecimento é um direito universal e a sua proteção é um direito privado.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> Transcrição literal do <span class="art" data-key="EPI2">Art. 2º do Estatuto</span>: <em>"A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei..."</em>. O envelhecimento é direito personalíssimo e proteção direito social.
+      </div>
+    </div>
+
+    <!-- Q11 (Teleaula 1) -->
+    <div class="q-card" data-correct="d">
+      <div class="q-meta">
+        <span>QUESTÃO 11 · TELEAULA II UNIP</span>
+        <span class="q-tag">ECA — Ato Infracional praticado por Criança</span>
+      </div>
+      <div class="q-text">
+        Malaquias do Monte, com onze anos e dez meses de idade, praticou ato infracional equiparado ao roubo. Com base no exposto, assinale a alternativa correta:
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> Verificada a prática do ato, a autoridade poderá aplicar a Malaquias as medidas do artigo 112 do ECA.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> Malaquias não poderá ser privado de sua liberdade senão em flagrante de ato infracional.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> Malaquias é penalmente inimputável, não sendo considerado seu ato como infracional.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> Malaquias se sujeitará às medidas previstas no artigo 101 do ECA.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> Por ser menor de 18 anos, os pais de Malaquias devem responder penalmente pelo ato.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito D):</strong> Malaquias possui 11 anos e 10 meses e, portanto, é categorizado como <strong>criança</strong> (<span class="art" data-key="ECA2">Art. 2º do ECA</span>). Às crianças autoras de atos infracionais <strong>NÃO se aplicam medidas socioeducativas do art. 112</strong>, aplicando-se apenas as <strong>medidas protetivas do artigo 101</strong> (<span class="art" data-key="ECA105">Art. 105 do ECA</span>).
+      </div>
+    </div>
+
+    <!-- Q12 (Teleaula 2) -->
+    <div class="q-card" data-correct="c">
+      <div class="q-meta">
+        <span>QUESTÃO 12 · TELEAULA II UNIP</span>
+        <span class="q-tag">Direitos Fundamentais e Gratuidade</span>
+      </div>
+      <div class="q-text">
+        Nos termos do Estatuto da Pessoa Idosa – Lei nº 10.741/2003, analise as assertivas e assinale a alternativa correta:<br><br>
+        I. O envelhecimento é um direito personalíssimo, sendo sua proteção um direito social.<br>
+        II. A obrigação de prestar alimentos é solidária para todos os filhos.<br>
+        III. Na admissão da pessoa idosa em qualquer trabalho ou emprego, é vedada a fixação de limite máximo de idade, inclusive para concursos, ressalvados os casos em que a natureza do cargo o exigir.<br>
+        IV. Aos maiores de 65 anos é assegurada, pelo princípio da assistência integral, a gratuidade em todos os meios de transportes coletivos urbanos e semiurbanos, não comportando exceção.
+      </div>
+      <div class="q-opts">
+        <button class="q-opt" data-opt="a" onclick="checkAns(this)"><strong>A)</strong> I, II, III e IV.</button>
+        <button class="q-opt" data-opt="b" onclick="checkAns(this)"><strong>B)</strong> I e IV, apenas.</button>
+        <button class="q-opt" data-opt="c" onclick="checkAns(this)"><strong>C)</strong> I, II e III, apenas.</button>
+        <button class="q-opt" data-opt="d" onclick="checkAns(this)"><strong>D)</strong> II, III e IV, apenas.</button>
+        <button class="q-opt" data-opt="e" onclick="checkAns(this)"><strong>E)</strong> II e IV, apenas.</button>
+      </div>
+      <div class="q-exp">
+        <strong>Justificativa Oficial (Gabarito C):</strong> As assertivas I (<span class="art" data-key="EPI2">Art. 2º</span>), II (<span class="art" data-key="EPI12">Art. 12</span>) e III (<span class="art" data-key="EPI27">Art. 27</span>) estão absolutamente corretas. A assertiva IV está errada porque o <span class="art" data-key="EPI39_2">Art. 39, § 2º</span> expressamente estabelece uma <strong>exceção à gratuidade</strong> nos transportes: os serviços seletivos e especiais prestados paralelamente aos regulares.
+      </div>
+    </div>
+
   </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Somente as assertivas II e III.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Somente as assertivas I e III.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Somente as assertivas I e II.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Todas as assertivas estão corretas.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Todas as assertivas estão incorretas.</div></div>
+</section>
+
+<!-- S12: FLASHCARDS DE MEMORIZAÇÃO ATIVA -->
+<section class="section" id="s12">
+  <div class="section-header">
+    <span class="sec-num">12</span>
+    <h2>Flashcards de Memorização Ativa (32 Cards)</h2>
+    <span class="prio-badge prio-high">Revisão Rápida NP2</span>
   </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: B</div>
-    <div><strong>I — Correta:</strong> art. 3º, caput. <strong>II — Errada:</strong> art. 3º §2º garante prioridade especial a maiores de 80 anos (Lei 13.466/2017). <strong>III — Correta:</strong> art. 4º §1º.</div>
-    <div class="quiz-fundamento">Arts. 3º e 4º da Lei 10.741/2003.</div>
-  </div>
-</div>
+  <div class="section-body">
+    <p style="font-size:0.88rem; color:var(--fg-muted);">Clique no card para virar e conferir a resposta na hora:</p>
+    <div class="fc-grid">
+      
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o conceito etário de Pessoa Idosa?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Pessoa com idade <strong>igual ou superior a 60 anos</strong> (Lei 10.741/2003, Art. 1º).</div>
+        </div>
+      </div>
 
-<!-- Q4 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 4</div>
-    <div class="quiz-q">Sobre direitos fundamentais das pessoas maiores de 60 anos, analise:<br>
-    <sub>I. O envelhecimento é um direito personalíssimo e a sua proteção é um direito social. / II. Os alimentos são prestados à pessoa idosa na forma da lei civil e de forma solidária entre os prestadores. / III. Na admissão da pessoa idosa em qualquer trabalho ou emprego, é vedada a fixação de limite máximo de idade, inclusive para concursos, ressalvados os casos em que a natureza do cargo o exigir. / IV. Aos maiores de 65 anos, é assegurada a gratuidade a todos os meios de transportes coletivos públicos urbanos e semiurbanos.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>I, II, III e IV.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>I e IV.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>I, II e III.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>II, III e IV.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>II e III.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div><strong>IV — Errada:</strong> art. 39 §2º: gratuidade não abrange serviços seletivos e especiais quando paralelos aos regulares.</div>
-    <div class="quiz-fundamento">Arts. 2º, 11, 12, 27, 39 da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A partir de qual idade vigora a Superprioridade Especial?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Aos <strong>maiores de 80 anos</strong>, com preferência sobre os demais idosos (Art. 3º, § 2º).</div>
+        </div>
+      </div>
 
-<!-- Q5 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 5</div>
-    <div class="quiz-q">Analise as alternativas a seguir e assinale a correta:</div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Nenhuma criança ou adolescente menor de 14 anos poderá viajar para fora da comarca onde reside desacompanhado dos pais sem expressa autorização judicial.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Quando se tratar de viagem ao exterior, a autorização é dispensável se a criança ou adolescente estiver acompanhado pelo pai ou pela mãe.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Sem prévia e expressa autorização judicial, nenhuma criança ou adolescente nascido em território nacional poderá sair do País em companhia de estrangeiro residente ou domiciliado no exterior.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>A autoridade judiciária poderá, a pedido dos pais ou responsável, conceder autorização válida por um ano.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>O adolescente, maior de 16 anos, poderá viajar com pessoa maior, desde que expressamente autorizado pelo pai, mãe ou responsável.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div>Transcrição exata do art. 85 ECA. <strong>A)</strong> Errada: limite é 16 anos, não 14. <strong>B)</strong> Errada: um dos pais no exterior exige autorização do outro. <strong>D)</strong> Errada: autorização pode ser de até <em>2</em> anos (art. 83 §2º). <strong>E)</strong> Errada: ≥16 anos, apenas RG — dispensa autorização.</div>
-    <div class="quiz-fundamento">Art. 85 da Lei 8.069/1990 (ECA).</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A obrigação de prestar alimentos à pessoa idosa é solidária?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>SIM.</strong> E é facultado ao idoso <strong>optar livremente</strong> entre os prestadores (Art. 12).</div>
+        </div>
+      </div>
 
-<!-- Q6 -->
-<div class="quiz-card" data-correct="d">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 6</div>
-    <div class="quiz-q">Sobre profissionalização e proteção ao trabalho, analise:<br>
-    <sub>I. Na admissão da pessoa idosa, são vedadas a discriminação e a fixação de limite máximo de idade, inclusive para concursos, não podendo ser utilizado o critério de idade para desempate. / II. Estímulo às empresas privadas para admissão de pessoas idosas ao trabalho. / III. Pessoa idosa tem direito ao exercício de atividade profissional, respeitadas suas condições físicas, intelectuais e psíquicas.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Somente a assertiva II está correta.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Somente a assertiva I está correta.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Somente a assertiva III está correta.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Estão corretas as assertivas II e III.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Estão corretas as assertivas I e II.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: D</div>
-    <div><strong>I — Errada:</strong> art. 27 PU diz que o <em>primeiro critério de desempate</em> em concurso É a idade mais elevada. <strong>II — Correta:</strong> art. 28, III. <strong>III — Correta:</strong> art. 26.</div>
-    <div class="quiz-fundamento">Arts. 26, 27, 28 da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Se a família não puder pagar alimentos, de quem é o dever?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Do <strong>Poder Público</strong>, no âmbito da Assistência Social (Art. 14).</div>
+        </div>
+      </div>
 
-<!-- Q7 -->
-<div class="quiz-card" data-correct="b">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 7</div>
-    <div class="quiz-q">Sobre direito à moradia da pessoa idosa, analise:<br>
-    <sub>I. A pessoa idosa tem direito à moradia digna, no seio da família natural ou substituta, ou desacompanhada, desde que em instituição pública ou privada. / II. As instituições que abrigarem pessoas idosas são obrigadas a manter padrões de habitação compatíveis, alimentação regular e higiene conforme normas sanitárias. / III. As unidades residenciais reservadas para a pessoa idosa devem situar-se, preferencialmente, no pavimento térreo.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Todas as assertivas estão corretas.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Estão corretas as assertivas II e III.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Estão corretas as assertivas I e III.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Estão corretas as assertivas I e II.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Todas as assertivas estão incorretas.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: B</div>
-    <div><strong>I — Errada:</strong> art. 37 garante moradia desacompanhada <em>em sua própria morada</em> quando assim desejar — não condicionada a instituições. <strong>II — Correta:</strong> art. 37 §2º. <strong>III — Correta:</strong> art. 38 PU.</div>
-    <div class="quiz-fundamento">Arts. 37 e 38 da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Planos de saúde podem reajustar mensalidade por idade do idoso?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>NÃO!</strong> É terminantemente vedada a cobrança de valores diferenciados por idade (Art. 15, § 3º).</div>
+        </div>
+      </div>
 
-<!-- Q8 -->
-<div class="quiz-card" data-correct="b">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 8</div>
-    <div class="quiz-q">Dentre as garantias destinadas às pessoas idosas, analise:<br>
-    <sub>I. É dever da família e da comunidade prevenir a ameaça ou violação aos direitos da pessoa idosa. / II. A pessoa idosa deve ter prioridade no recebimento da restituição do Imposto de Renda. / III. Dentre as pessoas idosas, é assegurada prioridade especial aos maiores de 75 anos.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Somente a assertiva I está correta.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Somente a assertiva II está correta.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Somente a assertiva III está correta.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Todas as assertivas estão corretas.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Estão corretas as assertivas II e III.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: B</div>
-    <div><strong>I — Imprecisa/Errada:</strong> art. 4º §1º diz "dever de <em>todos</em>" (não só família e comunidade). <strong>II — Correta:</strong> art. 3º §1º, IX — prioridade de restituição do IR. <strong>III — Errada:</strong> art. 3º §2º: prioridade especial é para maiores de <em>80</em> anos, não 75.</div>
-    <div class="quiz-fundamento">Arts. 3º e 4º da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual a idade para a gratuidade nos transportes públicos urbanos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Aos <strong>maiores de 65 anos</strong> (Art. 39). Municípios podem estender para 60-65 anos.</div>
+        </div>
+      </div>
 
-<!-- Q9 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 9</div>
-    <div class="quiz-q">Assinale a alternativa <strong>incorreta</strong> relacionada à prevenção e à manutenção da saúde da pessoa idosa:</div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Devem ser efetivadas por unidades geriátricas de referência, com pessoal especializado em geriatria e gerontologia social.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>É vedada a discriminação da pessoa idosa nos planos de saúde pela cobrança de valores diferenciados em razão da idade.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Em razão da não discriminação, pessoas idosas com deficiência ou com limitação incapacitante não terão atendimento especializado, nos termos da lei.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Quando de interesse do Poder Público, o agente promoverá o contato necessário com a pessoa idosa em sua residência.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Em todo atendimento de saúde, os maiores de 80 anos terão preferência especial sobre as demais pessoas idosas, exceto em caso de emergência.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C (assertiva incorreta)</div>
-    <div>Art. 15 §1º, IV determina exatamente o contrário: deve haver <strong>atendimento especializado</strong> às pessoas idosas com deficiência ou limitação incapacitante. A alternativa C inverte a norma.</div>
-    <div class="quiz-fundamento">Art. 15, §1º, IV da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A gratuidade do transporte coletivo comporta alguma exceção?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>SIM!</strong> Não abrange serviços <strong>seletivos e especiais</strong> paralelos aos regulares (Art. 39, § 2º).</div>
+        </div>
+      </div>
 
-<!-- Q10 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Questionário · Questão 10</div>
-    <div class="quiz-q">Analisando os direitos fundamentais da pessoa idosa, é correto afirmar que:</div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>É assegurada, prioritariamente, a saúde mental da pessoa idosa.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>O Estatuto da Pessoa Idosa é taxativo na implementação dos direitos previstos tão somente nesse estatuto.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Não há previsão do seu aperfeiçoamento moral, mas apenas intelectual, espiritual e social.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>O envelhecimento é um direito universal e a sua proteção é um direito privado, por ser de responsabilidade da família.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div>Transcrição literal do art. 2º: "A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei..."</div>
-    <div class="quiz-fundamento">Art. 2º da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o percentual de reserva de assentos nos ônibus coletivos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Reserva de no mínimo <strong>10% dos assentos</strong> devidamente identificados (Art. 39, § 3º).</div>
+        </div>
+      </div>
 
-<!-- T1 -->
-<div class="quiz-card" data-correct="d">
-  <div class="quiz-header">
-    <div class="quiz-num">Teleaula II · Questão 1</div>
-    <div class="quiz-q">Malaquias do Monte, com onze anos e dez meses de idade, praticou ato infracional equiparado ao roubo. Assinale a alternativa correta:</div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>Verificada a prática do ato, a autoridade competente poderá aplicar a Malaquias as medidas do artigo 112 do ECA.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>Malaquias não poderá ser privado de sua liberdade senão em flagrante de ato infracional.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>Malaquias é penalmente inimputável, não sendo considerado seu ato como infracional.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>Malaquias se sujeitará às medidas previstas no artigo 101 do ECA.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>Por ser menor de 18 anos, os pais de Malaquias devem responder penalmente pelo ato.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: D</div>
-    <div>Malaquias tem 11a 10m — <strong>criança</strong> (menos de 12 anos completos). Crianças não se sujeitam às medidas socioeducativas do art. 112 (exclusivas para adolescentes). Aplica-se exclusivamente o <strong>art. 101</strong> (medidas de proteção), pelo Conselho Tutelar e família.</div>
-    <div class="quiz-fundamento">Arts. 2º e 105 da Lei 8.069/1990 (ECA).</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o percentual de vagas reservadas em estacionamentos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Reserva de <strong>5% das vagas</strong> em locais de melhor comodidade (Art. 41).</div>
+        </div>
+      </div>
 
-<!-- T2 -->
-<div class="quiz-card" data-correct="c">
-  <div class="quiz-header">
-    <div class="quiz-num">Teleaula II · Questão 2</div>
-    <div class="quiz-q">Nos termos do Estatuto da Pessoa Idosa – Lei nº 10.741/2003, analise:<br>
-    <sub>I. O envelhecimento é um direito personalíssimo, sendo sua proteção um direito social. / II. A obrigação de prestar alimentos é solidária para todos os filhos. / III. Na admissão da pessoa idosa em qualquer trabalho ou emprego, é vedada a fixação de limite máximo de idade, inclusive para concursos, ressalvados os casos em que a natureza do cargo o exigir. / IV. Aos maiores de 65 anos é assegurada a gratuidade em todos os meios de transportes coletivos públicos urbanos e semiurbanos, não comportando exceção.</sub></div>
-  </div>
-  <div class="quiz-options">
-    <div class="opt" data-opt="a" onclick="selectOpt(this)"><div class="opt-letter">A</div><div>I, II, III e IV.</div></div>
-    <div class="opt" data-opt="b" onclick="selectOpt(this)"><div class="opt-letter">B</div><div>I e IV, apenas.</div></div>
-    <div class="opt" data-opt="c" onclick="selectOpt(this)"><div class="opt-letter">C</div><div>I, II e III, apenas.</div></div>
-    <div class="opt" data-opt="d" onclick="selectOpt(this)"><div class="opt-letter">D</div><div>II, III e IV, apenas.</div></div>
-    <div class="opt" data-opt="e" onclick="selectOpt(this)"><div class="opt-letter">E</div><div>II e IV, apenas.</div></div>
-  </div>
-  <div class="quiz-actions">
-    <button class="btn-check" onclick="checkQuiz(this)">Verificar</button>
-    <button class="btn-reset" onclick="resetQuiz(this)">Limpar</button>
-  </div>
-  <div class="quiz-reveal">
-    <div class="label ok">Resposta correta: C</div>
-    <div><strong>I — Correta:</strong> art. 2º. <strong>II — Correta:</strong> art. 12. <strong>III — Correta:</strong> art. 27. <strong>IV — Errada:</strong> art. 39 §2º: exceção para serviços seletivos e especiais quando paralelos aos regulares.</div>
-    <div class="quiz-fundamento">Arts. 2º, 12, 27, 39 da Lei 10.741/2003.</div>
-  </div>
-</div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o desconto garantido em eventos culturais e esportivos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Desconto de no mínimo <strong>50% (meia-entrada)</strong> e acesso preferencial (Art. 23).</div>
+        </div>
+      </div>
 
-</div><!-- /quiz-wrap -->
-</div><!-- /tab-quiz -->
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o 1º critério de desempate em concurso público?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">A <strong>idade mais elevada</strong>, sendo o primeiro critério de desempate obrigatório (Art. 27, p. único).</div>
+        </div>
+      </div>
 
-<!-- ===== FLASHCARDS ===== -->
-<div id="tab-flashcards" class="tab-content">
-<p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:14px">Clique no cartão para revelar a resposta.</p>
-<div class="fc-grid">
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">O que é a Superprioridade do Art. 3º, § 1º, IX?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Prioridade especial no recebimento da <strong>restituição do Imposto de Renda</strong>.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 01</div>Qual o limite de idade para controle de viagem nacional no ECA?</div>
-<div class="fc-a"><div class="fc-num">FC 01</div><strong>16 anos.</strong> Menor de 16 precisa de acompanhante qualificado ou autorização escrita. A partir de 16, apenas RG. (Art. 83)</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Criança de 11 anos que comete roubo recebe internação?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>NUNCA!</strong> Criança só recebe <strong>Medidas Protetivas do art. 101</strong> (Caso Malaquias).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 02</div>O adolescente de 16 anos precisa de autorização para viajar no território nacional?</div>
-<div class="fc-a"><div class="fc-num">FC 02</div><strong>Não.</strong> Pode viajar portando apenas documento oficial de identidade (RG). Dispensa autorização judicial ou dos pais. (Art. 83)</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Até que idade adolescente viaja desacompanhado só com RG?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">A partir dos <strong>16 anos completos</strong>, em todo o território nacional (ECA Art. 83).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 03</div>Quando a autorização para viagem ao exterior é dispensada?</div>
-<div class="fc-a"><div class="fc-num">FC 03</div>Se acompanhado de <strong>ambos os pais</strong>; ou de <strong>um dos pais</strong>, com autorização expressa do outro, firma reconhecida. (Art. 84)</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Viagem com estrangeiro residente fora exige autorização judicial?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>SEMPRE!</strong> Sem prévia e expressa autorização judicial é proibida a saída (ECA Art. 85).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 04</div>O que exige o art. 85 do ECA para viagem com estrangeiro?</div>
-<div class="fc-a"><div class="fc-num">FC 04</div><strong>Autorização judicial prévia e expressa, sempre.</strong> Nenhuma criança/adolescente nascido no Brasil sai com estrangeiro residente/domiciliado no exterior sem ela.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o prazo máximo da medida de internação para adolescentes?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Prazo máximo de <strong>3 anos</strong>, com liberação compulsória aos <strong>21 anos</strong> (ECA Art. 121).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 05</div>Quais os dois pilares da política de atendimento do ECA (art. 86)?</div>
-<div class="fc-a"><div class="fc-num">FC 05</div><strong>Descentralização político-administrativa</strong> e <strong>municipalização do atendimento</strong>.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Quais as hipóteses taxativas de internação (Art. 122 ECA)?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">1) Violência/grave ameaça; 2) Reiteração de infração grave; 3) Descumprimento reiterado de medida anterior.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 06</div>O acolhimento institucional implica privação de liberdade?</div>
-<div class="fc-a"><div class="fc-num">FC 06</div><strong>Não.</strong> É medida provisória e excepcional, sem privação de liberdade. Transição para reintegração familiar ou família substituta. (Art. 101 §1º)</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Quem pode aplicar acolhimento institucional e familiar?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">São medidas de proteção (Art. 101, VII/VIII), provisórias e que <strong>não implicam privação de liberdade</strong>.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 07</div>O art. 130 do ECA autoriza o quê?</div>
-<div class="fc-a"><div class="fc-num">FC 07</div>Verificada hipótese de maus-tratos, opressão ou abuso sexual por pais/responsáveis, a autoridade judiciária poderá determinar <strong>cautelarmente o afastamento do agressor</strong> da moradia comum.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">O Conselho Tutelar pode destituir poder familiar?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>NÃO!</strong> Guarda, tutela e perda/suspensão do poder familiar são de <strong>competência exclusiva do Juiz</strong>.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 08</div>O que é ato infracional (art. 103 ECA)?</div>
-<div class="fc-a"><div class="fc-num">FC 08</div><strong>Conduta descrita como crime ou contravenção penal.</strong> Menores de 18 anos não respondem pelo CP, mas pelo ECA.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">O que é a medida cautelar do Art. 130 do ECA?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">O <strong>afastamento imediato do agressor</strong> da moradia comum em casos de violência contra o menor.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 09</div>Qual a referência temporal da inimputabilidade (art. 104 ECA)?</div>
-<div class="fc-a"><div class="fc-num">FC 09</div>A <strong>idade à data do fato</strong>. Se tinha menos de 18 anos quando praticou o ato, é inimputável — mesmo que complete 18 depois.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual a natureza jurídica do envelhecimento no Estatuto?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Direito <strong>personalíssimo</strong>, e a sua proteção é um <strong>direito social</strong> (Art. 2º).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 10</div>Criança que pratica ato infracional → qual medida se aplica?</div>
-<div class="fc-a"><div class="fc-num">FC 10</div><strong>Apenas art. 101 (medidas de proteção).</strong> Nunca as socioeducativas do art. 112 — essas são exclusivas para adolescentes (12 a 18 anos).</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Onde devem situar-se as habitações reservadas a idosos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Preferencialmente no <strong>pavimento térreo</strong> (Lei 10.741/2003, Art. 38, p. único).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 11</div>Cite as 6 medidas socioeducativas do art. 112 ECA.</div>
-<div class="fc-a"><div class="fc-num">FC 11</div>1. Advertência; 2. Obrigação de reparar o dano; 3. Prestação de serviços à comunidade; 4. Liberdade assistida; 5. Semiliberdade; 6. <strong>Internação</strong>.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A autorização judicial para viagem de menor pode valer por quanto tempo?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">A autoridade judiciária pode conceder autorização válida por até <strong>2 anos</strong> (ECA Art. 83, § 2º).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 12</div>Quais as 3 hipóteses taxativas de internação (art. 122 ECA)?</div>
-<div class="fc-a"><div class="fc-num">FC 12</div>I. Grave ameaça ou violência; II. Reiteração em infrações graves; III. Descumprimento reiterado e injustificável de medida anterior. <strong>Fora dessas 3, não cabe.</strong></div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A pessoa idosa internada tem direito a acompanhante?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>SIM!</strong> Em tempo integral, a critério médico (Lei 10.741/2003, Art. 16).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 13</div>Malaquias, 11a 10m, pratica roubo → qual medida?</div>
-<div class="fc-a"><div class="fc-num">FC 13</div><strong>Art. 101 (proteção)</strong> — é criança (menos de 12 anos). Aplica pelo Conselho Tutelar e família. Sem art. 112, sem internação.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Como a idade do adolescente autor de ato infracional é aferida?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Exclusivamente à <strong>data do fato</strong> (ECA Art. 104, parágrafo único).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 14</div>O Estatuto da Pessoa Idosa se aplica a partir de qual idade?</div>
-<div class="fc-a"><div class="fc-num">FC 14</div><strong>60 anos ou mais.</strong> 118 artigos. Lei nº 10.741/2003.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">É permitido exigir o comparecimento de idoso enfermo em órgão público?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>VEDADO!</strong> O agente do poder público deve promover o contato na própria residência (Art. 15, § 1º, V).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 15</div>Quando o nome "Estatuto do Idoso" virou "Estatuto da Pessoa Idosa"?</div>
-<div class="fc-a"><div class="fc-num">FC 15</div>Lei nº 14.423/2022, vigência a partir de <strong>25/07/2023</strong>. Motivo: reconhecer a feminização do envelhecimento e linguagem inclusiva.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Qual o limite máximo da prestação de serviços à comunidade (ECA)?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Máximo de <strong>6 meses</strong>, por período não superior a 8 horas semanais (ECA Art. 117).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 16</div>Qual a prioridade especial e quem ela beneficia?</div>
-<div class="fc-a"><div class="fc-num">FC 16</div><strong>Maiores de 80 anos</strong> têm prioridade especial em relação aos demais idosos. (Art. 3º §2º, Lei 13.466/2017) — Pegadinha: não são 75 anos!</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">O que estabelece a Lei 14.423/2022?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Substituiu a expressão 'idoso' por <strong>'pessoa idosa'</strong> em toda a legislação brasileira.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 17</div>Cite os 4 princípios do Estatuto da Pessoa Idosa.</div>
-<div class="fc-a"><div class="fc-num">FC 17</div>1. Ampla Proteção; 2. Dignidade; 3. Participação; 4. Independência.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A gratuidade nos transportes públicos urbanos abrange voos de avião?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back"><strong>NÃO!</strong> Para transporte aéreo há apenas prioridade de embarque e desembarque.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 18</div>O envelhecimento é que tipo de direito? E sua proteção?</div>
-<div class="fc-a"><div class="fc-num">FC 18</div>O envelhecimento é um <strong>direito personalíssimo</strong>; sua proteção é um <strong>direito social</strong>. (Art. 2º)</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">O que ocorre se o filho não tiver condições financeiras de pagar alimentos?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">O <strong>Estado assume a obrigação</strong> através da Assistência Social (Art. 14).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 19</div>A obrigação alimentar no Estatuto é solidária? A pessoa idosa pode escolher o devedor?</div>
-<div class="fc-a"><div class="fc-num">FC 19</div><strong>Sim, é solidária.</strong> E é <strong>facultado à pessoa idosa optar</strong> entre os prestadores. (Art. 12) — Assertiva que diz "vedado optar" = errada!</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">Quais os princípios constitucionais de proteção da velhice?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Art. 229 (dever dos filhos de amparar) e Art. 230 (família, sociedade e Estado) da CF/88.</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 20</div>O que prevê o art. 14 sobre alimentos e Poder Público?</div>
-<div class="fc-a"><div class="fc-num">FC 20</div>Se a pessoa idosa ou familiares não possuem condições econômicas, <strong>impõe-se ao Poder Público</strong> o provimento, no âmbito da <strong>assistência social (BPC/LOAS)</strong>.</div>
-</div></div>
+      <div class="fc-card" onclick="flipCard(this)">
+        <div class="fc-inner">
+          <div class="fc-front"><div class="fc-q">A superprioridade dos maiores de 80 anos cede em qual situação?</div><div class="fc-hint">Clique para virar</div></div>
+          <div class="fc-back">Exclusivamente diante de <strong>emergências médicas</strong> com risco à vida (Art. 15, § 7º).</div>
+        </div>
+      </div>
 
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 21</div>Planos de saúde podem cobrar mais caro pela idade?</div>
-<div class="fc-a"><div class="fc-num">FC 21</div><strong>Não.</strong> Art. 15 §3º: vedada a cobrança de valores diferenciados em planos de saúde em razão da idade.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 22</div>Qual o desconto mínimo para cultura, esporte e lazer?</div>
-<div class="fc-a"><div class="fc-num">FC 22</div><strong>50%</strong> no valor dos ingressos para eventos artísticos, culturais, esportivos e de lazer. (Arts. 20–25)</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 23</div>Pode haver limite máximo de idade para concurso público envolvendo pessoa idosa?</div>
-<div class="fc-a"><div class="fc-num">FC 23</div><strong>Em regra, não.</strong> Art. 27: vedada a fixação de limite máximo de idade, salvo quando a natureza do cargo o exigir.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 24</div>Qual o critério de desempate em concurso público (art. 27 PU)?</div>
-<div class="fc-a"><div class="fc-num">FC 24</div>O <strong>primeiro critério</strong> de desempate é a <strong>idade mais elevada</strong>. — Pegadinha: o art. 27 veda limite de idade MAS usa a idade como desempate!</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 25</div>A pessoa idosa pode morar sozinha por opção?</div>
-<div class="fc-a"><div class="fc-num">FC 25</div><strong>Sim.</strong> Art. 37: pode morar desacompanhada de seus familiares quando assim desejar. Não é obrigada a morar em instituição.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 26</div>Quais obrigações das ILPIs (art. 37 §2º)?</div>
-<div class="fc-a"><div class="fc-num">FC 26</div>Manter padrões de habitação compatíveis + <strong>alimentação regular</strong> + higiene conforme normas sanitárias, sob penas da lei.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 27</div>Em qual pavimento devem ficar unidades residenciais para idosos?</div>
-<div class="fc-a"><div class="fc-num">FC 27</div>Art. 38 PU: <strong>preferencialmente no pavimento térreo</strong>.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 28</div>A gratuidade no transporte coletivo urbano e semiurbano vale para todos ≥65? Há exceção?</div>
-<div class="fc-a"><div class="fc-num">FC 28</div>Sim, ≥65 anos. <strong>Exceção (art. 39 §2º):</strong> serviços <strong>seletivos e especiais</strong> quando paralelos aos regulares <strong>não</strong> têm gratuidade.</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 29</div>Qual percentual de vagas deve ser reservado em estacionamentos para idosos?</div>
-<div class="fc-a"><div class="fc-num">FC 29</div><strong>5%</strong> das vagas em estacionamentos públicos e privados, posicionadas próximas aos acessos. (Art. 41)</div>
-</div></div>
-
-<div class="fc-wrap"><div class="fc" onclick="this.classList.toggle('flipped')">
-<div class="fc-f"><div class="fc-num">FC 30</div>A pessoa idosa tem prioridade na restituição do IR?</div>
-<div class="fc-a"><div class="fc-num">FC 30</div><strong>Sim.</strong> Art. 3º §1º, IX: prioridade de recebimento da restituição do Imposto de Renda — incluída no rol de 6 categorias de prioridade.</div>
-</div></div>
-
-</div><!-- /fc-grid -->
-</div><!-- /tab-flashcards -->
-
-<!-- BIO -->
-<div class="bio-card">
-  <img class="bio-avatar" src="avatar.jpg" alt="André" onerror="this.style.display='none'">
-  <div>
-    <div class="bio-name">André Sfy</div>
-    <div class="bio-sub">Graduando em Direito · UNIP · 10º Período · D83G</div>
-    <div class="bio-links">
-      <span class="bio-link">Lei 8.069/1990 · ECA</span>
-      <span class="bio-link">Lei 10.741/2003 · EPI</span>
-      <span class="bio-link">Unidade II</span>
     </div>
   </div>
+</section>
+
+<!-- POPOVER E BACKDROP -->
+<div id="popover-backdrop"></div>
+<div id="popover" role="dialog" aria-modal="true">
+  <div class="pop-header">
+    <span class="pop-key" id="pop-key"></span>
+    <span class="pop-label" id="pop-label">LEGISLAÇÃO POSITIVA</span>
+    <button class="pop-close" id="pop-close" aria-label="Fechar popover">×</button>
+  </div>
+  <div class="pop-body" id="pop-body"></div>
 </div>
-
-</main>
-
-<!-- ARTS POPOVER -->
-<div id="art-popover">
-  <button id="art-popover-close" onclick="document.getElementById('art-popover').style.display='none'">✕</button>
-  <span class="law-tag" id="art-law-tag"></span>
-  <strong id="art-title"></strong>
-  <div id="art-text"></div>
-</div>
-
-<!-- FLOATING BUTTONS -->
-<button id="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">↑</button>
-<a id="btn-wa" href="https://wa.me/5511966016189" target="_blank" rel="noopener" title="WhatsApp">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.874L0 24l6.312-1.517A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-5.001-1.372l-.359-.214-3.724.895.924-3.613-.234-.372A9.78 9.78 0 012.182 12C2.182 6.584 6.584 2.182 12 2.182S21.818 6.584 21.818 12 17.416 21.818 12 21.818z"/></svg>
-</a>
 
 <script>
-// Tab navigation
-function showTab(id, btn) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
-
-// Section accordion
-function toggleSection(header) {
-  var body = header.nextElementSibling;
-  var chevron = header.querySelector('.chevron');
-  var open = body.classList.toggle('open');
-  chevron.style.transform = open ? 'rotate(180deg)' : '';
-}
-
-// Quiz
-function selectOpt(opt) {
-  var card = opt.closest('.quiz-card');
-  if (card.dataset.answered) return;
-  card.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
-  opt.classList.add('selected');
-  card.dataset.selected = opt.dataset.opt;
-}
-
-function checkQuiz(btn) {
-  var card = btn.closest('.quiz-card');
-  if (card.dataset.answered) return;
-  var selected = card.dataset.selected;
-  if (!selected) return;
-  var correct = card.dataset.correct;
-  card.dataset.answered = '1';
-  card.querySelectorAll('.opt').forEach(o => {
-    if (o.dataset.opt === correct) o.classList.add('correct');
-    else if (o.dataset.opt === selected && selected !== correct) o.classList.add('wrong');
-  });
-  var reveal = card.querySelector('.quiz-reveal');
-  reveal.classList.add('show');
-  if (selected !== correct) reveal.querySelector('.label').classList.replace('ok', 'err');
-  updateProgress();
-}
-
-function resetQuiz(btn) {
-  var card = btn.closest('.quiz-card');
-  delete card.dataset.answered;
-  delete card.dataset.selected;
-  card.querySelectorAll('.opt').forEach(o => o.classList.remove('selected','correct','wrong'));
-  card.querySelector('.quiz-reveal').classList.remove('show');
-  updateProgress();
-}
-
-function updateProgress() {
-  var total = document.querySelectorAll('.quiz-card').length;
-  var answered = document.querySelectorAll('.quiz-card[data-answered]').length;
-  var pct = Math.round(answered / total * 100);
-  document.getElementById('quiz-progress-bar').style.width = pct + '%';
-  document.getElementById('quiz-progress-label').textContent = answered + ' de ' + total + ' respondidas';
-}
-
-// ARTS popover data
-var arts = {
-  '84eca': { law: 'ECA · Art. 84', title: 'Viagem ao Exterior', text: 'A autorização é dispensada se a criança/adolescente estiver acompanhada de ambos os pais (ou responsável), ou de um dos pais com autorização expressa do outro por documento com firma reconhecida.' },
-  '85eca': { law: 'ECA · Art. 85', title: 'Viagem com Estrangeiro', text: 'Sem prévia e expressa autorização judicial, nenhuma criança ou adolescente nascido em território nacional poderá sair do país em companhia de estrangeiro residente ou domiciliado no exterior.' },
-  '86eca': { law: 'ECA · Art. 86', title: 'Política de Atendimento', text: 'Far-se-á por conjunto articulado de ações governamentais e não governamentais, fundado na descentralização político-administrativa e na municipalização do atendimento.' },
-  '101eca': { law: 'ECA · Art. 101 §1º', title: 'Acolhimento Institucional', text: 'São medidas provisórias e excepcionais, utilizadas como transição para a reintegração familiar ou colocação em família substituta, sem implicar privação de liberdade.' },
-  '103eca': { law: 'ECA · Art. 103', title: 'Ato Infracional', text: 'Considera-se ato infracional a conduta descrita como crime ou contravenção penal.' },
-  '104eca': { law: 'ECA · Art. 104', title: 'Inimputabilidade', text: 'Os menores de 18 anos são penalmente inimputáveis, sujeitos às medidas do ECA. Considera-se a idade à data do fato.' },
-  '112eca': { law: 'ECA · Art. 112', title: 'Medidas Socioeducativas', text: 'Advertência; reparar o dano; PSC; liberdade assistida; semiliberdade; internação. Aplicáveis ao adolescente (12–18 anos).' },
-  '122eca': { law: 'ECA · Art. 122', title: 'Internação — Hipóteses Taxativas', text: 'I. Grave ameaça ou violência; II. Reiteração em infrações graves; III. Descumprimento reiterado e injustificável de medida anterior. Rol taxativo.' },
-  '129eca': { law: 'ECA · Art. 129', title: 'Medidas aos Pais', text: 'Encaminhamentos a programas de proteção, tratamento de dependência, psicológico/psiquiátrico, cursos de orientação parental; obrigação de matrícula escolar; advertência; perda da guarda/tutela/poder familiar.' },
-  '130eca': { law: 'ECA · Art. 130', title: 'Afastamento do Agressor', text: 'Verificada hipótese de maus-tratos, opressão ou abuso sexual por pais/responsáveis, a autoridade judiciária pode determinar cautelarmente o afastamento do agressor da moradia comum.' },
-  '2epi': { law: 'EPI · Art. 2º', title: 'Direitos Fundamentais', text: 'A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana. O envelhecimento é um direito personalíssimo e sua proteção é um direito social.' },
-  '9epi': { law: 'EPI · Art. 9º', title: 'Direito à Vida', text: 'É obrigação do Estado garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade.' },
-  '12epi': { law: 'EPI · Art. 12', title: 'Alimentos — Solidariedade', text: 'A obrigação alimentar é solidária, sendo facultado à pessoa idosa optar entre os prestadores.' },
-  '14epi': { law: 'EPI · Art. 14', title: 'Alimentos — Poder Público', text: 'Se a pessoa idosa ou seus familiares não possuírem condições econômicas de prover o sustento, impõe-se ao Poder Público esse provimento, no âmbito da assistência social.' },
-  '15epi': { law: 'EPI · Art. 15', title: 'Saúde', text: '§1º, IV: atendimento especializado a idosos com deficiência ou limitação incapacitante. §3º: vedada cobrança de valores diferenciados em planos de saúde em razão da idade.' },
-  '27epi': { law: 'EPI · Art. 27', title: 'Trabalho — Sem Limite de Idade', text: 'Caput: vedada discriminação e fixação de limite máximo de idade em trabalho/concursos, salvo natureza do cargo. PU: primeiro critério de desempate em concurso público = idade mais elevada.' },
-  '37epi': { law: 'EPI · Art. 37', title: 'Moradia', text: 'Direito à moradia digna no seio da família natural ou substituta, ou desacompanhada por opção própria. §2º: ILPIs devem manter padrões de habitação, alimentação e higiene.' },
-  '38epi': { law: 'EPI · Art. 38 PU', title: 'Pavimento Térreo', text: 'As unidades residenciais reservadas para atendimento à pessoa idosa devem situar-se, preferencialmente, no pavimento térreo.' },
-  '39epi': { law: 'EPI · Art. 39', title: 'Transporte — Gratuidade', text: 'Gratuidade nos transportes coletivos urbanos e semiurbanos para maiores de 65 anos, mediante documento com foto. Exceção (§2º): serviços seletivos e especiais paralelos aos regulares.' },
-  '41epi': { law: 'EPI · Art. 41', title: 'Estacionamento', text: 'Reserva de 5% das vagas em estacionamentos públicos e privados, posicionadas próximas aos acessos.' }
+// DICIONÁRIO LITERAL DE LEIS (Popovers Oficiais)
+var ARTS = {
+  "ECA2": "<strong>ECA, Art. 2º:</strong> Considera-se criança, para os efeitos desta Lei, a pessoa até doze anos de idade incompletos, e adolescente aquela entre doze e dezoito anos de idade.",
+  "ECA83": "<strong>ECA, Art. 83:</strong> Nenhuma criança ou adolescente menor de 16 (dezesseis) anos poderá viajar para fora da comarca onde reside desacompanhado dos pais ou dos responsáveis sem expressa autorização judicial. § 1º A autorização não será exigida quando: a) tratar-se de comarca contígua; b) a criança ou adolescente menor de 16 anos estiver acompanhado: 1. de pais ou responsável; 2. de ascendente ou colateral maior, até o terceiro grau; 3. de pessoa maior autorizada pelos pais com firma reconhecida. § 2º A autoridade judiciária poderá conceder autorização válida por dois anos.",
+  "ECA84": "<strong>ECA, Art. 84:</strong> Quando se tratar de viagem ao exterior, a autorização é dispensável se a criança ou adolescente: I - estiver acompanhado de ambos os pais ou responsável; II - viajar na companhia de um dos pais, autorizado expressamente pelo outro através de documento com firma reconhecida.",
+  "ECA85": "<strong>ECA, Art. 85:</strong> Sem prévia e expressa autorização judicial, nenhuma criança ou adolescente nascido em território nacional poderá sair do País em companhia de estrangeiro residente ou domiciliado no exterior.",
+  "ECA86": "<strong>ECA, Art. 86:</strong> A política de atendimento dos direitos da criança e do adolescente far-se-á através de um conjunto articulado de ações governamentais e não-governamentais, da União, dos Estados, do Distrito Federal e dos Municípios.",
+  "ECA98": "<strong>ECA, Art. 98:</strong> As medidas de proteção à criança e ao adolescente são aplicáveis sempre que os direitos reconhecidos nesta Lei forem ameaçados ou violados: I - por ação ou omissão da sociedade ou do Estado; II - por falta, omissão ou abuso dos pais ou responsável; III - em razão de sua conduta.",
+  "ECA101": "<strong>ECA, Art. 101:</strong> Verificada qualquer das hipóteses do art. 98, a autoridade competente poderá determinar, dentre outras: I - encaminhamento aos pais/responsável; II - orientação e apoio temporários; III - matrícula em escola oficial; IV - inclusão em programa de auxílio à família; V - requisição de tratamento médico/psiquiátrico; VI - inclusão em tratamento para toxicômanos; VII - acolhimento institucional; VIII - acolhimento familiar; IX - colocação em família substituta. § 1º O acolhimento é medida provisória e excepcional, não implicando privação de liberdade.",
+  "ECA103": "<strong>ECA, Art. 103:</strong> Considera-se ato infracional a conduta descrita como crime ou contravenção penal.",
+  "ECA104": "<strong>ECA, Art. 104:</strong> São penalmente inimputáveis os menores de dezoito anos, sujeitos às medidas previstas nesta Lei. Parágrafo único. Para os efeitos desta Lei, deve ser considerada a idade do adolescente à data do fato.",
+  "ECA105": "<strong>ECA, Art. 105:</strong> Ao ato infracional praticado por criança corresponderão as medidas previstas no art. 101.",
+  "ECA112": "<strong>ECA, Art. 112:</strong> Verificada a prática de ato infracional, a autoridade competente poderá aplicar ao adolescente as seguintes medidas: I - advertência; II - obrigação de reparar o dano; III - prestação de serviços à comunidade; IV - liberdade assistida; V - inserção em regime de semi-liberdade; VI - internação em estabelecimento educacional; VII - qualquer das previstas no art. 101, I a VI.",
+  "ECA121": "<strong>ECA, Art. 121:</strong> A internação constitui medida privativa da liberdade, sujeita aos princípios de brevidade, excepcionalidade e respeito à condição peculiar de pessoa em desenvolvimento. § 2º A desinternação será precedida de autorização judicial. § 3º Em nenhuma hipótese o período de internação excederá a três anos. § 5º A liberação será compulsória aos vinte e um anos de idade.",
+  "ECA122": "<strong>ECA, Art. 122:</strong> A medida de internação só poderá ser aplicada quando: I - tratar-se de ato infracional cometido mediante grave ameaça ou violência a pessoa; II - por reiteração no cometimento de outras infrações graves; III - por descumprimento reiterado e injustificável da medida anteriormente imposta.",
+  "ECA130": "<strong>ECA, Art. 130:</strong> Verificada a hipótese de maus-tratos, opressão ou abuso sexual impostos pelos pais ou responsável, a autoridade judiciária poderá determinar, como medida cautelar, o afastamento do agressor da moradia comum.",
+  "ECA131": "<strong>ECA, Art. 131:</strong> O Conselho Tutelar é órgão permanente e autônomo, não jurisdicional, encarregado pela sociedade de zelar pelo cumprimento dos direitos da criança e do adolescente.",
+  "ECA136": "<strong>ECA, Art. 136:</strong> São atribuições do Conselho Tutelar: I - atender as crianças e adolescentes nas hipóteses do art. 98, aplicando as medidas do art. 101, I a VII.",
+  "CF228": "<strong>CF/88, Art. 228:</strong> São penalmente inimputáveis os menores de dezoito anos, sujeitos às normas da legislação especial.",
+  "CF229": "<strong>CF/88, Art. 229:</strong> Os pais têm o dever de assistir, criar e educar os filhos menores, e os filhos maiores têm o dever de ajudar e amparar os pais na velhice, carência ou enfermidade.",
+  "CF230": "<strong>CF/88, Art. 230:</strong> A família, a sociedade e o Estado têm o dever de amparar as pessoas idosas, assegurando sua participação na comunidade, defendendo sua dignidade e bem-estar e garantindo-lhes o direito à vida.",
+  "EPI1": "<strong>Estatuto da Pessoa Idosa, Art. 1º:</strong> É instituído o Estatuto da Pessoa Idosa, destinado a regular os direitos assegurados às pessoas com idade igual ou superior a 60 (sessenta) anos (Redação dada pela Lei nº 14.423/2022).",
+  "EPI2": "<strong>Estatuto da Pessoa Idosa, Art. 2º:</strong> A pessoa idosa goza de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei, assegurando-se-lhe, por lei ou por outros meios, todas as oportunidades e facilidades, para preservação de sua saúde física e mental e seu aperfeiçoamento moral, intelectual, espiritual e social, em condições de liberdade e dignidade. Parágrafo único. O envelhecimento é um direito personalíssimo e a sua proteção um direito social.",
+  "EPI3": "<strong>Estatuto da Pessoa Idosa, Art. 3º:</strong> É obrigação da família, da comunidade, da sociedade e do Poder Público assegurar à pessoa idosa, com absoluta prioridade, a efetivação do direito à vida, à saúde, à alimentação, à educação, à cultura, ao esporte, ao lazer, ao trabalho, à cidadania, à liberdade, à dignidade, ao respeito e à convivência familiar e comunitária. § 2º Dentre as pessoas idosas, é assegurada prioridade especial aos maiores de 80 (oitenta) anos, atendendo-se suas necessidades sempre preferencialmente em relação às demais pessoas idosas (Redação pela Lei nº 13.466/2017).",
+  "EPI3_IR": "<strong>Estatuto da Pessoa Idosa, Art. 3º, § 1º, IX:</strong> Dentre as garantias da prioridade compreende-se a prioridade no recebimento da restituição do Imposto de Renda.",
+  "EPI4": "<strong>Estatuto da Pessoa Idosa, Art. 4º:</strong> Nenhuma pessoa idosa será objeto de qualquer tipo de negligência, discriminação, violência, crueldade ou opressão... § 1º É dever de todos prevenir a ameaça ou violação aos direitos da pessoa idosa.",
+  "EPI9": "<strong>Estatuto da Pessoa Idosa, Art. 9º:</strong> É obrigação do Estado garantir à pessoa idosa a proteção à vida e à saúde, mediante efetivação de políticas sociais públicas que permitam um envelhecimento saudável e em condições de dignidade.",
+  "EPI10": "<strong>Estatuto da Pessoa Idosa, Art. 10:</strong> É obrigação do Estado e da sociedade assegurar à pessoa idosa a liberdade, o respeito e a dignidade, como pessoa humana e sujeito de direitos civis, políticos, individuais e sociais...",
+  "EPI11": "<strong>Estatuto da Pessoa Idosa, Art. 11:</strong> Os alimentos serão prestados à pessoa idosa na forma da lei civil.",
+  "EPI12": "<strong>Estatuto da Pessoa Idosa, Art. 12:</strong> A obrigação alimentar é solidária, sendo facultado à pessoa idosa optar entre os prestadores.",
+  "EPI14": "<strong>Estatuto da Pessoa Idosa, Art. 14:</strong> Se a pessoa idosa ou seus familiares não possuírem condições econômicas de prover o seu sustento, impõe-se ao Poder Público esse provimento, no âmbito da assistência social.",
+  "EPI15": "<strong>Estatuto da Pessoa Idosa, Art. 15:</strong> É assegurada a atenção integral à saúde da pessoa idosa, por intermédio do Sistema Único de Saúde (SUS), garantindo-lhe o acesso universal e igualitário, em conjunto articulado e contínuo das ações e serviços, para a prevenção, promoção, proteção e recuperação da saúde. § 2º Incumbe ao Poder Público fornecer à pessoa idosa, gratuitamente, medicamentos, especialmente os de uso continuado, assim como próteses, órteses e outros recursos relativos ao tratamento.",
+  "EPI15_3": "<strong>Estatuto da Pessoa Idosa, Art. 15, § 3º:</strong> É vedada a discriminação da pessoa idosa nos planos de saúde pela cobrança de valores diferenciados em razão da idade.",
+  "EPI15_4": "<strong>Estatuto da Pessoa Idosa, Art. 15, § 1º, IV:</strong> Dentre as diretrizes de saúde compreende-se o atendimento especializado às pessoas idosas com deficiência ou com limitação incapacitante.",
+  "EPI20": "<strong>Estatuto da Pessoa Idosa, Art. 20:</strong> A pessoa idosa tem direito a educação, cultura, esporte, lazer, diversões, espetáculos, produtos e serviços que respeitem sua peculiar condição de idade.",
+  "EPI22": "<strong>Estatuto da Pessoa Idosa, Art. 22:</strong> Nos currículos mínimos dos diversos níveis de ensino formal serão inseridos conteúdos voltados ao processo de envelhecimento, ao respeito e à valorização da pessoa idosa, de forma a eliminar o preconceito e a produzir conhecimentos sobre o tema.",
+  "EPI23": "<strong>Estatuto da Pessoa Idosa, Art. 23:</strong> A participação das pessoas idosas em atividades culturais e de lazer será proporcionada mediante descontos de pelo menos 50% (cinquenta por cento) nos ingressos para eventos artísticos, culturais, esportivos e de lazer, bem como o acesso preferencial aos respectivos locais.",
+  "EPI26": "<strong>Estatuto da Pessoa Idosa, Art. 26:</strong> A pessoa idosa tem direito ao exercício de atividade profissional, respeitadas suas condições físicas, intelectuais e psíquicas.",
+  "EPI27": "<strong>Estatuto da Pessoa Idosa, Art. 27:</strong> Na admissão da pessoa idosa em qualquer trabalho ou emprego, é vedada a discriminação e a fixação de limite máximo de idade, inclusive para concursos, ressalvados os casos em que a natureza do cargo o exigir.",
+  "EPI27_PU": "<strong>Estatuto da Pessoa Idosa, Art. 27, Parágrafo único:</strong> O primeiro critério de desempate em concurso público será a idade, dando-se preferência ao de idade mais elevada.",
+  "EPI28": "<strong>Estatuto da Pessoa Idosa, Art. 28:</strong> O Poder Público criará e estimulará programas de: III - estímulo às empresas privadas para admissão de pessoas idosas ao trabalho.",
+  "EPI37": "<strong>Estatuto da Pessoa Idosa, Art. 37:</strong> A pessoa idosa tem direito a moradia digna, no seio da família natural ou substituta, ou desacompanhada de seus familiares, quando assim o desejar, ou, ainda, em instituição pública ou privada. § 2º Toda instituição dedicada ao atendimento à pessoa idosa fica obrigada a manter padrões de habitação compatíveis com as necessidades delas, bem como provê-las com alimentação regular e higiene indispensáveis.",
+  "EPI38_PU": "<strong>Estatuto da Pessoa Idosa, Art. 38, Parágrafo único:</strong> As unidades residenciais reservadas para atendimento a pessoas idosas devem situar-se, preferencialmente, no pavimento térreo.",
+  "EPI39": "<strong>Estatuto da Pessoa Idosa, Art. 39:</strong> Aos maiores de 65 (sessenta e cinco) anos fica assegurada a gratuidade dos transportes coletivos públicos urbanos e semiurbanos, exceto nos serviços seletivos e especiais, quando prestados paralelamente aos serviços regulares. § 1º Para ter acesso à gratuidade, basta que a pessoa idosa apresente qualquer documento pessoal que faça prova de sua idade.",
+  "EPI39_2": "<strong>Estatuto da Pessoa Idosa, Art. 39, § 2º:</strong> A gratuidade não se aplica aos serviços seletivos e especiais, quando prestados paralelamente aos serviços regulares (Exceção expressa do Estatuto).",
+  "EPI41": "<strong>Estatuto da Pessoa Idosa, Art. 41:</strong> É assegurada a reserva, para pessoas idosas, nos termos da lei local, de 5% (cinco por cento) das vagas nos estacionamentos públicos e privados, as quais deverão ser posicionadas de forma a garantir a melhor comodidade à pessoa idosa."
 };
 
-document.addEventListener('click', function(e) {
-  var link = e.target.closest('.art-link');
-  if (!link) { document.getElementById('art-popover').style.display = 'none'; return; }
-  var art = link.dataset.art;
-  if (!arts[art]) return;
-  var pop = document.getElementById('art-popover');
-  document.getElementById('art-law-tag').textContent = arts[art].law;
-  document.getElementById('art-title').textContent = arts[art].title;
-  document.getElementById('art-text').textContent = arts[art].text;
-  var rect = link.getBoundingClientRect();
-  pop.style.display = 'block';
-  var top = rect.bottom + window.scrollY + 8;
-  var left = Math.min(rect.left, window.innerWidth - 360);
-  if (left < 8) left = 8;
-  pop.style.top = top + 'px';
-  pop.style.left = left + 'px';
-  e.stopPropagation();
+// COMPONENTES INTERATIVOS
+document.addEventListener('DOMContentLoaded', function(){
+  // Tema Dark/Light
+  var themeBtn = document.getElementById('theme-btn');
+  themeBtn.addEventListener('click', function(){
+    var root = document.documentElement;
+    var current = root.getAttribute('data-theme');
+    var isDark = current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  });
+
+  // Botão Topo
+  var btnTop = document.getElementById('btn-top');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 300) btnTop.classList.add('show');
+    else btnTop.classList.remove('show');
+  }, {passive:true});
+
+  // Popover de Artigos
+  var pop = document.getElementById('popover');
+  var popBack = document.getElementById('popover-backdrop');
+  var popKey = document.getElementById('pop-key');
+  var popBody = document.getElementById('pop-body');
+  var popClose = document.getElementById('pop-close');
+  var activeTrigger = null;
+
+  function openPop(el){
+    var k = el.getAttribute('data-key');
+    if (!k || !ARTS[k]) return;
+    activeTrigger = el;
+    popKey.textContent = k;
+    popBody.innerHTML = ARTS[k];
+    pop.classList.add('open');
+    popBack.classList.add('open');
+
+    // Posicionamento
+    var rect = el.getBoundingClientRect();
+    var top = rect.bottom + window.scrollY + 6;
+    var left = rect.left + window.scrollX;
+    var popW = 380;
+    if (left + popW > window.innerWidth - 16) {
+      left = Math.max(16, window.innerWidth - popW - 16);
+    }
+    pop.style.top = top + 'px';
+    pop.style.left = left + 'px';
+  }
+
+  function closePop(){
+    pop.classList.remove('open');
+    popBack.classList.remove('open');
+    activeTrigger = null;
+  }
+
+  document.querySelectorAll('.art').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openPop(el);
+    });
+  });
+
+  popClose.addEventListener('click', closePop);
+  popBack.addEventListener('click', closePop);
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closePop();
+  });
+  window.addEventListener('resize', function(){
+    if (activeTrigger) openPop(activeTrigger);
+  });
 });
 
-// Back to top
-(function(){
-  var btn = document.getElementById('btn-top');
-  window.addEventListener('scroll', function(){
-    btn.classList.toggle('show', window.scrollY > 300);
+// Checagem de Resposta nos Exercícios
+function checkAns(btn){
+  var card = btn.closest('.q-card');
+  var correctOpt = card.getAttribute('data-correct').toLowerCase();
+  var selectedOpt = btn.getAttribute('data-opt').toLowerCase();
+  var allBtns = card.querySelectorAll('.q-opt');
+  var exp = card.querySelector('.q-exp');
+
+  allBtns.forEach(function(b){
+    b.classList.remove('correct', 'wrong');
+    if (b.getAttribute('data-opt').toLowerCase() === correctOpt) {
+      b.classList.add('correct');
+    }
   });
-})();
+
+  if (selectedOpt !== correctOpt) {
+    btn.classList.add('wrong');
+  }
+
+  if (exp) exp.classList.add('show');
+}
+
+// Virar Flashcard
+function flipCard(card){
+  card.classList.toggle('flipped');
+}
 </script>
+
 </body>
 </html>

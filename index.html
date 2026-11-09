@@ -74,6 +74,23 @@ body {
 #btn-wa {
   bottom: 16px; background: #25D366; color: #fff;
 }
+/* BARRA DE NAVEGAÇÃO ENTRE UNIDADES */
+@media (max-width: 600px) {
+  .unit-nav { flex-direction: column; text-align: center; gap: 0.3rem; margin-top: 2.2rem; }
+}
+.unit-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--bg-alt); border: 1px solid var(--divider);
+  padding: 0.5rem 1rem; border-radius: var(--radius); margin: 0.75rem 0 1rem;
+  font-size: 0.8rem; font-weight: 600;
+}
+.unit-nav a {
+  color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.35rem;
+}
+.unit-nav a:hover { text-decoration: underline; }
+.unit-nav .active-unit {
+  color: var(--fg-muted); font-weight: 500;
+}
 /* CABEÇALHO — editorial */
 .page-header {
   background: var(--bg-card);
@@ -579,6 +596,12 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
+
+<!-- Barra de Navegação Rápida entre Unidades -->
+<div class="unit-nav" id="top">
+  <span class="active-unit">Você está na <strong>Unidade I (ECA)</strong></span>
+  <a href="u2.html">Ir para Unidade II (Estatuto da Pessoa Idosa) →</a>
+</div>
 
 <header class="page-header">
   <div class="header-grid">
