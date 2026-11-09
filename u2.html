@@ -76,6 +76,7 @@ body {
 #btn-wa {
   bottom: 16px; background: #25D366; color: #fff;
 }
+#btn-wa:hover { transform: translateY(-2px); }
 /* CABEÇALHO — editorial de luxo */
 .page-header {
   background: var(--bg-card);
@@ -1211,10 +1212,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Botão Topo
   var btnTop = document.getElementById('btn-top');
-  window.addEventListener('scroll', function(){
-    if (window.scrollY > 300) btnTop.classList.add('show');
-    else btnTop.classList.remove('show');
-  }, {passive:true});
+  if (btnTop) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 300) btnTop.classList.add('show');
+      else btnTop.classList.remove('show');
+    }, {passive:true});
+    btnTop.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
 
   // Quiz Engine
   initQuiz();
