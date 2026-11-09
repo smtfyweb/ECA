@@ -286,8 +286,12 @@ td strong { color: var(--accent); }
 [data-theme="dark"] .id-transporte { background: #261e0e; border-color: #7a5000; }
 [data-theme="dark"] .id-super { background: #162842; border-color: #4a80c4; }
 
-/* COMPARATIVO 3 CARDS */
-.compare3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(195px,1fr)); gap: 0.75rem; }
+/* COMPARATIVO 3 E 4 CARDS */
+.compare3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 0.75rem; }
+.compare4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+@media (max-width: 580px) {
+  .compare4 { grid-template-columns: 1fr; }
+}
 .comp-card {
   background: var(--bg-alt); border: 1px solid var(--divider);
   border-top: 2px solid var(--accent-mid); border-radius: var(--radius); padding: 0.9rem 0.9rem 1rem;
@@ -530,29 +534,37 @@ td strong { color: var(--accent); }
     </div>
 
     <h3>Os Quatro Princípios Estruturantes da Matéria</h3>
-    <div class="compare3">
+    <div class="compare4">
       <div class="comp-card">
-        <div class="comp-card-title"><span>Ampla Proteção</span><em>CF 230</em></div>
+        <div class="comp-card-title"><span>1. Ampla Proteção</span><em>CF art. 230</em></div>
         <ul>
-          <li>Políticas de proteção social básica e ajuda continuada;</li>
-          <li>Atuação positiva e solidária da rede estatal;</li>
-          <li>Prevenção à vulnerabilidade física e econômica.</li>
+          <li>Políticas públicas de proteção social básica e ajuda continuada;</li>
+          <li>Atuação positiva e solidária da rede tripartite (Família + Sociedade + Estado);</li>
+          <li>Prevenção da vulnerabilidade social, econômica e física.</li>
         </ul>
       </div>
       <div class="comp-card">
-        <div class="comp-card-title"><span>Dignidade Humana</span><em>EPI art. 10</em></div>
+        <div class="comp-card-title"><span>2. Dignidade Humana</span><em>EPI art. 10</em></div>
         <ul>
-          <li>Inviolabilidade física, psíquica e moral;</li>
-          <li>Preservação da imagem, autonomia e valores;</li>
-          <li>Vedação absoluta a tratamento desumano ou vexatório.</li>
+          <li>A idade avançada não retira a condição de sujeito pleno de direitos e deveres;</li>
+          <li>Inviolabilidade física, psíquica e moral da pessoa idosa;</li>
+          <li>Vedação absoluta a qualquer tratamento desumano, discriminatório ou vexatório.</li>
         </ul>
       </div>
       <div class="comp-card">
-        <div class="comp-card-title"><span>Autonomia e Participação</span><em>EPI art. 3º</em></div>
+        <div class="comp-card-title"><span>3. Participação Social</span><em>EPI art. 3º</em></div>
         <ul>
-          <li>Vedação à segregação e isolamento forçado;</li>
-          <li>Direito de reger seus próprios atos civis;</li>
-          <li>Participação ativa na vida comunitária e política.</li>
+          <li>Vedação expressa a qualquer espécie de segregação, exclusão ou isolamento forçado;</li>
+          <li>Efetiva integração e protagonismo na vida comunitária, cultural e política;</li>
+          <li>O envelhecimento deve ser valorizado e respeitado por toda a sociedade civil.</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <div class="comp-card-title"><span>4. Independência e Autonomia</span><em>CF art. 5º</em></div>
+        <ul>
+          <li>Exercício livre e desimpedido dos direitos fundamentais civis, segurança e propriedade;</li>
+          <li>Atuação livre e independente, sem tutela indevida ou sujeição a prévia justificação;</li>
+          <li>Direito de reger seus próprios atos civis, ressalvada incapacidade real e comprovada.</li>
         </ul>
       </div>
     </div>
@@ -995,6 +1007,11 @@ td strong { color: var(--accent); }
       <div class="fc"><div class="fc-inner">
         <div class="fc-front"><div class="fc-tag">Conceito Legal</div><div class="fc-q">A partir de qual idade uma pessoa é considerada legalmente idosa?</div><div class="fc-hint">clique ↩</div></div>
         <div class="fc-back"><div class="fc-a">Idade igual ou superior a 60 anos completos.</div><div class="fc-law">Art. 1º Lei 10.741/2003</div></div>
+      </div></div>
+
+      <div class="fc"><div class="fc-inner">
+        <div class="fc-front"><div class="fc-tag">Quatro Princípios</div><div class="fc-q">Quais são os 4 princípios estruturantes da proteção à pessoa idosa?</div><div class="fc-hint">clique ↩</div></div>
+        <div class="fc-back"><div class="fc-a">1. Ampla Proteção, 2. Dignidade, 3. Participação e 4. Independência.</div><div class="fc-law">Slides 18 a 20 UNIP / CF art. 230</div></div>
       </div></div>
 
       <div class="fc"><div class="fc-inner">
